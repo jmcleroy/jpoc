@@ -7,4 +7,3 @@
       - show ip interface brief
       - show run
       - show log
-    wait for:
