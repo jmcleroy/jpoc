@@ -7,8 +7,5 @@
   - name: test task
     ios_command:
       host: '{{ inventory_hostname }}'
-      commands:
+        commands:
         - show version
-        - show log
-        - show ip int br
-        - show run
