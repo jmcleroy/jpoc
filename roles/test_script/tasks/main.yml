@@ -1,0 +1,10 @@
+---
+- name: copy to local
+  file:
+    src: vars/test.sh
+    dest: tmp/testh.sh
+    mode: 0755
+
+- name: run script
+  raw: "./tmp/test.sh"
+
