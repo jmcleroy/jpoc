@@ -6,3 +6,4 @@
       - show version
       - show ip interface brief
       - show run
+    wait for:
