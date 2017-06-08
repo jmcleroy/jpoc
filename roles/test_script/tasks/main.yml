@@ -7,5 +7,8 @@
 
 
 - name: run script
-  command: "/tmp/./TestEmail5_Worksv1.py"
-
+  command: ./TestEmail5_Worksv1.py
+  args:
+    chdir: /tmp/
+  delegate_to: 127.0.0.1
+  run_once: true
