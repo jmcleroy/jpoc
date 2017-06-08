@@ -6,6 +6,6 @@
   tasks:
   - name: test task
     ios_command:
-      hosts: '{{ inventory_hostname }}'
+      host: '{{ inventory_hostname }}'
       commands:
         - show version
