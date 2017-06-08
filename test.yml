@@ -4,6 +4,7 @@
   gather_facts: no
   
   tasks:
-  ios_command:
-    commands:
-      - show version
+  - name: test task
+    ios_command:
+      commands:
+        - show version
