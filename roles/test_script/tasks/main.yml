@@ -1,8 +1,8 @@
 ---
-- name: copy to local
+- name: copy from local
   file:
     src: vars/test.sh
-    dest: tmp/testh.sh
+    dest: tmp/test.sh
     mode: 0755
 
 - name: run script
