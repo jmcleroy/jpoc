@@ -9,3 +9,6 @@
       host: '{{ inventory_hostname }}'
       commands:
         - show version
+        - show log
+        - show ip int br
+        - show run
