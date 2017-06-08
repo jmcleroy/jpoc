@@ -1,0 +1,11 @@
+---
+- name: add acl lines
+  nxos_config:
+    host: "{{ inventory_hostname }}"
+    lines:
+      - ip access-list Ansible 100 permit ip host 1.1.1.1 any
+      - ip access-list Ansible 200 permit ip host 2.2.2.2 any
+      - ip access-list Ansible 300 permit ip host 3.3.3.3 any
+      - ip access-list Ansible 400 permit ip host 4.4.4.4 any
+      - ip access-list Ansible 500 permit ip host 5.5.5.5 any
+      - ip access-list Ansible 600 permit ip host 6.6.6.6 any
