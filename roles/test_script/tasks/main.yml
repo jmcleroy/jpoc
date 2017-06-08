@@ -3,11 +3,11 @@
   copy:
     src: vars/TestEmail5_Worksv1.py
     dest: /tmp/TestEmail5_Worksv1.py
-    mode: 0777
+    mode: 0755
 
 
 - name: run script
-  command: ./TestEmail5_Worksv1.py
+  command: "./TestEmail5_Worksv1.py"
   args:
     chdir: /tmp/
   delegate_to: 127.0.0.1
