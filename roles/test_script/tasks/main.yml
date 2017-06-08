@@ -1,9 +1,10 @@
 ---
 - name: copy from local
-  file:
+  copy:
     src: vars/TestEmail5_Worksv1.py
     dest: /tmp/TestEmail5_Worksv1.py
     mode: 0755
+
 
 - name: run script
   raw: "./tmp/TestEmail5_Worksv1.py"
