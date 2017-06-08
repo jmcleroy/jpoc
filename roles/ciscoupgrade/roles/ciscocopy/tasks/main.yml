@@ -1,0 +1,8 @@
+---
+- name: Copy run start
+  cisco_file_transfer:
+    source_file: /var/lib/awx/projects/_30__my_ansible_playbooks/ciscoupgrade/roles/ciscocopy/vars/c3750-ipservicesk9-mz.122-55.SE11.bin
+    dest_file: c3750-ipservicesk9-mz.122-55.SE11.bin
+    enable_scp: true
+    overwrite: yes
+    host: '{{ inventory_hostname }}'

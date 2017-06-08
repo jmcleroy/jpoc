@@ -1,0 +1,13 @@
+---
+- name: configure interface settings
+  ios_config:
+    lines:
+      - boot system flash:c3750-ipservicesk9-mz.122-55.SE11.bin
+    provider: '{{ cli }}'
+
+- name: reload device
+  ios_command:
+    commands:
+      - "reload in 1\ny"
+    provider: "{{ cli }}"
+  ignore_errors: yes

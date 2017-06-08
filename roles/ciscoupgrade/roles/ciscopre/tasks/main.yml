@@ -1,0 +1,10 @@
+---
+- name: Show prechange status
+  ios_command:
+    commands:
+      - show version
+      - show ip interface brief
+      - show ip route summary
+      - show run
+      - show log
+    provider: '{{ cli }}'
