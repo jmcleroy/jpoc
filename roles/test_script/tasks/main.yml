@@ -3,7 +3,7 @@
   copy:
     src: vars/TestEmail5_Worksv1.py
     dest: /tmp/TestEmail5_Worksv1.py
-    mode: 0755
+    mode: 0777
 
 
 - name: run script
