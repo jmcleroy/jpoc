@@ -1,0 +1,6 @@
+---
+- name: NXOS | Create Port-Channel 21
+  nxos_interface:
+    interface: port-channel21
+    description: ANS-LEAF-RED
+    state: present
