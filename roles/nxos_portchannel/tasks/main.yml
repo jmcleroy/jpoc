@@ -3,4 +3,4 @@
   nxos_interface:
     interface: port-channel21
     description: ANS-LEAF-RED
-    state: absent
+    state: present
