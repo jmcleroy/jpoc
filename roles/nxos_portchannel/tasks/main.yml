@@ -1,6 +1,6 @@
 ---
 - name: NXOS | Delete Port-Channel 21
-  nxos_interface:
+  nxos_portchannel:
     interface: port-channel21
     description: ANS-LEAF-RED
-    state: absent
+    state: present
