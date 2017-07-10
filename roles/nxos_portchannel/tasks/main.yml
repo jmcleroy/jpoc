@@ -1,7 +1,7 @@
 ---
 - name: NXOS | Delete Port-Channel 21
   nxos_portchannel:
-    group: port-channel21
+    group: 21
     members: ['Ethernet1/1','Ethernet1/2']
     mode: 'active'
     state: present
