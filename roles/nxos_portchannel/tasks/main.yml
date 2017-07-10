@@ -2,4 +2,4 @@
 - name: NXOS | Delete Port-Channel 21
   nxos_portchannel:
     group: port-channel21
-    state: present
+    state: absent
