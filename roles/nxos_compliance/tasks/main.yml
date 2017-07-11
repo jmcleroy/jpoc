@@ -3,5 +3,5 @@
   nxos_config:
     host: '{{ inventory_hostname }}'
     src: vars/nxos.j2
-  transport: nxapi
+    transport: nxapi
 
