@@ -10,3 +10,4 @@
       commands:
         - show version
         - show log
+        - show ip int br
