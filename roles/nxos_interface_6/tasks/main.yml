@@ -4,4 +4,3 @@
     host: "{{ inventory_hostname }}"
     lines:
       - interface {{ interface_port }} description {{ interface_description }}
-    transport: cli
