@@ -4,4 +4,4 @@
   gather_facts: no
 
   roles:
-    - nxos_interface_6
+  - nxos_interface_6
