@@ -8,4 +8,4 @@
     ios_command:
       host: '{{ inventory_hostname }}'
       commands:
-      - show running PO1
+      - show run int Po1
