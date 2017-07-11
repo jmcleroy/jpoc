@@ -2,6 +2,6 @@
 - name: Check compliance
   nxos_config:
     host: '{{ inventory_hostname }}'
-    transport: nxapi
+    transport: cli
     src: vars/nxos.j2
 
