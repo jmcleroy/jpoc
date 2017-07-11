@@ -1,9 +1,7 @@
 ---
 - name: Sets interface information
   nxos_interface:
-    host: "{{ inventory_hostname }}"
     interface: "{{ interface }}"
     admin_state: "{{ admin_state }}"
     description: "{{ interface_description }}"
-    transport: cli
 
