@@ -41,8 +41,8 @@
   nxos_command:
     commands:
       - show interface {{ port }}
-    wait_for:
-      - result[0] contains ‘is down’
+#    wait_for:
+#      - result[0] contains ‘is down’
 
 
 - name: BFD Check
