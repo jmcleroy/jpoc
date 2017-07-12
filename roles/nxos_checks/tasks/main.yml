@@ -42,7 +42,7 @@
     commands:
       - show interface {{ port }}
 #    wait_for:
-#      - result[0] contains ‘is down’
+#      - result[0] contains down
 
 
 - name: BFD Check
