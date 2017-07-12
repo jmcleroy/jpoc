@@ -7,7 +7,6 @@
       - show interface
       - show running-config all
       - show ip interface brief vrf all | include {{ ansible_host }}
-      - show run interface {{ port }}
   register: output
 
 # common facts
@@ -33,10 +32,6 @@
   set_fact:
     config_lines: "{{ config.split('\n') }}"
 
-#- name: Port-channel Config
-#  set_fact:
-#    portchannel: "{{ output.stdout[5] }}"
-
 - name: Port-channel Check
   nxos_command:
     commands:
@@ -44,11 +39,12 @@
     wait_for:
       - result[0] contains "port-channel{{ port }} is down"
 
-
 - name: BFD Check
   nxos_command:
     commands:
       - show bfd neighbors interface port-channel{{ port }}
+    wait_for:
+      - result [0] contains ""
 
 - name: Auto Cable Testing
   nxos_command:
@@ -60,3 +56,6 @@
 - name: BGP check
   nxos_command:
     commands:
+      - show bgp ipv4 unicast neighbors {{ bgp_ip_address }} | inc "BGP state"
+    wait_for:
+      - result[0] contains "BGP state = Shut"
