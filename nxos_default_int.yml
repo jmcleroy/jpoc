@@ -4,4 +4,4 @@
   gather_facts: no
 
   roles:
-    - nxos_default_init
+    - nxos_default_int
