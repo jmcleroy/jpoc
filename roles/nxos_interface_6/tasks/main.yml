@@ -1,6 +1,5 @@
 ---
 - name: Set Interface Description
   nxos_config:
-    host: "{{ inventory_hostname }}"
     lines:
       - interface {{ interface_port }} {{ shut_noshut }}
