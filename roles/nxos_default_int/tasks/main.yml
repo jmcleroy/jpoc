@@ -2,7 +2,7 @@
 - name: Gather port configuration
   nxos_command:
     commands:
-      - show runn {{ interface_port }}
+      - show run {{ interface_port }}
 
 - name: Clear configuration
   nxos_config:
