@@ -42,7 +42,7 @@
     commands:
       - show interface port-channel{{ port }}
     wait_for:
-      - result[0] contains "port-channel{{ port }} is up"
+      - result[0] contains "port-channel{{ port }} is down"
 
 
 - name: BFD Check
