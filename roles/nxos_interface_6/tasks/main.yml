@@ -3,4 +3,4 @@
   nxos_config:
     host: "{{ inventory_hostname }}"
     lines:
-      - interface {{ interface_port }} description {{ interface_description }}
+      - interface {{ interface_port }} {{ shut_noshut }}
