@@ -43,8 +43,6 @@
   nxos_command:
     commands:
       - show bfd neighbors interface port-channel{{ port }}
-    wait_for:
-      - result [0] contains ""
 
 - name: Auto Cable Testing
   nxos_command:
