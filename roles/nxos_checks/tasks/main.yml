@@ -53,7 +53,7 @@
 - name: Auto Cable Testing
   nxos_command:
     commands:
-      - show interfrace {{ interface_add }} description
+      - show interface {{ interface_add }} description
     wait_for:
       - result[0]
 
