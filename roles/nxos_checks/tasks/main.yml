@@ -33,9 +33,9 @@
   set_fact:
     config_lines: "{{ config.split('\n') }}"
 
-- name: Prort-channel Config
-  set_fact:
-    portchannel: "{{ output.stdout[5] }}"
+#- name: Port-channel Config
+#  set_fact:
+#    portchannel: "{{ output.stdout[5] }}"
 
 - name: Port-channel Check
   nxos_command:
