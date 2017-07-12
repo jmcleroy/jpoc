@@ -1,37 +1,37 @@
 ---
-- name: collect output from nxos device
-  nxos_command:
-    host: "{{ inventory_hostname }}"
-    commands:
-      - show version
-      - show interface
-      - show running-config all
-      - show ip interface brief vrf all | include {{ ansible_host }}
-      - show run interface {{ port }}
-  register: output
+#- name: collect output from nxos device
+#  nxos_command:
+#    host: "{{ inventory_hostname }}"
+#    commands:
+#      - show version
+#      - show interface
+#      - show running-config all
+#      - show ip interface brief vrf all | include {{ ansible_host }}
+#      - show run interface {{ port }}
+#  register: output
 
 # common facts
 #
 
-- name: set hostname fact
-  set_fact:
-    hostname: "{{ output.stdout[0] | regex_findall('\\s+Device name:\\s+(\\S+)') | first }}"
+#- name: set hostname fact
+#  set_fact:
+#    hostname: "{{ output.stdout[0] | regex_findall('\\s+Device name:\\s+(\\S+)') | first }}"
 
-- name: set interfaces fact
-  set_fact:
-    interfaces: "{{ output.stdout[1] | regex_findall('\n([E|L|P|V]\\S+)') }}"
+#- name: set interfaces fact
+#  set_fact:
+#    interfaces: "{{ output.stdout[1] | regex_findall('\n([E|L|P|V]\\S+)') }}"
 
-- name: set version fact
-  set_fact:
-    version: "{{ output.stdout[0] | regex_findall('(system|NXOS):\\s+version\\s+(\\S+)') | first }}"
+#- name: set version fact
+#  set_fact:
+#    version: "{{ output.stdout[0] | regex_findall('(system|NXOS):\\s+version\\s+(\\S+)') | first }}"
 
-- name: set config fact
-  set_fact:
-    config: "{{ output.stdout[2] }}"
+#- name: set config fact
+#  set_fact:
+#    config: "{{ output.stdout[2] }}"
 
-- name: set config_lines fact
-  set_fact:
-    config_lines: "{{ config.split('\n') }}"
+#- name: set config_lines fact
+#  set_fact:
+#    config_lines: "{{ config.split('\n') }}"
 
 #- name: Prort-channel Config
 #  set_fact:
