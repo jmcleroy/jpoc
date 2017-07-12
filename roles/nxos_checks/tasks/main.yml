@@ -40,7 +40,7 @@
 - name: Port-channel Check
   nxos_command:
     commands:
-      - show interface {{ port }} status
+      - show interface {{ port }}
 
 - name: BFD Check
   nxos_command:
