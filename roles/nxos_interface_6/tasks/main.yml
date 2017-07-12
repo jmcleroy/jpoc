@@ -2,4 +2,5 @@
 - name: Set Interface Description
   nxos_config:
     lines:
-      - interface {{ interface_port }} {{ shut_noshut }}
+      - {{ shut_noshut }}
+    parents: interface {{ interface_port }}
