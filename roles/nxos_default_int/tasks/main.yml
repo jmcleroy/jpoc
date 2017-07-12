@@ -7,5 +7,4 @@
 - name: Clear configuration
   nxos_config:
     lines:
-      - default interface
-    parents: interface {{ interface_port }}
+      - default interface {{ interface_port }}
