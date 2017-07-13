@@ -3,5 +3,4 @@
   nxos_config:
     host: '{{ inventory_hostname }}'
     src: vars/nxos.j2
-    src: {{ base_jinja }}
     transport: cli
