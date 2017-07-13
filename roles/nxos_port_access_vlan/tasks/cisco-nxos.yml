@@ -31,4 +31,3 @@
       nxos_config:
         src: "{{ backup_config.backup_path }}"
         save: yes
-        provider: "{{ cli }}"
