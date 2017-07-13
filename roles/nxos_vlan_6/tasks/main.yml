@@ -1,0 +1,31 @@
+- debug: msg="START ios.yaml"
+
+- name: Backup current config
+  nxos_config:
+    backup: yes
+  register: backup_config
+
+- debug:
+    var: backup_config.backup_path
+    verbosity: 3
+
+- block:
+    - name: Add VLAN
+      nxos_config:
+        lines: interface vlan{{ vlan_port }}
+      when: input_state == 'add'
+
+    - name: Remove VLAN
+      nxos_config:
+        lines: no vlan{{ vlan_port }}
+      when: input_state == 'remove'
+
+  rescue:
+    - debug:
+        var: backup_config.backup_path
+        verbosity: 3
+
+    - name: Reset to backed-up config
+      nxos_config:
+        src: "{{ backup_config.backup_path }}"
+        save: yes
