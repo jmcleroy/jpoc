@@ -1,0 +1,8 @@
+---
+- name: "include {{ device_os }} tasks"
+  include: "{{ item }}"
+  with_first_found:
+    - files: "{{ device_os }}.yaml"
+      skip: true
+      paths: tasks
+

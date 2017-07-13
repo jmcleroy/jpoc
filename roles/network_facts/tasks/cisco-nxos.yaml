@@ -1,0 +1,50 @@
+---
+- name: collect output from nxos device
+  nxos_command:
+    commands:
+      - show version
+      - show interface
+      - show running-config all
+      - show ip interface brief vrf all | include {{ ansible_host }}
+    provider: "{{ cli }}"
+  register: output
+
+# common facts
+#
+
+- name: set hostname fact
+  set_fact: 
+    hostname: "{{ output.stdout[0] | regex_findall('\\s+Device name:\\s+(\\S+)') | first }}"
+
+- name: set interfaces fact
+  set_fact: 
+    interfaces: "{{ output.stdout[1] | regex_findall('\n([E|L|P|V]\\S+)') }}"
+
+- name: set version fact
+  set_fact: 
+    version: "{{ output.stdout[0] | regex_findall('(system|NXOS):\\s+version\\s+(\\S+)') | first }}"
+
+- name: set config fact
+  set_fact: 
+    config: "{{ output.stdout[2] }}"
+
+- name: set config_lines fact
+  set_fact: 
+    config_lines: "{{ config.split('\n') }}"
+
+# Gets the first item of stdout (should only be 1) and splits it on whitespace into a list.
+# The first item in that list will be the management interface name.
+- name: set management interface name fact
+  set_fact:
+    mgmt_interface_name: "{{ output.stdout[3].split()[0] }}"
+
+
+- nxos_command:
+    commands:
+      - show vrf interface {{ mgmt_interface_name }} | i {{ mgmt_interface_name }}
+    provider: "{{ cli }}"
+  register: output
+
+- set_fact:
+    vrf_name: "{{ output.stdout[0].split()[1] }}"
+

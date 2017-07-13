@@ -1,0 +1,36 @@
+---
+- name: collect output from eos device
+  eos_command:
+    commands:
+      - show version | json
+      - show hostname | json
+      - show interfaces | json
+      - show running-config all | json
+      - show ip interface brief | include {{ ansible_host }}
+    provider: "{{ cli }}"
+  register: output
+
+# common facts
+#
+
+- name: set hostname fact
+  set_fact: 
+    hostname: "{{ output.stdout[1].hostname }}"
+
+- name: set interfaces fact
+  set_fact: 
+    interfaces: "{{ output.stdout[2] }}"
+
+- name: set version fact
+  set_fact: 
+    version: "{{ output.stdout[0].version }}"
+
+- name: set config fact
+  set_fact: 
+    config: "{{ output.stdout[3] }}"
+
+# Gets the first item of stdout (should only be 1) and splits it on whitespace into a list.
+# The first item in that list will be the management interface name.
+- name: set management interface name fact
+  set_fact:
+    mgmt_interface_name: "{{ output.stdout[4].split()[0] }}"

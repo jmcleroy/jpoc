@@ -1,0 +1,18 @@
+# common facts
+hostname
+interfaces
+config
+version
+
+
+# network device facts
+device_mac_address (remove?)
+device_image
+device_serial_number
+device_model
+device_memfree
+device_memtotal
+
+
+# device specific facts
+

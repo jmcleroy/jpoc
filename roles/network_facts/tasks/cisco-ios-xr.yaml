@@ -1,0 +1,44 @@
+---
+- name: collect output from iosxr device
+  iosxr_command:
+    commands:
+      - show version
+      - show running-config
+      - show interfaces
+      - show ipv4 interface brief | include {{ ansible_host }}
+      - show ipv4 vrf all interface brief | include {{ ansible_host }}
+    provider: "{{ cli }}"
+  register: output
+
+# common facts
+#
+
+- name: set hostname fact
+  set_fact: 
+    hostname: "{{ output.stdout[1] | regex_search('\nhostname (.+)', '\\1') | first }}"
+
+- name: set interfaces fact
+  set_fact: 
+    interfaces: "{{ output.stdout[2] | regex_findall('\n([B|C|F|G|H|I|L|M|N|P|S|T]\\S+)') }}"
+
+- name: set version fact
+  set_fact: 
+    version: "{{ output.stdout[0] | regex_search('Version (\\S+)\\[', '\\1') | first }}"
+
+- name: set config fact
+  set_fact: 
+    config: "{{ output.stdout[1] }}"
+
+- name: set config_lines fact
+  set_fact: 
+    config_lines: "{{ config.split('\n') }}"
+
+# Gets the first item of stdout (should only be 1) and splits it on whitespace into a list.
+# The first item in that list will be the management interface name.
+- name: set management interface name fact
+  set_fact:
+    mgmt_interface_name: "{{ output.stdout[3].split()[0] }}"
+
+- name: set vrf interface name fact
+  set_fact:
+    vrf_name: "{{ output.stdout[4].split()[-1] }}"
