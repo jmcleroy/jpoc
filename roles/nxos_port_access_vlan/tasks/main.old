@@ -1,0 +1,3 @@
+# tasks file for config_port
+- name: include device specific tasks
+  include: "{{ device_os }}.yml"

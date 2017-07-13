@@ -1,3 +1,33 @@
-# tasks file for config_port
-- name: include device specific tasks
-  include: "{{ device_os }}.yml"
+- debug: msg="START ios.yaml"
+
+- name: Backup current config
+  nxos_config:
+    backup: yes
+  register: backup_config
+
+- debug:
+    var: backup_config.backup_path
+    verbosity: 3
+
+- block:
+    - name: Add Access VLAN
+      nxos_config:
+        lines: switchport access vlan {{ input_access_vlan }}
+        parents: interface {{ input_interface }}
+      when: input_state == 'add'
+
+    - name: Remove Access VLAN
+      nxos_config:
+        lines: no switchport access vlan {{ input_access_vlan }}
+        parents: interface {{ input_interface }}
+      when: input_state == 'remove'
+
+  rescue:
+    - debug:
+        var: backup_config.backup_path
+        verbosity: 3
+
+    - name: Reset to backed-up config
+      nxos_config:
+        src: "{{ backup_config.backup_path }}"
+        save: yes
