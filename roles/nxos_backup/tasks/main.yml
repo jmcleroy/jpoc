@@ -12,8 +12,7 @@
 
 - name: create backup paths
   file:
-#    path: "{{ backup_path }}/{{ inventory_hostname }}"
-    path: /tmp/{{ inventory_hostname }}
+    path: "{{ backup_path }}/{{ inventory_hostname }}"
     state: directory
   delegate_to: localhost
 
