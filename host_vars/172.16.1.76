@@ -1,5 +1,5 @@
-bgp_asn: 65333
-bgp_router_id: 10.88.0.22
+bgp_asn: 1
+bgp_router_id: 172.16.1.76
 
 bgp_address_families:
   - { afi: ipv4, safi: unicast }
