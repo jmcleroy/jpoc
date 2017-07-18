@@ -73,18 +73,18 @@
    lines:
     - ['router bgp {{ bgp_asn }}']
 
-#- name: Ensure BGP ASN exists
-#  nxos_bgp:
-#    asn: "{{ bgp_asn }}"
-#    router_id: "{{ bgp_router_id }}"
-#    state: present
+- name: Ensure BGP ASN exists
+  nxos_bgp:
+    asn: "{{ bgp_asn }}"
+    router_id: "{{ bgp_router_id }}"
+    state: present
 
-#- name: BASE BGP AF CONFIG
-#  nxos_bgp_af:
-#    asn: "{{ bgp_asn }}"
-#    afi: "{{ item.afi }}"
-#    safi: "{{ item.safi }}"
-#  with_items: "{{ bgp_address_families }}"
+- name: BASE BGP AF CONFIG
+  nxos_bgp_af:
+    asn: "{{ bgp_asn }}"
+    afi: "{{ item.afi }}"
+    safi: "{{ item.safi }}"
+  with_items: "{{ bgp_address_families }}"
 
 - name: BASE NEIGHBOR CONFIG
   nxos_bgp_neighbor:
