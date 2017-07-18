@@ -66,11 +66,11 @@
    lines:
     - ['router bgp {{ bgp_asn }}']
 
-- name: Ensure BGP ASN exists
-  nxos_bgp:
-    asn: "{{ bgp_asn }}"
-    router_id: "{{ bgp_router_id }}"
-    state: present
+#- name: Ensure BGP ASN exists
+#  nxos_bgp:
+#    asn: "{{ bgp_asn }}"
+#    router_id: "{{ bgp_router_id }}"
+#    state: present
 
 - name: BASE BGP AF CONFIG
   nxos_bgp_af:
