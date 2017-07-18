@@ -1,37 +1,32 @@
-#working
-#- name: ENABLE NECESSARY FEATURES
-#  nxos_feature:
-#    feature: "{{item.feature }}"
-#  with_items: "{{ features }}"
+---
+- name: ENABLE NECESSARY FEATURES
+  nxos_feature:
+    feature: "{{item.feature }}"
+  with_items: "{{ features }}"
 
-#working
-#- name: ENABLE NV OVERLAY EVPN
-#  nxos_evpn_global:
-#    nv_overlay_evpn: true
+- name: ENABLE NV OVERLAY EVPN
+  nxos_evpn_global:
+    nv_overlay_evpn: true
 
-#working
-#- name: ASSIGN ANYCAST GATEWAY
-#  nxos_overlay_global:
-#    anycast_gateway_mac: "000E.000E.000E"
+- name: ASSIGN ANYCAST GATEWAY
+  nxos_overlay_global:
+    anycast_gateway_mac: "000E.000E.000E"
 
-#working
-#- name: Assign Anycast GW
-#  nxos_config:
-#    lines: ['fabric forwarding anycast-gateway-mac DEAD.BEEF.CAFE']
+- name: Assign Anycast GW
+  nxos_config:
+    lines: ['fabric forwarding anycast-gateway-mac DEAD.BEEF.CAFE']
 
-#working
-#- name: SET DOMAIN NAME
-#  nxos_config:
-#    lines: ['ip domain-name t-mobile.lab']
-#    force: yes
+- name: SET DOMAIN NAME
+  nxos_config:
+    lines: ['ip domain-name t-mobile.lab']
+    force: yes
 
-#working
-#- name: DNS SERVER HOST CONFIGURATION
-#  nxos_config:
-#    lines: ['ip name-server {{ item.server }} use-vrf {{ item.vrf }}']
-#    force: yes
-#  with_items:
-#    - "{{ name_servers }}"
+- name: DNS SERVER HOST CONFIGURATION
+  nxos_config:
+    lines: ['ip name-server {{ item.server }} use-vrf {{ item.vrf }}']
+    force: yes
+  with_items:
+    - "{{ name_servers }}"
 
 #OPEN BUG REPORT
 #- name: configure name servers with VRF support
@@ -42,37 +37,30 @@
 #    state: present
 
 
-#working
-#- name: set port MTU
-#  nxos_system:
-#    system_mtu: 9216
+- name: set port MTU
+  nxos_system:
+    system_mtu: 9216
 
-#working
-#- name: Logging Configuration
-#  nxos_config:
-#    lines:
-#    - 'logging server {{ item.server }} {{ item.log_level }} use-vrf {{ item.vrf }} facility {{ item.facility }}'
-#    - 'logging source-interface {{ item.source }}'
-#    force: yes
-#  with_items:
-#  - "{{ logging }}"
+- name: Logging Configuration
+  nxos_config:
+    lines:
+    - 'logging server {{ item.server }} {{ item.log_level }} use-vrf {{ item.vrf }} facility {{ item.facility }}'
+    - 'logging source-interface {{ item.source }}'
+    force: yes
+  with_items:
+  - "{{ logging }}"
 
-#working
-#- name: Create ACL
-#  nxos_acl:
-#    name: "{{ item.name }}"
-#    seq: "{{ item.seq }}"
-#    action: "{{ item.action }}"
-#    proto: "{{ item.proto }}"
-#    src: "{{ item.src }}"
-#    dest: "{{ item.dest }}"
-#  with_items: "{{ acls }}"
 
-#bug report
-#- name: Ensure BGP ASN exists
-#  nxos_config:
-#   lines:
-#    - ['router bgp {{ bgp_asn }}']
+- name: Create ACL
+  nxos_acl:
+    name: "{{ item.name }}"
+    seq: "{{ item.seq }}"
+    action: "{{ item.action }}"
+    proto: "{{ item.proto }}"
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+  with_items: "{{ acls }}"
+
 
 - name: Ensure BGP ASN exists
   nxos_bgp:
