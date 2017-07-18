@@ -12,6 +12,8 @@ features:
   - { feature:  dhcp }
   - { feature:  lldp }
   - { feature:  bfd }
+  - { feature:  nv overlay }
+  - { feature:  vn-segment-vlan-based }
 
 name_servers:
   - { server: 5.232.32.63, vrf: management }
