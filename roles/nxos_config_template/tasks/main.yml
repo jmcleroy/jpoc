@@ -10,8 +10,12 @@
       - { server: 5.232.32.63, vrf: management}
     lookup_source: mgmt0
 
-- name: Ensure BGP ASN exists
-  nxos_bgp:
-    asn: "{{ bgp_asn }}"
-    router_id: "{{ bgp_router_id }}"
-    state: present
+#- name: Ensure BGP ASN exists
+#  nxos_bgp:
+#    asn: "{{ bgp_asn }}"
+#    router_id: "{{ bgp_router_id }}"
+#    state: present
+
+- name: set port MTU
+  nxos_system:
+    system_mtu: 9216
