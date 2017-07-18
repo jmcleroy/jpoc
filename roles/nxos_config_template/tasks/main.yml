@@ -26,7 +26,6 @@
   nxos_config:
     lines: ['ip name-server {{ item.server }} use-vrf {{ item.vrf }}']
     force: yes
-    provider: "{{ nxos_provider }}"
   with_items:
     - "{{ name_servers }}"
 
