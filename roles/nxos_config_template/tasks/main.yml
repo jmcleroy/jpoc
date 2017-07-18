@@ -90,6 +90,7 @@
     afi: ipv4
     safi: unicast
     send_community: both
+    state: present
   with_items: "{{ bgp_neighbors }}"
 
 - name: CONFIGURE IPV4 UNICAST ADDRESS FAMILY
