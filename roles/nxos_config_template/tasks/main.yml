@@ -1,0 +1,10 @@
+---
+- name: ASSIGN ANYCAST GATEWAY
+  nxos_overlay_global:
+    anycast_gateway_mac: "DEAD.BEEF.CAFE"
+
+- name: DNS SERVER HOST CONFIGURATION
+  nxos_system:
+    name_servers:
+      - { server: 5.232.32.63, vrf: management}
+    lookup_source: mgmt0
