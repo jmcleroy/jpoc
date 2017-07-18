@@ -9,3 +9,10 @@
     name_servers:
       - { server: 5.232.32.63, vrf: management}
     lookup_source: mgmt0
+
+- name: Ensure BGP ASN exists
+  nxos_bgp:
+    asn: "{{ bgp_asn }}"
+    router_id: "{{ bgp_router_id }}"
+    provider: "{{ nxos_provider }}"
+    state: present
