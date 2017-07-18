@@ -98,5 +98,6 @@
     neighbor: "{{ item.neighbor }}"
     afi: l2vpn
     safi: evpn
+    send_community: extended
   with_items: "{{ bgp_neighbors }}"
 
