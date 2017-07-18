@@ -29,7 +29,12 @@
  # with_items:
  #   - "{{ name_servers }}"
 
-
+- name: configure name servers with VRF support
+  nxos_system:
+    name_servers:
+      - 8.8.8.8
+      - 8.8.4.4
+    state: present
 
 - name: configure name servers with VRF support
   nxos_system:
