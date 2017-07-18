@@ -36,6 +36,7 @@
     name_servers:
       - { server: 8.8.8.8, vrf: management }
       - { server: 8.8.4.4, vrf: management }
+    state: present
 
 
 
