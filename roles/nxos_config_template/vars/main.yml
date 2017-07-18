@@ -1,0 +1,48 @@
+features:
+  - { feature:  nxapi }
+  - { feature:  tacacs+ }
+  - { feature:  scheduler }
+  - { feature:  ospf }
+  - { feature:  bgp }
+  - { feature:  pim }
+  - { feature:  interface-vlan }
+  - { feature:  hsrp }
+  - { feature:  udld }
+  - { feature:  lacp }
+  - { feature:  dhcp }
+  - { feature:  lldp }
+  - { feature:  bfd }
+  - { feature:  "nv overlay" }
+  - { feature:  vn-segment-vlan-based }
+
+name_servers:
+  - { server: 5.232.32.63, vrf: management }
+
+domain:
+  - { name: t-mobile.lab }
+
+logging:
+  - { server: 5.232.36.236, log_level: 6, vrf: management, facility: syslog, source: mgmt0 }
+
+
+acls:
+#  - { name: SNMP-RO-NMNET, remark: '+----------------------------------------------------------------------', seq 10, action: remark}
+#  - { name: SNMP-RO-NMNET, remark: '+ SNMP Read-Only Acesss (NMNET)', seq 20, action: remark}
+#  - { name: SNMP-RO-NMNET, remark: '+----------------------------------------------------------------------', seq 30, action: remark}
+  - { name: SNMP-RO-NMNET, src: 5.0.0.0/8, dest: any, seq: 40, action: permit, proto: ip, state: present }
+  - { name: SNMP-RO-NMNET, src: 10.169.64.0/18, dest: any, seq: 50, action: permit, proto: ip, state: present }
+  - { name: SNMP-RO-NMNET, src: 10.25.172.73/32, dest: any, seq: 60, action: permit, proto: ip, state: present }
+  - { name: SNMP-RO-NMNET, src: 5.232.40.91/32, dest: any, seq: 70, action: permit, proto: ip, state: present }
+  - { name: SNMP-RO-NMNET, src: 172.24.29.126/32, dest: any, seq: 80, action: permit, proto: ip, state: present }
+
+#  - { name: SNMP-RW-NMNET, remark: '+----------------------------------------------------------------------', seq 10, action: remark, state: present}
+#  - { name: SNMP-RW-NMNET, remark: '+ SNMP Read-Write Acesss (NMNET)', seq: 20, action: remark, state: present}
+#  - { name: SNMP-RW-NMNET, remark: '+----------------------------------------------------------------------', seq 30, action: remark, state: present}
+  - { name: SNMP-RO-NMNET, src: 5.0.0.0/8, dest: any, seq: 40, action: permit, proto: ip, state: present }
+
+vlans:
+  - { vlan_id: 700, vni: 10700, name: ansible-test-vlan}
+
+vlan_svi:
+  - { vlan_id: 700, addr: 10.0.10.1, mask: 24, name: ansible-test-svi}
+
