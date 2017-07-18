@@ -1,0 +1,16 @@
+bgp_asn: 1
+bgp_router_id: 172.16.1.75
+
+bgp_address_families:
+  - { afi: ipv4, safi: unicast }
+  - { afi: l2vpn, safi: evpn }
+
+bgp_neighbors:
+  - { remote_as: 65137, neighbor: 10.88.128.57 }
+  - { remote_as: 65333, neighbor: 10.88.34.1 }
+
+l3_interfaces:
+   - { interface: Loopback0, description: "AREPDC07-Loop0", addr: 10.88.0.22, mask: 32 }
+   - { interface: Loopback1, description: "AREPDC07-VXLAN", addr: 10.0.2.1, mask: 32 }
+   - { interface: port-channel1, description: "AREPDC08", addr: 10.88.34.0, mask: 31 }
+   - { interface: port-channel2, description: "506.02-DREPDC23-Po8", addr: 10.88.128.57, mask: 31 }
