@@ -14,5 +14,4 @@
   nxos_bgp:
     asn: "{{ bgp_asn }}"
     router_id: "{{ bgp_router_id }}"
-    provider: "{{ nxos_provider }}"
     state: present
