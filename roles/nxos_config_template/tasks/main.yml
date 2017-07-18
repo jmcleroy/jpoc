@@ -8,14 +8,13 @@
     nv_overlay_evpn: true
 
 # Open new bug report if issue still persists
-#- name: ASSIGN ANYCAST GATEWAY
-#  nxos_overlay_global:
-#    anycast_gateway_mac: "000E.000E.000E"
+- name: ASSIGN ANYCAST GATEWAY
+  nxos_overlay_global:
+    anycast_gateway_mac: "000E.000E.000E"
 
 - name: Assign Anycast GW
   nxos_config:
     lines: ['fabric forwarding anycast-gateway-mac DEAD.BEEF.CAFE']
-    force: yes
 
 - name: SET DOMAIN NAME
   nxos_config:
@@ -29,12 +28,12 @@
   with_items:
     - "{{ name_servers }}"
 
-#- name: configure name servers with VRF support
-#  nxos_system:
-#    name_servers:
-#      - { server: 8.8.8.8, vrf: management }
-#      - { server: 8.8.4.4, vrf: management }
-#    state: present
+- name: configure name servers with VRF support
+  nxos_system:
+    name_servers:
+      - { server: 8.8.8.8, vrf: management }
+      - { server: 8.8.4.4, vrf: management }
+    state: present
 
 
 
