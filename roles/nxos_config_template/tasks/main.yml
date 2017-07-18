@@ -83,15 +83,14 @@
     state: present
   with_items: "{{ bgp_neighbors }}"
 
-# name: CONFIGURE IPV4 UNICAST ADDRESS FAMILY
-#  nxos_bgp_neighbor_af:
-#    asn: "{{ bgp_asn }}"
-#    neighbor: "{{ item.neighbor }}"
-#    afi: ipv4
-#    safi: unicast
-#    send_community: both
-#    state: present
-#  with_items: "{{ bgp_neighbors }}"
+ name: CONFIGURE IPV4 UNICAST ADDRESS FAMILY
+  nxos_bgp_neighbor_af:
+    asn: "{{ bgp_asn }}"
+    neighbor: "{{ item.neighbor }}"
+    afi: ipv4
+    safi: unicast
+    state: present
+  with_items: "{{ bgp_neighbors }}"
 
 - name: CONFIGURE IPV4 UNICAST ADDRESS FAMILY
   nxos_bgp_neighbor_af:
@@ -99,6 +98,5 @@
     neighbor: "{{ item.neighbor }}"
     afi: l2vpn
     safi: evpn
-    send_community: both
   with_items: "{{ bgp_neighbors }}"
 
