@@ -1,21 +1,106 @@
----
-#- name: ASSIGN ANYCAST GATEWAY
-#  nxos_overlay_global:
-#    anycast_gateway_mac: "DEAD.BEEF.CAFE"
-#  transport: cli
+- name: ENABLE NECESSARY FEATURES
+  nxos_feature:
+    feature: "{{item.feature }}"
+  with_items: "{{ features }}"
+
+- name: ENABLE NV OVERLAY EVPN
+  nxos_evpn_global:
+    nv_overlay_evpn: true
+
+- name: ASSIGN ANYCAST GATEWAY
+  nxos_overlay_global:
+    anycast_gateway_mac: "000E.000E.000E"
+
+- name: Assign Anycast GW
+  nxos_config:
+    lines: ['fabric forwarding anycast-gateway-mac DEAD.BEEF.CAFE']
+    force: yes
+
+- name: SET DOMAIN NAME
+  nxos_config:
+    lines: ['ip domain-name t-mobile.lab']
+    force: yes
+
+- name: DNS SERVER HOST CONFIGURATION
+  nxos_config:
+    lines: ['ip name-server {{ item.server }} use-vrf {{ item.vrf }}']
+    force: yes
+    provider: "{{ nxos_provider }}"
+  with_items:
+    - "{{ name_servers }}"
+
+
 
 - name: DNS SERVER HOST CONFIGURATION
   nxos_system:
     name_servers:
-      - { server: 5.232.32.63, vrf: management}
+     - { server: 5.232.32.63, vrf: management}
     lookup_source: mgmt0
 
-#- name: Ensure BGP ASN exists
-#  nxos_bgp:
-#    asn: "{{ bgp_asn }}"
-#    router_id: "{{ bgp_router_id }}"
-#    state: present
+
 
 - name: set port MTU
-  nxos_system:
-    system_mtu: 9216
+   nxos_system:
+     system_mtu: 9216
+
+- name: Logging Configuration
+  nxos_config:
+    lines:
+    - 'logging server {{ item.server }} {{ item.log_level }} use-vrf {{ item.vrf }} facility {{ item.facility }}'
+    - 'logging source-interface {{ item.source }}'
+    force: yes
+  with_items:
+  - "{{ logging }}"
+
+- name: Create ACL
+  nxos_acl:
+    name: "{{ item.name }}"
+    seq: "{{ item.seq }}"
+    action: "{{ item.action }}"
+    proto: "{{ item.proto }}"
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+  with_items: "{{ acls }}"
+
+- name: Ensure BGP ASN exists
+  nxos_config:
+   lines:
+    - ['router bgp {{ bgp_asn }}']
+
+   nxos_bgp:
+     asn: "{{ bgp_asn }}"
+     router_id: "{{ bgp_router_id }}"
+     state: present
+
+- name: BASE BGP AF CONFIG
+  nxos_bgp_af:
+    asn: "{{ bgp_asn }}"
+    afi: "{{ item.afi }}"
+    safi: "{{ item.safi }}"
+  with_items: "{{ bgp_address_families }}"
+
+- name: BASE NEIGHBOR CONFIG
+  nxos_bgp_neighbor:
+    asn: "{{ bgp_asn }}"
+    neighbor: "{{ item.neighbor }}"
+    remote_as: "{{ item.remote_as }}"
+  with_items: "{{ bgp_neighbors }}"
+
+- name: CONFIGURE IPV4 UNICAST ADDRESS FAMILY
+  nxos_bgp_neighbor_af:
+    asn: "{{ bgp_asn }}"
+    neighbor: "{{ item.neighbor }}"
+    afi: ipv4
+    safi: unicast
+     send_community: both
+  with_items: "{{ bgp_neighbors }}"
+
+- name: CONFIGURE IPV4 UNICAST ADDRESS FAMILY
+  nxos_bgp_neighbor_af:
+    asn: "{{ bgp_asn }}"
+    neighbor: "{{ item.neighbor }}"
+    afi: l2vpn
+    safi: evpn
+    send_community: both
+  with_items: "{{ bgp_neighbors }}"
+
