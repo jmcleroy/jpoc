@@ -31,11 +31,11 @@
 
 
 
-- name: DNS SERVER HOST CONFIGURATION
+- name: configure name servers with VRF support
   nxos_system:
     name_servers:
-      - { server: 5.232.32.63, vrf: management}
-
+      - { server: 8.8.8.8, vrf: mgmt }
+      - { server: 8.8.4.4, vrf: mgmt }
 
 
 
