@@ -41,8 +41,8 @@
 
 
 - name: set port MTU
-   nxos_system:
-     system_mtu: 9216
+  nxos_system:
+    system_mtu: 9216
 
 - name: Logging Configuration
   nxos_config:
