@@ -84,6 +84,7 @@
     asn: "{{ bgp_asn }}"
     neighbor: "{{ item.neighbor }}"
     remote_as: "{{ item.remote_as }}"
+    state: present
   with_items: "{{ bgp_neighbors }}"
 
 - name: CONFIGURE IPV4 UNICAST ADDRESS FAMILY
