@@ -8,9 +8,9 @@
     nv_overlay_evpn: true
 
 # Open new bug report if issue still persists
-- name: ASSIGN ANYCAST GATEWAY
-  nxos_overlay_global:
-    anycast_gateway_mac: "000E.000E.000E"
+#- name: ASSIGN ANYCAST GATEWAY
+#  nxos_overlay_global:
+#    anycast_gateway_mac: "000E.000E.000E"
 
 - name: Assign Anycast GW
   nxos_config:
