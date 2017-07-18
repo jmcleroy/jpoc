@@ -68,10 +68,11 @@
 #    dest: "{{ item.dest }}"
 #  with_items: "{{ acls }}"
 
-- name: Ensure BGP ASN exists
-  nxos_config:
-   lines:
-    - ['router bgp {{ bgp_asn }}']
+#bug report
+#- name: Ensure BGP ASN exists
+#  nxos_config:
+#   lines:
+#    - ['router bgp {{ bgp_asn }}']
 
 - name: Ensure BGP ASN exists
   nxos_bgp:
