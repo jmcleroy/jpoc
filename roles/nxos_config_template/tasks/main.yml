@@ -21,19 +21,19 @@
     lines: ['ip domain-name t-mobile.lab']
     force: yes
 
-#- name: DNS SERVER HOST CONFIGURATION
-#  nxos_config:
-#    lines: ['ip name-server {{ item.server }} use-vrf {{ item.vrf }}']
-#    force: yes
-#  with_items:
-#    - "{{ name_servers }}"
+- name: DNS SERVER HOST CONFIGURATION
+  nxos_config:
+    lines: ['ip name-server {{ item.server }} use-vrf {{ item.vrf }}']
+    force: yes
+  with_items:
+    - "{{ name_servers }}"
 
-- name: configure name servers with VRF support
-  nxos_system:
-    name_servers:
-      - { server: 8.8.8.8, vrf: management }
-      - { server: 8.8.4.4, vrf: management }
-    state: present
+#- name: configure name servers with VRF support
+#  nxos_system:
+#    name_servers:
+#      - { server: 8.8.8.8, vrf: management }
+#      - { server: 8.8.4.4, vrf: management }
+#    state: present
 
 
 
