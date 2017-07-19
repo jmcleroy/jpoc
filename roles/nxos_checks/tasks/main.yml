@@ -33,7 +33,7 @@
     config_lines: "{{ config.split('\n') }}"
 
 - name: display backup_file path
-  debug: config_lines
+  debug: var=config_lines
 
 #- name: Port-channel Check
 #  nxos_command:
