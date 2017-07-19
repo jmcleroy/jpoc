@@ -29,12 +29,12 @@
     - "{{ name_servers }}"
 
 #OPEN BUG REPORT
-#- name: configure name servers with VRF support
-#  nxos_system:
-#    name_servers:
-#      - { server: 8.8.8.8, vrf: management }
-#      - { server: 8.8.4.4, vrf: management }
-#    state: present
+- name: configure name servers with VRF support
+  nxos_system:
+    name_servers:
+      - { server: 8.8.8.8, vrf: management }
+      - { server: 8.8.4.4, vrf: management }
+    state: present
 
 
 - name: set port MTU
