@@ -32,8 +32,8 @@
 - name: configure name servers with VRF support
   nxos_system:
     name_servers:
-      - { server: 8.8.8.8, vrf: management }
-      - { server: 8.8.4.4, vrf: management }
+      - 8.8.4.4
+      - 8.8.8.8
     state: present
 
 
