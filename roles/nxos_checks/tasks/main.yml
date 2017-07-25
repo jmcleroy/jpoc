@@ -31,15 +31,15 @@
   set_fact:
     config_lines: "{{ config.split('\n') }}"
 
-- name: display backup_file path
-  debug: var=config_lines
+#- name: display backup_file path
+#  debug: var=config_lines
 
 - name: Port-channel Check
   nxos_command:
     commands:
       - show interface port-channel{{ port }}
     wait_for:
-      - result[0] contains "port-channel{{ port }} is down"
+      - result[0] contains "port-channel{{ port }} is up"
 
 - name: Auto Cable Testing
   nxos_command:
