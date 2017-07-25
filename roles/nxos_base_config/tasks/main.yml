@@ -2,4 +2,4 @@
 - name: Push Base Config
   nxos_config:
     host: '{{ inventory_hostname }}'
-    src: nxos_base_config/vars/nxos.j2
+    src: 'vars/nxos.j2'
