@@ -1,6 +1,6 @@
 ---
 - name: Check compliance
-  nxos_config:
+  nxos_template:
     host: '{{ inventory_hostname }}'
     src: vars/nxos.j2
     transport: cli
