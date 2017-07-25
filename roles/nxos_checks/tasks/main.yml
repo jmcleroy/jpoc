@@ -41,14 +41,14 @@
     wait_for:
       - result[0] contains "port-channel{{ port }} is up"
 
-- name: Auto Cable Testing
+- name: Interface state
   nxos_command:
     commands:
       - show interface {{ interface_add }}
     wait_for:
       - result[0] contains "is up"
 
-- name: BGP check
+- name: OSPF Check
   nxos_command:
     commands:
       - show routing ospf-1 detail
