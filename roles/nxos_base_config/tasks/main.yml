@@ -2,5 +2,5 @@
 - name: Push Base Config
   nxos_config:
     host: '{{ inventory_hostname }}'
-    src: vars/nxos.j2
+    src: "{{ playbook_dir }}/nxos_base_config/vars/nxos.j2"
     transport: cli
