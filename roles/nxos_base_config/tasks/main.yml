@@ -1,5 +1,5 @@
 ---
 - name: Push Base Config
-  nxos_template:
+  nxos_config:
     host: '{{ inventory_hostname }}'
     src: nxos.j2
