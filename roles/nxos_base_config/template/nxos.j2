@@ -1,0 +1,736 @@
+no feature telnet
+feature tacacs+
+feature scheduler
+feature ospf
+feature bgp
+feature pim
+feature udld
+feature interface-vlan
+feature hsrp
+feature lacp
+feature dhcp
+feature lldp
+feature bfd
+feature sflow
+
+role name Eng
+  description FSC Access
+  rule 8 permit command terminal *
+  rule 7 permit command copy *
+  rule 6 permit command dir *
+  rule 5 permit read
+  rule 4 permit command clear counters *
+  rule 3 permit command show *
+  rule 2 permit command traceroute *
+  rule 1 permit command ping *
+username admin password 5 $1$hst8ffKj$3edQcPL/ZVicrED89NqKY/  role network-admin
+username OO_Automation password 5 $1$pJZ0Z/9Q$qc/emFmprcDzKWA/Gk15U.  role network-admin
+username ops password 5 $1$W8zexc0j$QaValcZAGObQ/cDbEZNty/  role network-admin
+no password strength-check
+
+banner motd ^
+
+
+T-Mobile USA, Inc. 2014 (C) All rights reserved.
+
+All use subject to applicable license agreements.
+
+This system is for the use of authorized users only. Everyone (Users) using
+
+this system consents to the terms and conditions hereunder. The use is for
+
+T-Mobile USA, Inc. (TMUS) authorized users only, and all use must be for TMUS
+
+business only. All data, content, software and other information (Data) on the
+
+system is owned or licensed by TMUS. Users should not disclose or otherwise use
+
+the Data except as expressly authorized by TMUS. No Data may be shared outside
+
+of TMUS systems unless expressly authorized by TMUS. TMUS may monitor Users
+
+usage. Users should contact T-Mobile National Help Desk at 877-878-7326 with
+
+any questions. Users in violation of these terms and conditions are subject to
+
+disciplinary or other action.
+
+^
+
+no ip domain-lookup
+ip domain-name infra
+ip tacacs source-interface mgmt0
+tacacs-server timeout 10
+tacacs-server host 192.168.1.7 key 7 "s1ojq"
+tacacs-server host 192.168.1.8 key 7 "s1ojq"
+aaa group server tacacs+ p1lab
+    server 192.168.1.7
+    server 192.168.1.8
+    use-vrf management
+logging event link-status default
+service unsupported-transceiver
+errdisable recovery cause link-flap
+errdisable recovery cause bpduguard
+ip access-list AirFrame_permit_Global
+  35 permit ip 10.178.79.64/28 any
+  36 permit ip 10.178.79.80/28 any
+ip access-list RCS-FE-FILTER
+  10 remark Permit IMS
+  20 permit ip 10.160.0.0/16 any
+  30 permit ip 10.161.0.0/16 any
+  40 permit ip 10.162.0.0/16 any
+  50 permit ip 10.163.0.0/16 any
+  60 permit ip 10.164.0.0/16 any
+  70 permit ip 10.165.0.0/16 any
+  80 permit ip 10.166.0.0/16 any
+  90 permit ip 10.167.0.0/16 any
+  100 permit ip 10.174.0.0/18 any
+  110 permit ip 10.174.64.0/18 any
+  120 permit ip 10.198.0.0/16 any
+  121 permit ip 10.174.0.0/16 any
+  122 permit ip 10.168.163.0/24 any
+  123 permit ip 10.168.65.0/23 any
+  124 permit ip 10.170.234.0/23 any
+  125 permit ip 10.181.89.0/24 any
+  126 permit ip 10.198.186.0/23 any
+  127 permit ip 10.168.231.0/23 any
+  130 permit ip 208.54.47.103/32 any
+  140 permit ip 10.188.28.106/32 any
+  141 permit ip 10.188.240.0/25 any
+  142 permit ip 10.188.240.128/25 any
+  150 remark Permit DNS
+  160 permit ip 66.94.9.120/32 any
+  170 permit ip 66.94.25.120/32 any
+  180 remark Permit SPS
+  190 permit ip 10.175.82.120/32 any
+  200 permit ip 10.188.82.120/32 any
+  210 remark Permit SMSC
+  220 permit ip 10.175.80.41/32 any
+  230 remark Permit MMSC
+  240 permit ip 10.175.85.128/26 any
+  250 permit ip 10.175.105.0/24 any
+  260 permit ip 10.176.75.71/32 any
+  270 permit ip 10.176.75.79/32 any
+  280 permit ip 10.176.75.105/32 any
+  290 permit ip 10.184.75.71/32 any
+  300 permit ip 10.184.75.79/32 any
+  310 permit ip 10.184.75.105/32 any
+  320 permit ip 10.188.238.0/24 any
+  330 permit ip 10.188.239.64/26 any
+  340 permit ip 10.188.239.128/26 any
+  350 permit ip 66.94.9.139/32 any
+  360 permit ip 66.94.25.139/32 any
+  370 permit ip 208.54.96.144/28 any
+  380 permit ip 208.54.152.144/28 any
+  390 remark Permit mStore
+  400 permit ip 10.175.84.65/32 any
+  410 permit ip 10.188.84.65/32 any
+  411 permit ip 10.175.55.65/32 any
+  412 permit ip 10.188.55.65/32 any
+  420 remark Permit SMSC
+  430 permit ip 10.175.80.75/32 any
+  440 permit ip 10.175.80.76/32 any
+  450 permit ip 10.175.80.77/32 any
+  460 permit ip 10.175.80.78/32 any
+  470 permit ip 10.175.80.79/32 any
+  480 permit ip 10.175.80.80/32 any
+  490 permit ip 10.175.80.81/32 any
+  500 permit ip 10.175.80.82/32 any
+  510 permit ip 10.188.80.41/32 any
+  520 permit ip 10.188.80.75/32 any
+  530 permit ip 10.188.80.76/32 any
+  540 permit ip 10.188.80.77/32 any
+  550 permit ip 10.188.80.78/32 any
+  560 permit ip 10.188.80.79/32 any
+  570 permit ip 10.188.80.80/32 any
+  580 permit ip 10.188.80.81/32 any
+  590 permit ip 10.188.80.82/32 any
+  600 remark Permit mStore
+  610 permit ip 10.175.96.0/24 any
+  620 permit ip 10.188.96.0/24 any
+  630 permit ip 10.188.84.73/32 any
+  631 permit ip 10.175.54.0/24 any
+  632 permit ip 10.188.54.0/24 any
+  633 permit ip 10.175.52.0/24 any
+  634 permit ip 10.175.53.0/24 any
+  635 permit ip 10.188.52.0/24 any
+  636 permit ip 10.188.53.0/24 any
+  640 remark Permit SCAP
+  650 permit ip 10.159.26.81/32 any
+  660 permit ip 10.86.2.64/32 any
+  670 permit ip 10.81.52.220/32 any
+  680 permit ip 10.154.44.114/32 any
+  690 remark Permit WSG
+  700 permit ip 10.175.87.10/32 any
+  710 permit ip 10.175.87.11/32 any
+  720 permit ip 10.175.87.12/32 any
+  730 permit ip 10.175.87.13/32 any
+  740 permit ip 10.175.87.14/32 any
+  750 permit ip 10.175.87.15/32 any
+  760 permit ip 10.175.87.16/32 any
+  770 permit ip 10.188.87.10/32 any
+  780 permit ip 10.175.87.20/32 any
+  790 permit ip 10.175.87.21/32 any
+  800 permit ip 10.175.87.22/32 any
+  810 permit ip 10.188.87.20/32 any
+  820 permit ip 10.188.87.21/32 any
+  830 permit ip 10.188.87.22/32 any
+  840 permit ip 10.188.87.11/32 any
+  850 permit ip 10.188.87.12/32 any
+  860 permit ip 10.188.87.13/32 any
+  870 permit ip 10.188.87.14/32 any
+  880 permit ip 10.188.87.15/32 any
+  890 permit ip 10.188.87.16/32 any
+  900 remark Permit ERF
+  910 permit ip 10.175.35.22/32 any
+  920 permit ip 10.175.35.23/32 any
+  930 permit ip 10.175.35.24/32 any
+  940 permit ip 10.175.35.25/32 any
+  950 permit ip 10.175.35.26/32 any
+  960 permit ip 10.175.35.27/32 any
+  970 permit ip 10.188.35.22/32 any
+  980 permit ip 10.188.35.23/32 any
+  990 permit ip 10.188.35.24/32 any
+  1000 permit ip 10.188.35.25/32 any
+  1010 permit ip 10.188.35.26/32 any
+  1020 permit ip 10.188.35.27/32 any
+  1030 remark Permit RCS
+  1040 permit ip 10.175.98.0/24 any
+  1050 permit ip 10.188.98.0/24 any
+  1051 permit ip 10.161.147.224/28 any
+  1052 permit ip 10.160.131.64/27 any
+  1060 remark Permit Syniverse
+  1070 permit ip 10.176.55.20/32 any
+  1080 permit ip 10.184.55.20/32 any
+  1090 remark Permit EMM
+  1100 permit ip 10.92.243.0/24 any
+  1110 permit ip 10.94.132.0/24 any
+  1120 permit ip 10.148.66.0/24 any
+  1130 permit ip 10.159.26.0/24 any
+  1140 remark Permit NPP
+  1150 permit ip 10.175.104.160/27 any
+  1160 permit ip 10.188.104.160/27 any
+  1170 remark Permit CDB
+  1180 permit ip 10.175.20.12/32 any
+  1190 permit ip 10.188.20.12/32 any
+  1200 remark Permit OCS
+  1210 permit ip 10.182.31.4/32 any
+  1220 permit ip 10.182.31.5/32 any
+  1230 permit ip 10.182.31.6/32 any
+  1240 permit ip 10.182.31.7/32 any
+  1250 permit ip 10.188.28.100/32 any
+  1260 permit ip 10.188.28.101/32 any
+  1270 permit ip 10.188.0.100/32 any
+  1280 permit ip 10.188.28.107/32 any
+  1290 permit ip 10.182.77.197/32 any
+  1300 remark Permit CSCF
+  1310 permit ip 10.182.77.196/32 any
+  1320 permit ip 10.182.77.197/32 any
+  1330 permit ip 10.182.77.203/32 any
+  1340 permit ip 10.182.77.204/32 any
+  1350 permit ip 10.176.83.181/32 any
+  1360 permit ip 10.176.81.149/32 any
+  1370 permit ip 10.188.251.196/32 any
+  1380 permit ip 10.188.251.197/32 any
+  1390 permit ip 10.188.251.203/32 any
+  1400 permit ip 10.188.251.204/32 any
+  1410 remark Permit RMS
+  1420 permit ip 10.175.48.0/25 any
+  1430 permit ip 10.188.48.0/25 any
+  1440 remark permit DRA
+  1450 permit ip 10.177.70.192/27 any
+  1460 remark Permit SBC
+  1470 permit ip 216.155.169.164/32 any
+  1490 remark Permit CIS_SERVERS
+  1500 permit ip 10.154.11.101/32 any
+  1510 permit ip 10.148.25.254/32 any
+  1520 remark Permit VIRTUALIZATION_SERVERS
+  1521 permit ip 10.182.34.128/26 any
+  1522 permit ip 10.182.34.192/26 any
+  1523 permit ip 10.182.40.0/24 any
+  1524 permit ip 10.182.41.0/24 any
+  1525 permit ip 10.188.52.0/24 any
+  1526 permit ip 172.58.112.0/25 any
+  1527 permit ip 172.58.112.128/25 any
+  1528 permit ip 172.58.113.0/25 any
+ipv6 access-list TTNPOD01-IPV6
+  10 remark Permit incoming IPV6 frpm TTNPOD01
+  20 permit ipv6 2607:fb90:c13f:fff5::/64 any
+  30 permit ipv6 2607:fb90:c13f:fff1::/64 any
+ipv6 access-list VLAN53
+  10 remark PERMIT DNS
+  20 permit ipv6 any fd00:976a::0009/128
+  30 permit ipv6 any fd00:976a:d6b6:193f::/64
+  40 remark PERMIT OOKLA and UE
+  50 permit tcp any 2607:fb90:0cf0:1ea0::5eed/128 eq 8080
+  60 permit tcp any 2607:fb90:0cf0:1ea0::5eed/128 eq www
+  65 permit tcp any 2607:fb90:0cf0:1ea0::5eed/128 eq 8000
+  70 permit udp 2607:fb90::/32 2607:fb90:0cf0:1ea0::5eed/128 eq 8080
+  80 remark PERMIT TRACEROUTE FROM TMO
+  90 permit udp 2607:fb90::/32 2607:fb90:0cf0:1ea0::5eed/128 range 33434 33534
+  100 permit udp fc00::/7 2607:fb90:0cf0:1ea0::5eed/128 range 33434 33534
+  110 remark ALLOW ICMP RFC 4890
+  120 permit icmp any fe80::/10
+  130 permit icmp any fc00::/7
+  140 permit icmp 2607:fb90::/32 any echo-request
+  150 permit icmp 2607:fb90::/32 any echo-reply
+  160 permit icmp 2607:fb90::/32 any packet-too-big
+  170 permit icmp 2607:fb90::/32 any time-exceeded
+  180 permit icmp 2607:fb90::/32 any parameter-problem
+  190 permit icmp 2607:fb90::/32 any unreachable
+ipv6 access-list copp-system-acl-dhcpc6
+  10 permit udp any any eq 546
+ipv6 access-list copp-system-acl-dhcps6
+  10 permit udp any ff02::0001:0002/128 eq 547
+  20 permit udp any ff05::0001:0003/128 eq 547
+ip access-list copp-system-acl-eigrp
+  10 permit eigrp any 224.0.0.10/32
+ipv6 access-list copp-system-acl-eigrp6
+  10 permit 88 any ff02::000a/128
+ip access-list copp-system-acl-icmp
+  10 permit icmp any any
+ip access-list copp-system-acl-igmp
+  10 permit igmp any any
+ip access-list copp-system-acl-ntp
+  10 permit udp any any eq ntp
+  20 permit udp any eq ntp any
+ip access-list copp-system-acl-pimreg
+  10 permit pim any any
+ip access-list copp-system-acl-ping
+  10 permit icmp any any echo
+  20 permit icmp any any echo-reply
+ip access-list copp-system-acl-routingproto1
+  10 permit tcp any gt 1024 any eq bgp
+  20 permit tcp any eq bgp any gt 1024
+  30 permit udp any 224.0.0.0/24 eq rip
+  40 permit tcp any gt 1024 any eq 639
+  50 permit tcp any eq 639 any gt 1024
+  70 permit ospf any any
+  80 permit ospf any 224.0.0.5/32
+  90 permit ospf any 224.0.0.6/32
+ip access-list copp-system-acl-routingproto2
+  10 permit udp any 224.0.0.0/24 eq 1985
+  20 permit 112 any 224.0.0.0/24
+ip access-list copp-system-acl-snmp
+  10 permit udp any any eq snmp
+  20 permit udp any any eq snmptrap
+ip access-list copp-system-acl-ssh
+  10 permit tcp any any eq 22
+  20 permit tcp any eq 22 any
+ip access-list copp-system-acl-stftp
+  10 permit udp any any eq tftp
+  20 permit udp any any eq 1758
+  30 permit udp any eq tftp any
+  40 permit udp any eq 1758 any
+  50 permit tcp any any eq 115
+  60 permit tcp any eq 115 any
+ip access-list copp-system-acl-tacacsradius
+  10 permit tcp any any eq tacacs
+  20 permit tcp any eq tacacs any
+  30 permit udp any any eq 1812
+  40 permit udp any any eq 1813
+  50 permit udp any any eq 1645
+  60 permit udp any any eq 1646
+  70 permit udp any eq 1812 any
+  80 permit udp any eq 1813 any
+  90 permit udp any eq 1645 any
+  100 permit udp any eq 1646 any
+ip access-list copp-system-acl-telnet
+  10 permit tcp any any eq telnet
+  20 permit tcp any any eq 107
+  30 permit tcp any eq telnet any
+  40 permit tcp any eq 107 any
+ipv6 access-list copp-system-acl-v6routingProto2
+  10 permit udp any ff02::0066/128 eq 2029
+  20 permit udp any ff02::00fb/128 eq 5353
+ipv6 access-list copp-system-acl-v6routingproto1
+  10 permit 89 any ff02::0005/128
+  20 permit 89 any ff02::0006/128
+  30 permit udp any ff02::0009/128 eq 521
+ip access-list copp-system-dhcp-relay
+  10 permit udp any eq bootps any eq bootps
+ip access-list mSTORE-DB-REPLICATION
+  10 permit ip 10.175.27.0/24 any
+  20 permit ip 10.188.27.0/24 any
+  30 permit ip 10.188.55.128/25 any
+  40 permit ip 10.175.55.128/25 any
+  50 permit ip 10.175.51.0/25 any
+  60 permit ip 10.188.51.128/25 any
+  70 permit ip 10.175.51.0/25 any
+  80 permit ip 10.188.51.0/25 any
+ip access-list mSTORE-FE-FILTER
+  10 remark +------------------------------
+  20 remark + update ACL on all mstore SB in POL and TTN  use HPNA
+  30 remark +------------------------------
+  40 remark permit mStore FE
+  50 permit ip 10.175.106.0/24 any
+  60 permit ip 10.175.107.0/24 any
+  70 permit ip 10.175.54.0/24 any
+  71 permit ip 10.175.52.0/24 any
+  72 permit ip 10.175.53.0/24 any
+  73 permit ip 10.175.56.0/24 any
+  74 permit ip 10.175.57.0/24 any
+  75 permit ip 10.175.50.0/24 any
+  76 permit ip 10.175.49.0/24 any
+  77 permit ip 10.175.42.0/24 any
+  78 permit ip 10.175.43.0/24 any
+  80 permit ip 10.188.106.0/24 any
+  90 permit ip 10.188.107.0/24 any
+  100 permit ip 10.188.54.0/24 any
+  101 permit ip 10.188.52.0/24 any
+  102 permit ip 10.188.53.0/24 any
+  103 permit ip 10.188.56.0/24 any
+  104 permit ip 10.188.57.0/24 any
+  105 permit ip 10.188.50.0/24 any
+  106 permit ip 10.188.49.0/24 any
+  107 permit ip 10.188.42.0/24 any
+  108 permit ip 10.188.43.0/24 any
+  110 remark permit A10 IP
+  120 permit ip 10.175.96.64/26 any
+  130 permit ip 10.175.64.136/29 any
+  140 permit ip 10.175.63.64/29 any
+  150 permit ip 10.175.55.64/26 any
+  160 permit ip 10.188.96.64/26 any
+  170 permit ip 10.188.65.248/29 any
+  180 permit ip 10.188.1.248/29 any
+  190 permit ip 10.188.55.64/26 any
+  200 remark permit LI
+  210 permit ip 10.164.16.26/32 any
+  220 remark permit EMA
+  230 permit ip 10.154.115.88/32 any
+  240 permit ip 10.148.125.8/32 any
+  250 remark permit DNS
+  260 permit ip 66.94.9.120/32 any
+  270 permit ip 66.94.25.120/32 any
+  280 remark permit PNS-SPP
+  290 permit ip 10.188.60.1/32 any
+  300 permit ip 10.175.60.1/32 any
+  310 remark Permit WRG
+  320 permit ip 10.164.131.192/27 any
+  330 permit ip 10.164.139.32/27 any
+  340 permit ip 10.164.139.6/32 any
+  350 permit ip 10.163.141.0/27 any
+  360 permit ip 10.163.141.36/32 any
+  370 permit ip 10.161.213.32/27 any
+  380 permit ip 10.165.16.128/27 any
+  390 permit ip 10.161.228.4/32 any
+  400 remark permit AOG
+  410 permit ip 10.184.131.128/32 any
+  420 permit ip 10.182.131.128/32 any
+  430 permit ip 10.161.213.32/27 any
+  440 permit ip 10.188.104.145/32 any
+  450 permit ip 10.182.13.1/32 any
+  460 remark permit WSG
+  470 permit ip 10.175.87.0/24 any
+  480 permit ip 10.188.87.0/24 any
+  490 remark permit EAS-FAX
+  500 permit ip 10.175.34.10/32 any
+  510 permit ip 10.188.34.10/32 any
+  520 remark permit MRF
+  530 permit ip 10.175.35.0/25 any
+  540 permit ip 10.175.26.0/25 any
+  550 permit ip 10.188.35.0/25 any
+  560 permit ip 10.188.36.0/25 any
+  570 remark permit RMS
+  580 permit ip 10.175.98.0/24 any
+  590 permit ip 10.188.98.0/24 any
+  600 permit ip 10.166.234.128/26 any
+  610 permit ip 10.175.48.0/26 any
+  620 permit ip 10.188.48.0/26 any
+  621 permit ip 10.165.207.0/24 any
+  622 permit ip 10.161.147.224/28 any
+  623 permit ip 10.175.55.32/27 any
+  630 remark permit switch control
+  640 permit ip 10.155.52.0/24 any
+  650 remark permit VM2WEB
+  660 permit ip 66.94.9.52/32 any
+  670 permit ip 66.94.27.6/32 any
+  680 permit ip 208.54.156.1/32 any
+  681 permit ip 208.54.99.144/32 any
+  690 remark permit Mitel-VMAS
+  700 permit ip 10.175.110.0/26 any
+  710 permit ip 10.175.110.128/28 any
+  720 permit ip 10.188.110.0/26 any
+  730 permit ip 10.188.110.128/28 any
+  731 permit ip 10.188.110.160/27 any
+  740 remark permit NSIM2
+  750 permit ip 10.188.104.144/28 any
+  760 permit ip 10.175.104.144/28 any
+  770 remark permit IMS-TAS
+  780 permit ip 10.160.0.0/16 any
+  790 permit ip 10.161.0.0/16 any
+  800 permit ip 10.162.0.0/16 any
+  810 permit ip 10.163.0.0/16 any
+  820 permit ip 10.164.0.0/16 any
+  830 permit ip 10.165.0.0/16 any
+  840 permit ip 10.166.0.0/16 any
+  850 permit ip 10.174.0.0/18 any
+  860 permit ip 10.174.64.0/18 any
+  870 permit ip 208.54.47.103/32 any
+  880 permit ip 10.188.28.106/32 any
+  890 permit ip 10.188.251.0/24 any
+  900 remark permit BackUp
+  910 permit ip 10.175.23.10/32 any
+  920 permit ip 10.188.21.4/32 any
+ip access-list set-dscp-best-effort
+  10 permit ip any any
+ip access-list set-dscp-bronze
+  10 deny ip any any
+ip access-list set-dscp-gold
+  10 deny ip any any
+ip access-list set-dscp-silver
+  10 deny ip any any
+ip access-list ssh-only
+  10 permit tcp 5.0.0.0/8 any eq 22
+  20 permit tcp 10.245.0.0/16 any eq 22
+  30 permit tcp 10.248.0.0/13 any eq 22
+class-map type qos match-any set-dscp-gold
+  match dscp 46
+  match precedence 5
+class-map type qos match-any set-dscp-bronze
+  match dscp 18,20,22
+  match precedence 2
+class-map type qos match-any set-dscp-silver
+  match dscp 26,28,30,34,36,38
+  match precedence 3-4
+class-map type qos match-any set-dscp-best-effort
+  match dscp 10,12,14
+  match precedence 1
+policy-map type qos set-dscp-all
+  class set-dscp-gold
+    set qos-group 4
+  class set-dscp-silver
+    set qos-group 3
+  class set-dscp-bronze
+    set qos-group 2
+  class set-dscp-best-effort
+    set qos-group 1
+policy-map type qos Q-I-DRA_TRAFFIC
+policy-map type network-qos jumbo
+  class type network-qos class-default
+    mtu 9216
+system qos
+  service-policy type network-qos jumbo
+class-map type control-plane match-any copp-icmp
+  match access-group name copp-system-acl-icmp
+class-map type control-plane match-any copp-ntp
+  match access-group name copp-system-acl-ntp
+class-map type control-plane match-any copp-s-arp
+class-map type control-plane match-any copp-s-bfd
+class-map type control-plane match-any copp-s-bpdu
+class-map type control-plane match-any copp-s-dai
+class-map type control-plane match-any copp-s-default
+class-map type control-plane match-any copp-s-dhcpreq
+  match access-group name copp-system-acl-dhcps6
+class-map type control-plane match-any copp-s-dhcpresp
+  match access-group name copp-system-acl-dhcpc6
+  match access-group name copp-system-dhcp-relay
+class-map type control-plane match-any copp-s-dpss
+class-map type control-plane match-any copp-s-eigrp
+  match access-group name copp-system-acl-eigrp
+  match access-group name copp-system-acl-eigrp6
+class-map type control-plane match-any copp-s-glean
+class-map type control-plane match-any copp-s-igmp
+  match access-group name copp-system-acl-igmp
+class-map type control-plane match-any copp-s-ipmcmiss
+class-map type control-plane match-any copp-s-l2switched
+class-map type control-plane match-any copp-s-l3destmiss
+class-map type control-plane match-any copp-s-l3mtufail
+class-map type control-plane match-any copp-s-l3slowpath
+class-map type control-plane match-any copp-s-pimautorp
+class-map type control-plane match-any copp-s-pimreg
+  match access-group name copp-system-acl-pimreg
+class-map type control-plane match-any copp-s-ping
+  match access-group name copp-system-acl-ping
+class-map type control-plane match-any copp-s-ptp
+class-map type control-plane match-any copp-s-routingProto1
+  match access-group name copp-system-acl-routingproto1
+  match access-group name copp-system-acl-v6routingproto1
+class-map type control-plane match-any copp-s-routingProto2
+  match access-group name copp-system-acl-routingproto2
+class-map type control-plane match-any copp-s-selfIp
+class-map type control-plane match-any copp-s-ttl1
+class-map type control-plane match-any copp-s-v6routingProto2
+  match access-group name copp-system-acl-v6routingProto2
+class-map type control-plane match-any copp-s-vxlan
+class-map type control-plane match-any copp-snmp
+  match access-group name copp-system-acl-snmp
+class-map type control-plane match-any copp-ssh
+  match access-group name copp-system-acl-ssh
+class-map type control-plane match-any copp-stftp
+  match access-group name copp-system-acl-stftp
+class-map type control-plane match-any copp-tacacsradius
+  match access-group name copp-system-acl-tacacsradius
+class-map type control-plane match-any copp-telnet
+  match access-group name copp-system-acl-telnet
+policy-map type control-plane copp-system-policy
+  class copp-s-default
+    police pps 400
+  class copp-s-l2switched
+    police pps 200
+  class copp-s-ping
+    police pps 100
+  class copp-s-l3destmiss
+    police pps 100
+  class copp-s-glean
+    police pps 500
+  class copp-s-selfIp
+    police pps 500
+  class copp-s-l3mtufail
+    police pps 100
+  class copp-s-ttl1
+    police pps 100
+  class copp-s-ipmcmiss
+    police pps 400
+  class copp-s-l3slowpath
+    police pps 100
+  class copp-s-dhcpreq
+    police pps 300
+  class copp-s-dhcpresp
+    police pps 300
+  class copp-s-dai
+    police pps 300
+  class copp-s-igmp
+    police pps 400
+  class copp-s-routingProto2
+    police pps 1300
+  class copp-s-v6routingProto2
+    police pps 1300
+  class copp-s-eigrp
+    police pps 200
+  class copp-s-pimreg
+    police pps 200
+  class copp-s-pimautorp
+    police pps 200
+  class copp-s-routingProto1
+    police pps 1000
+  class copp-s-arp
+    police pps 200
+  class copp-s-ptp
+    police pps 1000
+  class copp-s-vxlan
+    police pps 1000
+  class copp-s-bfd
+    police pps 350
+  class copp-s-bpdu
+    police pps 12000
+  class copp-s-dpss
+    police pps 1000
+  class copp-icmp
+    police pps 200
+  class copp-telnet
+    police pps 500
+  class copp-ssh
+    police pps 500
+  class copp-snmp
+    police pps 500
+  class copp-ntp
+    police pps 100
+  class copp-tacacsradius
+    police pps 400
+  class copp-stftp
+    police pps 400
+control-plane
+  service-policy input copp-system-policy
+hardware profile portmode 48x10G+4x40G
+
+snmp-server user admin network-admin auth md5 0x3b71887f970403b6c620b76c76aba7ae priv 0x3b71887f970403b6c620b76c76aba7ae localizedkey
+ntp server 172.16.1.1
+ntp server 172.16.1.75
+ntp server 172.16.1.177
+ntp server 172.16.1.200
+aaa authentication login default group p1lab
+aaa authentication login console group p1lab
+aaa authorization config-commands default group p1lab local
+aaa authorization commands default group p1lab local
+aaa accounting default group p1lab
+
+
+spanning-tree mode mst
+spanning-tree pathcost method long
+spanning-tree port type edge default
+spanning-tree port type edge bpduguard default
+spanning-tree mst 0 priority 24576
+spanning-tree mst configuration
+  name TMO_MST
+ip prefix-list DEFAULT-IPV4-ROUTE seq 5 permit 0.0.0.0/0
+ip prefix-list NB-IPV4-ASSIGNED-SPACE seq 20 permit 10.74.139.5/32
+ip prefix-list NB-IPV4-ASSIGNED-SPACE seq 30 permit 10.74.164.0/25
+ip prefix-list NB-IPV4-ASSIGNED-SPACE seq 40 permit 10.74.144.72/30
+ip prefix-list NB-IPV4-ASSIGNED-SPACE seq 50 permit 10.74.144.76/30
+ip prefix-list NB-IPV4-ASSIGNED-SPACE seq 60 permit 10.74.160.0/24
+ip prefix-list NB-IPV4-ASSIGNED-SPACE seq 70 permit 10.74.161.0/24
+ip prefix-list NB-IPV4-ASSIGNED-SPACE seq 80 permit 10.74.162.0/24
+ip prefix-list NB-IPV4-ASSIGNED-SPACE seq 90 permit 10.74.163.0/24
+ip prefix-list NB-IPV4-ASSIGNED-SPACE seq 100 permit 208.54.129.32/27
+ip prefix-list SB-GI-ASSIGNED-SPACE seq 10 permit 10.178.79.100/30
+ip prefix-list SB-GI-ASSIGNED-SPACE seq 20 permit 10.178.79.108/30
+ip prefix-list SB-GI-ASSIGNED-SPACE seq 30 permit 10.178.79.112/30
+ip prefix-list SB-GI-ASSIGNED-SPACE seq 40 permit 10.178.79.116/30
+ip prefix-list SB-IPV4-ASSIGNED-SPACE seq 10 deny 192.168.80.0/24 le 32
+ip prefix-list SB-IPV4-ASSIGNED-SPACE seq 20 permit 10.175.68.27/32
+ip prefix-list SB-IPV4-ASSIGNED-SPACE seq 30 permit 10.175.70.56/30
+ip prefix-list SB-IPV4-ASSIGNED-SPACE seq 40 permit 10.182.124.184/30
+ip prefix-list SB-IPV4-ASSIGNED-SPACE seq 120 permit 10.178.79.64/28
+ip prefix-list SB-IPV4-ASSIGNED-SPACE seq 130 permit 10.178.79.80/28
+ip prefix-list SB-IPV4-ASSIGNED-SPACE seq 135 permit 10.188.26.0/24
+ip prefix-list SB-IPV4-ASSIGNED-SPACE seq 140 permit 10.188.13.0/24
+ip prefix-list SB-IPV4-NMNET-ASSIGNED-SPACE seq 10 deny 192.168.82.0/23 le 32
+ip prefix-list SB-IPV4-NMNET-ASSIGNED-SPACE seq 20 permit 10.169.8.109/32
+ip prefix-list SB-IPV4-NMNET-ASSIGNED-SPACE seq 30 permit 10.198.199.182/31
+ip prefix-list SB-IPV4-NMNET-ASSIGNED-SPACE seq 40 permit 10.198.199.198/31
+ip prefix-list SB-IPV4-NMNET-ASSIGNED-SPACE seq 50 permit 10.255.227.136/30
+ip prefix-list SB-IPV4-NMNET-ASSIGNED-SPACE seq 60 permit 10.255.227.140/30
+ip prefix-list SB-IPV4-NMNET-ASSIGNED-SPACE seq 70 permit 10.255.227.0/25
+ip prefix-list SB-IPV4-NMNET-ASSIGNED-SPACE seq 80 permit 10.169.0.147/32
+ipv6 prefix-list DEFAULT-IPV6-ROUTE seq 10 permit 0::/0
+route-map DEFAULT-IPV6-ROUTE-ONLY permit 10
+  match ip address prefix-list DEFAULT-IPV6-ROUTE
+route-map IPV4-DEFAULT-ONLY permit 10
+  match ip address prefix-list DEFAULT-IPV4-ROUTE
+route-map NB-IPV4-ASSIGNED-SPACE-ONLY permit 10
+  match ip address prefix-list NB-IPV4-ASSIGNED-SPACE
+route-map SB-IPV4-ASSIGNED-SPACE-ONLY permit 10
+  match ip address prefix-list SB-IPV4-ASSIGNED-SPACE
+route-map SB-IPV4-GI-ASSIGNED-SPACE permit 10
+  match ip address prefix-list SB-GI-ASSIGNED-SPACE
+  set community 65138:140 65138:1028
+route-map SB-IPV4-NMNET-ASSIGNED-SPACE-ONLY permit 10
+  match ip address prefix-list SB-IPV4-NMNET-ASSIGNED-SPACE
+  set community 65138:140 65138:1028 65138:1118 65138:1119
+route-map SB-IPV6-ASSIGNED-SPACE permit 10
+  match ip address prefix-list S
+route-map SB-IPV6-ASSIGNED-SPACE-ONLY permit 10
+  match ip address prefix-list SB-IPV6-ASSIGNED-SPACE
+route-map STATIC-TO-BGP-IPV6SUB permit 10
+  match tag 53
+  set community no-export
+route-map STATIC-TO-BGP-IPV6SUB permit 30
+  match ipv6 address prefix-list HOST-ROUTES
+key chain hsrp-keys
+  key 1
+    key-string 7 073b6c41410b100912
+service dhcp
+ip dhcp relay
+
+cli alias name sri sho run | inc
+cli alias name son sho ip ospf nei
+cli alias name sr sho run
+cli alias name sirc sho ip route vrf cos
+cli alias name sli show log | include
+cli alias name sle show log | exclude
+cli alias name wr copy run start
+cli alias name srb sho run | beg
+cli alias name sir show ip route
+line console
+line vty
+router ospf 100
+  default-information originate always route-map ospf100_metric
+  log-adjacency-changes
+
+ip arp timeout 3600
+monitor session 1
+mac address-table aging-time 14460
+logging server 10.251.7.72 5 use-vrf management facility kern
+logging source-interface mgmt0
+logging timestamp milliseconds
