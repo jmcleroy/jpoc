@@ -1,6 +1,6 @@
 ---
 - name: Check compliance
-  nxos_config:
+  nxos_template:
     host: '{{ inventory_hostname }}'
     src: "{{ playbook_dir }}/roles/nxos_compliance/vars/nxos.j2"
     transport: cli
