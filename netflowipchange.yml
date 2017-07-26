@@ -4,7 +4,14 @@
   gather_facts: no
 
   tasks:
+    - name: Remove Netflow IP
+      nxos_config:
+        lines: no {{ item }}
+        host: "{{ inventory_hostname }}"
+      with_items: "{{ config_lines | select('match', 'ip flow-export destination *') | list }}"
+
     - name: Change netflow IP
       ios_config:
         lines:
-          - ip flow-export destination 172.16.1.1
+          - ip flow-export destination 172.16.1.1 9996
+        host: "{{ inventory_hostname }}"
