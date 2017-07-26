@@ -4,7 +4,7 @@
   gather_facts: no
 
   tasks:
-  - name: Change netflow IP
-    ios_config:
-      lines:
-        - ip flow-export destination 172.16.1.1
+    - name: Change netflow IP
+      ios_config:
+        lines:
+          - ip flow-export destination 172.16.1.1
