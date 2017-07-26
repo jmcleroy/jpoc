@@ -4,14 +4,13 @@
   gather_facts: no
 
   tasks:
-    - name: collect output from nxos device
+    - name: collect output from ios device
       ios_command:
         host: "{{ inventory_hostname }}"
         commands:
           - show version
           - show interface
-          - show running-config all
-          - show ip interface brief vrf all | include {{ ansible_host }}
+          - show running-config
       register: output
 
     - name: set config fact
