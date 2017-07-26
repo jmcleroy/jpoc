@@ -10,7 +10,7 @@
         commands:
           - show version
           - show interface
-          - show running-config
+          - show running-config all
       register: output
 
     - name: set config fact
