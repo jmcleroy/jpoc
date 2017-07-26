@@ -2,6 +2,9 @@
 - name: Check compliance
   nxos_template:
     host: '{{ inventory_hostname }}'
-    src: "{{ playbook_dir }}/roles/nxos_compliance/vars/nxos.j2"
+#    src: "{{ playbook_dir }}/roles/nxos_compliance/vars/nxos.j2"
+    lines:
+      - ntp server 172.16.1.1
+      - ntp server 172.16.1.75
     transport: cli
 
