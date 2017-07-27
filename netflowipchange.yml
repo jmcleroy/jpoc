@@ -30,5 +30,5 @@
     - name: Change netflow IP
       ios_config:
         lines:
-          - ip flow-export destination 172.16.1.1 9996
+          - ip flow-export destination {{ netflow_ip }} {{ netflow_port }}
         host: "{{ inventory_hostname }}"
