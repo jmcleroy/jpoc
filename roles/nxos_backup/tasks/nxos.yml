@@ -3,7 +3,6 @@
   nxos_command:
     commands: show running-config all
     host: "{{ inventory_hostname }}"
-#    provider: "{{ cli }}"
   register: config
 
 - name: set backup_file fact
