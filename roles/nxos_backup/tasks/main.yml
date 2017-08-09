@@ -1,7 +1,7 @@
 ---
 - name: set backup_path fact
   set_fact:
-    backup_path: "{{ playbook_dir }}/backup"
+    backup_path: "/tmp/backup"
 
 - name: create backup paths
   file:
