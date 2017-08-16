@@ -1,0 +1,7 @@
+---
+- name: Sets interface information
+  net_vlan:
+    vlan_id: "{{ vlan_number }}"
+    name: "{{ vlan_name }}"
+    state: "{{ vlan_admin_state }}"
+

@@ -4,4 +4,4 @@
   gather_facts: no
 
   roles:
-    - net_interface
+    - mpva_vlan
