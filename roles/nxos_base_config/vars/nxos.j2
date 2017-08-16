@@ -23,15 +23,7 @@ role name Eng
   rule 3 permit command show *
   rule 2 permit command traceroute *
   rule 1 permit command ping *
-username admin password 5 $1$hst8ffKj$3edQcPL/ZVicrED89NqKY/  role network-admin
-username OO_Automation password 5 $1$pJZ0Z/9Q$qc/emFmprcDzKWA/Gk15U.  role network-admin
-username ops password 5 $1$W8zexc0j$QaValcZAGObQ/cDbEZNty/  role network-admin
-no password strength-check
 
-banner motd ^
-
-
-^
 
 no ip domain-lookup
 ip domain-name infra
