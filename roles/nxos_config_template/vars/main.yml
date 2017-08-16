@@ -19,7 +19,7 @@ name_servers:
   - { server: 5.232.32.63, vrf: management }
 
 domain:
-  - { name: t-mobile.lab }
+  - { name: redhat.lab }
 
 logging:
   - { server: 5.232.36.236, log_level: 6, vrf: management, facility: syslog, source: mgmt0 }

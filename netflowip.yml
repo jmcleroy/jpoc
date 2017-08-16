@@ -1,0 +1,18 @@
+---
+- hosts: all
+  connection: local
+  gather_facts: no
+
+  tasks:
+    - name: Check for netflow ip
+      ios_command:
+        commands:
+          - show run
+      register: output
+
+    - name: set netflow ip fact
+      set_fact:
+        netflowip: "{{ output.stdout[0] | regex_findall('\\s+ip flow-export destination\\s+(\\S+)') }}"
+
+    - name: display netflow ip
+      debug: var=netflowip
