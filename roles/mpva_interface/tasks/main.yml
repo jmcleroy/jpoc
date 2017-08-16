@@ -1,0 +1,7 @@
+---
+- name: Sets interface information
+  net_interface:
+    interface: "{{ interface }}"
+    admin_state: "{{ admin_state }}"
+    description: "{{ interface_description }}"
+

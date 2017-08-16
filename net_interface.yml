@@ -1,0 +1,7 @@
+---
+- hosts: all
+  connection: local
+  gather_facts: no
+
+  roles:
+    - net_interface
