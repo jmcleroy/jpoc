@@ -1,6 +1,6 @@
 ---
 - name: Sets interface information
-  net_vlan:
+  nxos_vlan:
     vlan_id: "{{ vlan_number }}"
     name: "{{ vlan_name }}"
 
