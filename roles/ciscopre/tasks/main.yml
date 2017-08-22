@@ -1,6 +1,6 @@
 ---
 - name: Show prechange status
-  ios_command:
+  nxos_command:
     host: '{{ inventory_hostname }}'
     commands:
       - show version
