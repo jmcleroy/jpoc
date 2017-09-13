@@ -1,7 +1,11 @@
 ---
 - name: BASE NEIGHBOR CONFIG
   nxos_config:
-    src: "{{ playbook_dir }}/roles/nxos_test/template/bgp_spine_neighbor.j2"
+    commands:
+      - router bgp 1\n  neighbor 10.88.145.31\n  bfdinherit peer LEAF remote-as 65336
+
+
+#    src: "{{ playbook_dir }}/roles/nxos_test/template/bgp_spine_neighbor.j2"
 #    provider: "{{ nxos_provider }}" #(nxapi)
-  with_items:
-    - "{{ bgp_neighbors }}"
+#  with_items:
+#    - "{{ bgp_neighbors }}"
