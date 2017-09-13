@@ -1,9 +1,9 @@
 bgp_neighbors:
   - { remote_as: 65336, neighbor: 10.88.145.1 }
-  - { remote_as: 65336, neighbor: 10.88.145.7 }
-  - { remote_as: 65336, neighbor: 10.88.145.13 }
-  - { remote_as: 65336, neighbor: 10.88.145.19 }
-  - { remote_as: 65336, neighbor: 10.88.145.25 }
-  - { remote_as: 65336, neighbor: 10.88.145.31 }
-  - { remote_as: 65336, neighbor: 10.88.145.37 }
-  - { remote_as: 65336, neighbor: 10.88.145.43 }
+#  - { remote_as: 65336, neighbor: 10.88.145.7 }
+#  - { remote_as: 65336, neighbor: 10.88.145.13 }
+#  - { remote_as: 65336, neighbor: 10.88.145.19 }
+#  - { remote_as: 65336, neighbor: 10.88.145.25 }
+#  - { remote_as: 65336, neighbor: 10.88.145.31 }
+#  - { remote_as: 65336, neighbor: 10.88.145.37 }
+#  - { remote_as: 65336, neighbor: 10.88.145.43 }
