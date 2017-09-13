@@ -2,6 +2,6 @@
 - name: BASE NEIGHBOR CONFIG
   nxos_config:
     src: bgp_spine_neighbor.j2
-    provider: "{{ nxos_provider }}" #(nxapi)
+#    provider: "{{ nxos_provider }}" #(nxapi)
   with_items:
     - "{{ bgp_neighbors }}"
