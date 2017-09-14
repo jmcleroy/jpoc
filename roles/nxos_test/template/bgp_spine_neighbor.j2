@@ -1,4 +1,4 @@
 router bgp 1
-  neighbor '{{ item.neighbor }}'
+  neighbor {{ item.neighbor }}
   inherit peer LEAF
-  remote-as '{{ item.remote-as }}'
+  remote-as {{ item.remote_as }}
