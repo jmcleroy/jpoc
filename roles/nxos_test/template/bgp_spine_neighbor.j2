@@ -1,4 +1,4 @@
 router bgp 1
-  neighbor 10.88.145.17
+  neighbor '{{ item.neighbor }}'
   inherit peer LEAF
-  remote-as 65336
+  remote-as '{{ item.remote-as }}'

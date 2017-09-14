@@ -4,5 +4,5 @@
     src: "{{ playbook_dir }}/roles/nxos_test/template/bgp_spine_neighbor.j2"
     save_when: modified
 #    provider: "{{ nxos_provider }}" #(nxapi)
-#  with_items:
-#    - "{{ bgp_neighbors }}"
+  with_items:
+    - "{{ bgp_neighbors }}"
