@@ -1,0 +1,11 @@
+---
+- hosts: all
+  connection: local
+  gather_facts: no
+  
+  tasks:
+  - name: test task
+    nxos_command:
+      host: '{{ inventory_hostname }}'
+      commands:
+        - setup
