@@ -5,7 +5,6 @@
   
   tasks:
   - name: test task
-    nxos_command:
+    nxos_facts:
       host: '{{ inventory_hostname }}'
-      commands:
-        - setup
+
