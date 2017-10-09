@@ -1,14 +1,7 @@
 ---
-- name: Allow external DNS call
-  fortios_ipv4_policy:
+- name: Backup fortinet
+  fortios_config:
     host: "{{ inventory_hostname }}"
     username: admin
     password: admin
-    id: 42
-    src_addr: internal_network
-    dst_addr: all
-    service: dns
-    nat: True
-    state: present
-    policy_action: accept
-    logtraffic: disable
+    backup: yes
