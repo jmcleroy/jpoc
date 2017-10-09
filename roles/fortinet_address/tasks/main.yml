@@ -8,3 +8,4 @@
     dest: ./backup_address_objects.conf
     filter: "firewall address"
     logfile: fortios.log
+    
