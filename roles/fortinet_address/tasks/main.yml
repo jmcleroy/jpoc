@@ -7,3 +7,4 @@
     timeout: 60
     backup: true
     backup_path: /tmp/
+    vdom: nsx
