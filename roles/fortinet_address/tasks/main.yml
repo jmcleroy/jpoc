@@ -5,5 +5,4 @@
     username: admin
     password: admin
     backup: yes
-    backup_path: /tmp/forti_backup/
-    filter: "firewall address"
+    backup_path: /tmp/
