@@ -1,8 +1,10 @@
 ---
 - name: Backup fortinet
-  fortios_config:
-    host: "{{ inventory_hostname }}"
-    username: admin
-    password: admin
-    backup: yes
-    backup_path: /tmp/
+    fortios_address:
+      host: "{{ inventory_hostname }}"
+      username: admin
+      password: admin
+      state: present
+      name: "google_dns"
+      type: ipmask
+      value: 8.8.8.8
