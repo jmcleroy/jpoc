@@ -1,7 +1,10 @@
 ---
-- name: Backup only address objects, log all commands to file
-  fortios_config:
+- name: Register google DNS
+  fortios_address:
     host: 192.168.1.76
     username: admin
     password: admin
-    vdom: nsx
+    state: present
+    name: "google_dns"
+    type: ipmask
+    value: 8.8.8.8
