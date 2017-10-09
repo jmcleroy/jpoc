@@ -4,5 +4,5 @@
     host: 192.168.1.73
     username: admin
     password: admin
-    backup: yes
-    backup_path: /tmp/
+    state: backuped
+    dest: ./backup.conf
