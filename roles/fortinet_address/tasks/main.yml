@@ -1,7 +1,7 @@
 ---
 - name: Allow external DNS call
   fortios_ipv4_policy:
-    host: 192.168.1.185
+    host: "{{ inventory_hostname }}"
     username: admin
     password: admin
     id: 42
