@@ -5,5 +5,5 @@
     username: admin
     password: admin
     timeout: 20
-    state: backuped
-    dest: ./backup.conf
+    backup: true
+    backup_path: /tmp/
