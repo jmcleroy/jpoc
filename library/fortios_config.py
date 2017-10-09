@@ -19,29 +19,66 @@
 # along with Ansible.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-ANSIBLE_METADATA = {'metadata_version': '1.0',
-                    'status': ['preview'],
-                    'supported_by': 'community'}
-
+ANSIBLE_METADATA = {
+    'status': ['preview'],
+    'supported_by': 'community',
+    'version': '0.1'
+}
 
 DOCUMENTATION = """
 ---
-module: fortios_config
+module: fortios_address
 version_added: "2.3"
 author: "Benjamin Jolivot (@bjolivot)"
-short_description: Manage config on Fortinet FortiOS firewall devices
+short_description: Manage fortios firewall config
 description:
-  - This module provides management of FortiOS Devices configuration.
-extends_documentation_fragment: fortios
+  - This module provide management of FortiOS Devices configuration
 options:
-  src:
+  host:
     description:
-      - The I(src) argument provides a path to the configuration file
-        to load into the remote device.
-  filter:
+      - Specifies the DNS hostname or IP address for connecting to the remote fortios device
+    required: true
+  username:
     description:
-      - Only for partial backup, you can restrict by giving expected configuration path (ex. firewall address).
-    default: ""
+      - Configures the username used to authenticate to the remote device.
+    required: true
+  password:
+    description:
+      - Specifies the password used to authenticate to the remote device.
+    required: true
+  timeout
+    description:
+      - Specifies timeout in seconds for connecting to the remote device.
+      required: false 
+      default: 60
+  vdom
+    description:
+      - Specifies on which vdom to apply configuration
+      required: false
+      default: None
+  src
+    description:
+      - target configuration file path
+      required: false
+  dest
+    description:
+      - Backup configuration file path
+      required: false
+  filter
+    description:
+      - in case of backup, if you want partial config, you can restrict by giving expected configuration path (ex: firewall address)
+      required: false
+      default: ""
+  state
+    description:
+      - Specifies if address need to be added or deleted
+      required: true
+      choices: ['updated', 'backuped']
+  logfile
+    description:
+      - logfile path to log command sent to the device and responses
+      required: false 
+
 notes:
   - This module requires pyFG python library
 """
@@ -52,20 +89,23 @@ EXAMPLES = """
     host: 192.168.0.254
     username: admin
     password: password
-    backup: yes
-- name: Backup only address objects
+    state: backuped
+    dest: ./backup.conf
+- name: Backup only address objects, log all commands to file
   fortios_config:
     host: 192.168.0.254
     username: admin
     password: password
-    backup: yes
-    backup_path: /tmp/forti_backup/
+    state: backuped
+    dest: ./backup_address_objects.conf
     filter: "firewall address"
+    logfile: fortios.log
 - name: Update configuration from file
   fortios_config:
     host: 192.168.0.254
     username: admin
     password: password
+    state: updated
     src: new_configuration.conf
 """
 
@@ -79,91 +119,119 @@ change_string:
   returned: only if config changed
   type: string
 """
-
-
-
-from ansible.module_utils.fortios import fortios_argument_spec, fortios_required_if
-from ansible.module_utils.fortios import backup
-
+import logging
 from ansible.module_utils.basic import AnsibleModule
-from ansible.module_utils.pycompat24 import get_exception
 
-
-#check for pyFG lib
+# check for pyFG lib
 try:
-    from pyFG import FortiOS, FortiConfig
+    from pyFG import *
     from pyFG.fortios import logger
-    from pyFG.exceptions import CommandExecutionException, FailedCommit, ForcedCommit
-    HAS_PYFG=True
+    from pyFG.exceptions import *
+
+    HAS_PYFG = True
 except:
-    HAS_PYFG=False
+    HAS_PYFG = False
 
 # some blocks don't support update, so remove them
-NOT_UPDATABLE_CONFIG_OBJECTS=[
+NOT_UPDATABLE_CONFIG_OBJECTS = [
     "vpn certificate local",
 ]
 
+
 def main():
     argument_spec = dict(
-        src       = dict(type='str', default=None),
-        filter    = dict(type='str', default=""),
+        host=dict(required=True),
+        username=dict(required=True),
+        password=dict(required=True, type='str'),
+        timeout=dict(type='int', default=60),
+        vdom=dict(type='str', default=None),
+        state=dict(required=True, choices=['backuped', 'updated']),
+        src=dict(type='str'),
+        dest=dict(type='str'),
+        filter=dict(type='str', default=""),
+        logfile=dict(type='str'),
     )
 
-    argument_spec.update(fortios_argument_spec)
+    required_if = [
+        ['state', 'backuped', ['dest']],
+        ['state', 'updated', ['src']],
+    ]
 
-    required_if = fortios_required_if
+    # could not backup and update
+    mutually_exclusive = [
+        ['src', 'filter'],
+        ['src', 'path'],
+    ]
 
     module = AnsibleModule(
         argument_spec=argument_spec,
         supports_check_mode=True,
-        required_if=required_if,
+        mutually_exclusive=mutually_exclusive,
     )
 
-    result = dict(changed=False)
+    if module.params['logfile'] is not None:
+        try:
+            logger.setLevel(logging.DEBUG)
+            fh = logging.FileHandler(module.params['logfile'])
+            fh.setLevel(logging.DEBUG)
+            logger.addHandler(fh)
+        except:
+            module.fail_json(msg="Problem with logfile, read only ?")
+
+    retkwargs = dict(changed=False)
 
     # fail if pyFG not present
     if not HAS_PYFG:
         module.fail_json(msg='Could not import the python library pyFG required by this module')
 
-    #define device
-    f = FortiOS( module.params['host'],
-        username=module.params['username'],
-        password=module.params['password'],
-        timeout=module.params['timeout'],
-        vdom=module.params['vdom'])
+    # define device
+    f = FortiOS(module.params['host'],
+                username=module.params['username'],
+                password=module.params['password'],
+                timeout=module.params['username'],
+                vdom=module.params['vdom'])
 
-    #connect
+    # connect
     try:
         f.open()
     except:
-        module.fail_json(msg='Error connecting device')
+        module.fail_json(
+            msg='Error connecting device'
+        )
 
-    #get  config
+    # get  config
     try:
         f.load_config(path=module.params['filter'])
-        result['running_config'] = f.running_config.to_text()
+        retkwargs['running_config'] = f.running_config.to_text()
 
     except:
-        module.fail_json(msg='Error reading running config')
+        module.fail_json(
+            msg='Error reading running config'
+        )
 
-    #backup config
-    if module.params['backup']:
-        backup(module, f.running_config.to_text())
-
-
-    #update config
-    if module.params['src'] is not None:
-        #store config in str
+    if module.params['state'] == 'backuped':
+        # backup
+        try:
+            backup_file = open(module.params['dest'], "w")
+            backup_file.write(retkwargs['running_config'])
+            backup_file.close()
+        except:
+            module.fail_json(
+                msg='Error writing running config to file {0}'.format(module.params['dest'])
+            )
+    else:
+        # update config
+        # store config in str
         try:
             conf_str = open(module.params['src'], 'r').read()
             f.load_config(in_candidate=True, config_text=conf_str)
         except:
             module.fail_json(msg="Can't open configuration file, or configuration invalid")
 
-        #get updates lines
+        # get updates lines
         change_string = f.compare_config()
 
-        #remove not updatable parts
+        # remove not updatable parts
         c = FortiConfig()
         c.parse_config_output(change_string)
 
@@ -173,24 +241,20 @@ def main():
         change_string = c.to_text()
 
         if change_string != "":
-            result['change_string'] = change_string
-            result['changed'] = True
+            retkwargs['change_string'] = change_string
+            retkwargs['changed'] = True
 
-        #Commit if not check mode
-        if module.check_mode is False and change_string != "":
+        # Commit if not check mode
+        if module.check_mode == False and change_string != "":
             try:
                 f.commit(change_string)
-            except CommandExecutionException:
-                e = get_exception()
-                module.fail_json(msg="Unable to execute command, check your args, the error was {0}".format(e.message))
-            except FailedCommit:
-                e = get_exception()
-                module.fail_json(msg="Unable to commit, check your args, the error was {0}".format(e.message))
-            except ForcedCommit:
-                e = get_exception()
-                module.fail_json(msg="Failed to force commit, check your args, the error was {0}".format(e.message))
+            except FailedCommit as e:
+                # rollback
+                module.fail_json(msg="Unable to commit change, check your args, the error was {0}".format(e.message))
 
-    module.exit_json(**result)
+    module.exit_json(**retkwargs)
+
 
 if __name__ == '__main__':
     main()
+    
