@@ -8,4 +8,5 @@
     dest: ./backup_address_objects.conf
     filter: "firewall address"
     logfile: fortios.log
+    timeout: 60
     vdom: nsx
