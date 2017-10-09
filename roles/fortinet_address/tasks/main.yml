@@ -4,6 +4,6 @@
     host: 192.168.1.73
     username: admin
     password: admin
-    timeout: 20
+    timeout: 60
     backup: true
     backup_path: /tmp/
