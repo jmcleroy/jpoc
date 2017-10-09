@@ -1,11 +1,9 @@
 ---
-- name: Register google DNS
-  fortios_address:
+- name: Backup current config
+  fortios_config:
     host: 192.168.1.73
     username: admin
     password: admin
-    state: present
-    name: "google_dns"
-    type: ipmask
-    value: 8.8.8.8
     timeout: 20
+    state: backuped
+    dest: ./backup.conf
