@@ -5,3 +5,4 @@
     username: admin
     password: admin
     backup: yes
+    backup_path: /tmp/forti_backup/
