@@ -1,10 +1,10 @@
 ---
-- name: Backup only address objects
-  fortios_config:
+- name: Register google DNS
+  fortios_address:
     host: 192.168.1.73
     username: admin
     password: admin
-    state: backuped
-    dest: ./backup_address_objects.conf
-    filter: "firewall address"
-    logfile: fortios.log
+    state: present
+    name: "google_dns"
+    type: ipmask
+    value: 8.8.8.8
