@@ -7,4 +7,3 @@
   - name: test task
     nxos_facts:
       host: '{{ inventory_hostname }}'
-      
