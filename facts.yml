@@ -8,3 +8,4 @@
     nxos_facts:
       host: '{{ inventory_hostname }}'
 
+
