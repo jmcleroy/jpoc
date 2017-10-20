@@ -1,0 +1,16 @@
+- name: Test bigip_facts
+  hosts: all
+  connection: local
+  tasks:
+      - name: Get system info from the lab BIG-IP
+        bigip_facts:
+            server: "{{ inventory_hostname }}"
+            user: "admin"
+            password: "admin"
+            include: "system_info"
+        register: LTM_facts
+        delegate_to: localhost
+
+      - name: Print the system info
+        debug:
+            msg: "{{ LTM_facts }}"
