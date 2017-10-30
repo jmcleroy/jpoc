@@ -1,20 +1,25 @@
 ---
-- name: set backup_path fact
-  set_fact:
-    backup_path: "/tmp/backup"
+- name: Backup current config
+  nxos_config:
+    backup: yes
+  register: backup_config
+#- name: set backup_path fact
+#  set_fact:
+#    backup_path: "/tmp/backup"
 
-- name: create backup paths
-  file:
-    path: "{{ backup_path }}"
-    state: directory
-  run_once: yes
-  delegate_to: localhost
+#- name: create backup paths
+#  file:
 
-- name: create backup paths
-  file:
-    path: "{{ backup_path }}/{{ inventory_hostname }}"
-    state: directory
-  delegate_to: localhost
+#    path: "{{ backup_path }}"
+#    state: directory
+#  run_once: yes
+#  delegate_to: localhost
 
-- name: include device specific tasks
-  include: "{{ device_os }}.yml"
+#- name: create backup paths
+#  file:
+#    path: "{{ backup_path }}/{{ inventory_hostname }}"
+#    state: directory
+#  delegate_to: localhost
+
+#- name: include device specific tasks
+#  include: "{{ device_os }}.yml"
