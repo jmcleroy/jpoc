@@ -1,18 +1,23 @@
 ---
-- name: backup running-config from ios device
-  nxos_command:
-    commands: show running-config all
-    host: "{{ inventory_hostname }}"
-  register: config
+- name: Backup current config
+  nxos_config:
+    backup: yes
+  register: backup_config
 
-- name: set backup_file fact
-  set_fact:
-    backup_file: "{{ backup_path }}/{{ inventory_hostname }}/running-config"
+#- name: backup running-config from ios device
+#  nxos_command:
+#    commands: show running-config all
+#    host: "{{ inventory_hostname }}"
+#  register: config
 
-- name: write backup to file
-  copy:
-    content: "{{ config.stdout[0] }}"
-    dest: "{{ backup_file }}"
+#- name: set backup_file fact
+#  set_fact:
+#    backup_file: "{{ backup_path }}/{{ inventory_hostname }}/running-config"
 
-- name: display backup_file path
-  debug: var=backup_file
+#- name: write backup to file
+#  copy:
+#    content: "{{ config.stdout[0] }}"
+#    dest: "{{ backup_file }}"
+
+#- name: display backup_file path
+#  debug: var=backup_file
