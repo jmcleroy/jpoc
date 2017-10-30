@@ -1,0 +1,6 @@
+---
+- name: Reset to backed-up config
+  nxos_config:
+    src: "{{ backup_config.backup_path }}"
+    save: yes
+
