@@ -1,0 +1,8 @@
+---
+- name: "Radius Server Host Key Configuration"
+  nxos_aaa_server_host:
+    state: present
+    server_type: tacacs
+    address: 1.2.3.4
+    key: hello
+    encrypt_type: 7
