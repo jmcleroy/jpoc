@@ -4,8 +4,10 @@
   gather_facts: no
   
   tasks:
-  - name: test task
-    ios_command:
-      host: '{{ inventory_hostname }}'
-      commands:
-        - show version
+    - name: add acl lines
+      nxos_config:
+        lines:
+          - switchport mode trunk
+          - switchport trunk native vlan 20
+          - switchport trunk allowed vlan 50-51
+        parents: interface gigabitethernet 0/0
