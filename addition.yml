@@ -4,6 +4,9 @@
   gather_facts: no
 
   tasks:
+    - name: fact gathering
+      nxos_facts:
+
     - set_fact:
         nxos_version: "{{ hostvars['ansible_net_memfree_mb'] }}"
 #      with_items: "{{ ansible_play_hosts }}"
