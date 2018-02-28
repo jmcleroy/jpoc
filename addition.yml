@@ -5,8 +5,8 @@
 
   tasks:
     - set_fact:
-        nxos_version: "{{ hostvars[item]['ansible_net_hostname'] }}"
-      with_items: "{{ ansible_play_hosts }}"
+        nxos_version: "{{ hostvars['ansible_net_hostname'] }}"
+#      with_items: "{{ ansible_play_hosts }}"
 #    - set_fact:
 #        count_sum: "{{ hostvars[item]['mtu'] + count_sum | default(0) }}"
 #      with_items: "{{ ansible_play_hosts }}"
