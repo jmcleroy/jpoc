@@ -8,7 +8,7 @@
       nxos_facts:
 
     - set_fact:
-        nxos_version: "{{ hostvars['ansible_net_memfree_mb'] }}"
+        nxos_version: "{{ ['ansible_net_memfree_mb'] }}"
 #      with_items: "{{ ansible_play_hosts }}"
 #    - set_fact:
 #        count_sum: "{{ hostvars[item]['mtu'] + count_sum | default(0) }}"
