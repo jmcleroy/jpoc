@@ -4,9 +4,11 @@
     feature: "{{item.feature }}"
   with_items: "{{ features }}"
 
+
 - name: ENABLE NV OVERLAY EVPN
   nxos_evpn_global:
     nv_overlay_evpn: true
+
 
 - name: ASSIGN ANYCAST GATEWAY
   nxos_overlay_global:

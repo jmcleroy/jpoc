@@ -12,6 +12,7 @@
     var: backup_config.backup_path
     verbosity: 3
 
+
 - block:
     - name: Get ipv6 interface info
       iosxr_command:

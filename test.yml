@@ -4,10 +4,21 @@
   gather_facts: no
   
   tasks:
-    - name: add acl lines
+    - name: add switchport trunks and vlans
       nxos_config:
         lines:
           - switchport mode trunk
           - switchport trunk native vlan 20
           - switchport trunk allowed vlan 50-51
         parents: interface gigabitethernet 0/0
+
+    - name: show vlans
+      nxos_command:
+        commands:
+          - show vlan 20
+          - show vlan 50
+          - show vlan 51
+        wait_for:
+          - vlan 20 == present
+          - vlan 50 == present
+          - vlan 51 == present
