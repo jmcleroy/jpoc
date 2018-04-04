@@ -4,4 +4,5 @@
   gather_facts: no
 
   roles:
+    - nxos_backup
     - nxos_vlan_6

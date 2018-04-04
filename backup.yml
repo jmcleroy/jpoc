@@ -1,0 +1,5 @@
+---
+- name: Reset to backed-up config
+  nxos_config:
+    backup: yes
+  register: {{ backup.name }}

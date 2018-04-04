@@ -11,5 +11,5 @@
         count_sum: "{{ hostvars[item]['ansible_net_memfree_mb'] + count_sum }}"
       with_items: "{{ ansible_play_hosts }}"
 #    - set_fact:
-#        count_sum: "{{ hostvars[item]['mtu'] + count_sum | default(0) }}"
+#        count_sum: "{{ [item]['mtu'] + count_sum | default(0) }}"
 #      with_items: "{{ ansible_play_hosts }}"

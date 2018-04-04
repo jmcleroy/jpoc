@@ -1,0 +1,7 @@
+---
+- name: run command that requires answering a prompt
+  ios_command:
+    commands:
+      - command: 'reload'
+        prompt: 'Proceed with reload\? \[confirm\]'
+        answer: y
