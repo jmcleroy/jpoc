@@ -1,0 +1,34 @@
+---
+- hosts: localhost
+  gather_facts: false
+  vars_files:
+    - vars/instance.yml
+
+  tasks:
+    - name: Get User
+      uri:
+        url: "{{sn_instance_url}}api/now/table/sys_user?sysparm_query=user_name%3Dadmin&sysparm_fields=sys_id&sysparm_limit=1"
+        method: GET
+        user: "{{sn_instance_login}}"
+        password: "{{sn_instance_password}}"
+      register: user_result
+
+    - name: Open Incident
+      uri:
+        url: "{{sn_instance_url}}api/now/table/incident?sysparm_fields=number%2Csys_id"
+        method: POST
+        status_code: 201
+        user: "{{sn_instance_login}}"
+        password: "{{sn_instance_password}}"
+        body_format: json
+        body: "{'caller_id':'{{user_result.json.result[0].sys_id}}','short_description':'Ansible Keepalive'}"
+      register: incident_response
+
+    - name: Resolve Incident
+      uri:
+        url: "{{sn_instance_url}}api/now/table/incident/{{incident_response.json.result.sys_id}}"
+        method: PUT
+        user: "{{sn_instance_login}}"
+        password: "{{sn_instance_password}}"
+        body_format: json
+        body: '{"state":"Resolved"}'
