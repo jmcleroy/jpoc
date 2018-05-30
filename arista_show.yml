@@ -1,0 +1,9 @@
+---
+- hosts: all
+  connection: local
+  gather_facts: no
+
+  tasks:
+    - name: add switchport trunks and vlans
+      eos_command:
+        commands: show version
