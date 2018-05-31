@@ -10,6 +10,5 @@
         name: ethernet1
         description: test-interface
         speed: 100full
-        mtu: 512
       provider:
         transport: eapi
