@@ -5,10 +5,8 @@
 
   tasks:
     - name: configure interface
-      eos_interface:
-        name: ethernet1
-        description: test-interface
-        speed: 100full
+      eos_command:
+        commands: show version
         provider:
           transport: eapi
           validate_certs: "{{ validate_SSL_certs | default('no') }}"
