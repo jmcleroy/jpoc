@@ -1,0 +1,10 @@
+---
+- hosts: all
+  connection: local
+  gather_facts: no
+
+  tasks:
+  - name: diff against the startup config
+    nxos_config:
+      diff_against: startup
+    register: test_diff
