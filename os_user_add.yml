@@ -1,0 +1,15 @@
+---
+- hosts: all
+  connection: local
+  gather_facts: no
+
+  tasks:
+    - name: add openstack user
+      os_user:
+        cloud: {{ mycloud }}
+        state: {{ state }}
+        name: {{ username }}
+        password: {{ password }}
+        email: {{ email_address }}
+        domain: {{ domain }}
+        default_project: {{ project }}
