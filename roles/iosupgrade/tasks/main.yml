@@ -6,10 +6,14 @@
 #    src: IOS/basics.j2
 #    dest: new_configs/new_device.cfg
 #  delegate_to: localhost
-- name: ENSURE FILES ARE ON REMOTE DEVICES
-  ntc_file_copy:
-    local_file={{playbook_dir}}/roles/iosupgrade/files/new_device.cfg
-    platform=cisco_ios_ssh
-    host={{ inventory_hostname }}
-    username=cisco
-    password=cisco
+#- name: ENSURE FILES ARE ON REMOTE DEVICES
+#  ntc_file_copy:
+#    local_file={{playbook_dir}}/roles/iosupgrade/files/new_device.cfg
+#    platform=cisco_ios_ssh
+#    host={{ inventory_hostname }}
+#    username=cisco
+#    password=cisco
+- name: copy config
+  ios_config:
+    src: {{ playbook_dir }}/roles/iosupgrade/files/new_device.cfg
+    save_when: changed
