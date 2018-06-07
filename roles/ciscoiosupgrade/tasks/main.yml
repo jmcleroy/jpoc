@@ -8,7 +8,7 @@
 #  delegate_to: localhost
 - name: ENSURE FILES ARE ON REMOTE DEVICES
   ntc_file_copy:
-    local_file={{playbook_dir}}/files/new_device.cfg
+    local_file={{playbook_dir}}/ciscoiosupgrade/files/new_device.cfg
     platform=cisco_ios_ssh
     host={{ inventory_hostname }}
     username=cisco
