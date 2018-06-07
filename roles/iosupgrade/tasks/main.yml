@@ -15,5 +15,5 @@
 #    password=cisco
 - name: copy config
   ios_config:
-    src: '{{ playbook_dir }}'/roles/iosupgrade/files/new_device.cfg
+    src: "{{ playbook_dir }}"/roles/iosupgrade/files/new_device.cfg
     save_when: changed
