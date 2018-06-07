@@ -6,7 +6,7 @@
   tasks:
     - name: add openstack user
       os_user:
-        cloud: {{ mycloud }}
+        cloud: {{ cloud }}
         state: {{ state }}
         name: {{ username }}
         password: {{ password }}

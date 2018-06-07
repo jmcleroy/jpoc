@@ -1,0 +1,15 @@
+---
+- debug:
+    msg: "{{ ansible_host }}"
+#- name: create configuration for IOS devices
+#  template:
+#    src: IOS/basics.j2
+#    dest: new_configs/new_device.cfg
+#  delegate_to: localhost
+- name: ENSURE FILES ARE ON REMOTE DEVICES
+  ntc_file_copy:
+    local_file=new_device.cfg
+    platform=cisco_ios_ssh
+    host={{ inventory_hostname }}
+    username=cisco
+    password=cisco
