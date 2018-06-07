@@ -17,3 +17,5 @@
   ios_config:
     src: files/new_device.cfg
     save_when: changed
+    provider:
+      timeout: 600
