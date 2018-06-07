@@ -15,5 +15,5 @@
 #    password=cisco
 - name: copy config
   ios_config:
-    src: new_device.cfg
+    src: files/new_device.cfg
     save_when: changed
