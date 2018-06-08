@@ -5,5 +5,4 @@
     vlan_id: "{{ nxos_vlan }}"
     admin_state: "{{ vlan_admin_state }}"
     state: "{{ vlan_state }}"
-    provider:
-      authorize: no
+
