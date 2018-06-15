@@ -2,6 +2,8 @@
 - name: Backup current config
   nxos_config:
     backup: yes
+    provider:
+      authorize: no
   register: backup_config
 #- name: set backup_path fact
 #  set_fact:
