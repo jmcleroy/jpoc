@@ -1,6 +1,6 @@
 ---
 - hosts: all
-  connection: network_cli
+  connection: local
   gather_facts: no
 
   tasks:
