@@ -1,0 +1,11 @@
+---
+- hosts: all
+  connection: network_cli
+  gather_facts: no
+
+  tasks:
+    - name: show commnds
+      ios_command:
+        commands:
+          - show ip int br
+          - show log
