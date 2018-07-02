@@ -1,0 +1,11 @@
+---
+- hosts: all
+  connection: local
+  gather_facts: no
+  
+  tasks:
+    - name: add switchport trunks and vlans
+      nxos_scp:
+        image: {{ image_version }}
+
+      nxos_config:
