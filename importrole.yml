@@ -7,4 +7,4 @@
     - import_role:
         name: ciscopre
       when:
-        - '"nxos" in ansible_inventory_os'
+        - '"nxos" in ansible_network_os'
