@@ -8,3 +8,8 @@
         name: ciscopre
       when:
         - '"nxos" in ansible_network_os'
+
+    - import_role:
+        name: nxos_precheck
+      when:
+        - '"nxos" in ansible_network_os'
