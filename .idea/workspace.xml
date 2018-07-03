@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1518ea8d-3031-4efc-8a0f-e7a5a881e274" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/importrole.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/importrole.yml" afterPath="$PROJECT_DIR$/importrole.yml" />
     </list>
     <ignored path="jpoc3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,7 +68,7 @@
         <entry file="file://$PROJECT_DIR$/importrole.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="216">
-              <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -511,13 +511,6 @@
       <option name="presentableId" value="Default" />
       <updated>1501075586948</updated>
     </task>
-    <task id="LOCAL-00065" summary="adding items">
-      <created>1519784267009</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1519784267009</updated>
-    </task>
     <task id="LOCAL-00066" summary="adding items">
       <created>1519784387196</created>
       <option name="number" value="00066" />
@@ -854,7 +847,14 @@
       <option name="project" value="LOCAL" />
       <updated>1529618113960</updated>
     </task>
-    <option name="localTasksCounter" value="114" />
+    <task id="LOCAL-00114" summary="Added in importing role with when statements.">
+      <created>1530642608682</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1530642608682</updated>
+    </task>
+    <option name="localTasksCounter" value="115" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -895,7 +895,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="adding items" />
     <MESSAGE value="Modified snow_record.py in order to support host vs instance." />
-    <option name="LAST_COMMIT_MESSAGE" value="Modified snow_record.py in order to support host vs instance." />
+    <MESSAGE value="Added in importing role with when statements." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added in importing role with when statements." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1263,7 +1264,7 @@
     <entry file="file://$PROJECT_DIR$/importrole.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
-          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
           <folding />
         </state>
       </provider>
