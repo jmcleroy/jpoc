@@ -1,0 +1,10 @@
+---
+- hosts: all
+  connection: local
+  gather_facts: no
+
+  tasks:
+    - import_role:
+        name: ciscopre
+      when:
+    - 'ansible_inventory_os=nxos'
