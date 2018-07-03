@@ -7,3 +7,5 @@
       - show ip interface brief
       - show ip route summary
       - show ip bgp summary
+    provider:
+      authorize: no
