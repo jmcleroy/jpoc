@@ -13,3 +13,8 @@
     name_servers: "{{ item.servers }}"
   with_items: "{{ name_servers }}"
 
+- name: configure ntp servers
+  ios_config:
+    lines:
+      - ntp server "{{ item.servers }}"
+    with_items: "{{ ntp_servers }}"

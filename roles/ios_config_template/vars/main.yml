@@ -1,4 +1,7 @@
 name_servers:
   - { servers: 8.8.8.8 }
-  - { servers: 8.8.4.4 }
+
+ntp_servers:
+  - { servers: 192.168.1.1}
+  - { servers: 192.168.1.126}
 
