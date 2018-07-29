@@ -27,8 +27,8 @@
       <file leaf-file-name="172.16.1.76" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/host_vars/172.16.1.76">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="13" column="2" selection-start-line="13" selection-start-column="0" selection-end-line="14" selection-end-column="88" />
+            <state relative-caret-position="336">
+              <caret line="14" column="58" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -38,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/host_vars/192.168.1.165">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="48">
-              <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+              <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -609,13 +609,6 @@
       <option name="presentableId" value="Default" />
       <updated>1501075586948</updated>
     </task>
-    <task id="LOCAL-00083" summary="adding items">
-      <created>1527771516378</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1527771516378</updated>
-    </task>
     <task id="LOCAL-00084" summary="adding items">
       <created>1527771563831</created>
       <option name="number" value="00084" />
@@ -952,7 +945,14 @@
       <option name="project" value="LOCAL" />
       <updated>1532890414242</updated>
     </task>
-    <option name="localTasksCounter" value="132" />
+    <task id="LOCAL-00132" summary="Added in importing role with when statements.">
+      <created>1532890459672</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1532890459672</updated>
+    </task>
+    <option name="localTasksCounter" value="133" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1288,14 +1288,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/host_vars/172.16.1.76">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="13" column="2" selection-start-line="13" selection-start-column="0" selection-end-line="14" selection-end-column="88" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/roles/nxos_base_config/tasks/main.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -1360,10 +1352,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/host_vars/172.16.1.76">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" column="58" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/host_vars/192.168.1.165">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
-          <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
           <folding />
         </state>
       </provider>
