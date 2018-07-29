@@ -37,8 +37,8 @@
       <file leaf-file-name="192.168.1.165" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/host_vars/192.168.1.165">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="1" column="34" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
+            <state relative-caret-position="48">
+              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -609,13 +609,6 @@
       <option name="presentableId" value="Default" />
       <updated>1501075586948</updated>
     </task>
-    <task id="LOCAL-00088" summary="adding items">
-      <created>1528038901824</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1528038901824</updated>
-    </task>
     <task id="LOCAL-00089" summary="adding items">
       <created>1528375723448</created>
       <option name="number" value="00089" />
@@ -952,7 +945,14 @@
       <option name="project" value="LOCAL" />
       <updated>1532890708520</updated>
     </task>
-    <option name="localTasksCounter" value="137" />
+    <task id="LOCAL-00137" summary="Added in importing role with when statements.">
+      <created>1532890971182</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1532890971182</updated>
+    </task>
+    <option name="localTasksCounter" value="138" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1362,8 +1362,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/host_vars/192.168.1.165">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" column="34" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
+        <state relative-caret-position="48">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
           <folding />
         </state>
       </provider>
