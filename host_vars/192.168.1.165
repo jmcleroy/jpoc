@@ -1,4 +1,4 @@
 l2_interfaces:
-   - interface: GigabitEthernet1/0/2, description: "tnmemph01"
-   - interface: GigabitEthernet1/0/3, description: "tnmemph02"
+   - { interface: GigabitEthernet1/0/2, description: "tnmemph01" }
+   - { interface: GigabitEthernet1/0/3, description: "tnmemph02" }
 
