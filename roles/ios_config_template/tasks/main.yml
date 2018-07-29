@@ -8,4 +8,8 @@
       authorize: no
   with_items: "{{ l2_interfaces }}"
 
+- name: configure name servers
+  ios_system:
+    name_servers: "{{ item.name_servers }}"
+  with_items: "{{ name_servers }}"
 
