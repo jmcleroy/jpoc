@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1518ea8d-3031-4efc-8a0f-e7a5a881e274" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/roles/ios_config_template/vars/main.yml" afterPath="$PROJECT_DIR$/roles/ios_config_template/vars/main.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/roles/ios_config_template/tasks/main.yml" afterPath="$PROJECT_DIR$/roles/ios_config_template/tasks/main.yml" />
     </list>
     <ignored path="jpoc3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -94,7 +94,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/roles/ios_config_template/vars/main.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="96">
@@ -104,11 +104,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.yml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/roles/ios_config_template/tasks/main.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+            <state relative-caret-position="480">
+              <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -182,8 +182,8 @@
         <option value="$PROJECT_DIR$/host_vars/192.168.1.145" />
         <option value="$PROJECT_DIR$/ios_config_template.yml" />
         <option value="$PROJECT_DIR$/host_vars/192.168.1.165" />
-        <option value="$PROJECT_DIR$/roles/ios_config_template/tasks/main.yml" />
         <option value="$PROJECT_DIR$/roles/ios_config_template/vars/main.yml" />
+        <option value="$PROJECT_DIR$/roles/ios_config_template/tasks/main.yml" />
       </list>
     </option>
   </component>
@@ -609,13 +609,6 @@
       <option name="presentableId" value="Default" />
       <updated>1501075586948</updated>
     </task>
-    <task id="LOCAL-00094" summary="adding items">
-      <created>1528378917643</created>
-      <option name="number" value="00094" />
-      <option name="presentableId" value="LOCAL-00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1528378917643</updated>
-    </task>
     <task id="LOCAL-00095" summary="adding items">
       <created>1528379923481</created>
       <option name="number" value="00095" />
@@ -952,7 +945,14 @@
       <option name="project" value="LOCAL" />
       <updated>1532892119930</updated>
     </task>
-    <option name="localTasksCounter" value="143" />
+    <task id="LOCAL-00143" summary="Added in importing role with when statements.">
+      <created>1532892267535</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1532892267535</updated>
+    </task>
+    <option name="localTasksCounter" value="144" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1352,18 +1352,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/roles/ios_config_template/tasks/main.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/roles/ios_config_template/vars/main.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roles/ios_config_template/tasks/main.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
           <folding />
         </state>
       </provider>

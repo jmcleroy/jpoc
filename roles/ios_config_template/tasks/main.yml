@@ -17,4 +17,6 @@
   ios_config:
     lines:
       - ntp server "{{ item.ntp }}"
+    provider:
+      authorize: no
   with_items: "{{ ntp_servers }}"
