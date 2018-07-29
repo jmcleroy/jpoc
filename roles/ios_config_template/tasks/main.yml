@@ -4,7 +4,8 @@
     name: "{{ item.interface }}"
     description: "{{ item.description }}"
     enabled: True
-  with_items: "{{ l2_interfaces }}"
     provider:
       authorize: no
+  with_items: "{{ l2_interfaces }}"
+
 
