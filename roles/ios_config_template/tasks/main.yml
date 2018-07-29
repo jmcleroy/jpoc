@@ -1,0 +1,9 @@
+---
+- name: configure interface
+  ios_interface:
+    name: "{{ item.interface }}"
+    description: "{{ item.description }}"
+    enabled: True
+  with_items:
+  - "{{ l2_interfaces }}"
+
