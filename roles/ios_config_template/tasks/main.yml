@@ -16,5 +16,5 @@
 - name: configure ntp servers
   ios_config:
     lines:
-      - ntp server "{{ item.servers }}"
-    with_items: "{{ ntp_servers }}"
+      - ntp server "{{ item.ntp }}"
+  with_items: "{{ ntp_servers }}"
