@@ -4,4 +4,4 @@
   gather_facts: no
 
   roles:
-    - ios_conig_template
+    - ios_config_template
