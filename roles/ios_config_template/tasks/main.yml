@@ -5,4 +5,6 @@
     description: "{{ item.description }}"
     enabled: True
   with_items: "{{ l2_interfaces }}"
+    provider:
+      authorize: no
 
