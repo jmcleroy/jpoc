@@ -10,6 +10,6 @@
 
 - name: configure name servers
   ios_system:
-    name_servers: "{{ item.name_servers }}"
+    name_servers: "{{ item.servers }}"
   with_items: "{{ name_servers }}"
 
