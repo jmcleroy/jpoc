@@ -4,3 +4,10 @@ l2_interfaces:
    - { interface: "{{ interface_name }}1/0/4", description: "tnmemph03" }
    - { interface: "{{ interface_name }}1/0/5", description: "tnmemph04" }
    - { interface: "{{ interface_name }}1/0/6", description: "tnmemph05" }
+
+vlan_id:
+   - { vlan: 100, interfaces: "{{ interface_name }}1/0/3" }
+   - { vlan: 100, interfaces: "{{ interface_name }}1/0/5" }
+   - { vlan: 200, interfaces: "{{ interface_name }}1/0/2" }
+   - { vlan: 200, interfaces: "{{ interface_name }}1/0/4" }
+   - { vlan: 200, interfaces: "{{ interface_name }}1/0/6" }
