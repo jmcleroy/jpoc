@@ -1,0 +1,9 @@
+---
+- hosts: all
+  connection: network_cli
+  gather_facts: no
+  
+  tasks:
+    - name: add switchport trunks and vlans
+      nxos_command:
+        commands: show running-config all

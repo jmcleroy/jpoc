@@ -21,8 +21,14 @@
       authorize: no
   with_items: "{{ ntp_servers }}"
 
+- name: show vlans
+  ios_command:
+    commands: show vlan
+  register: vlans
+
 - name: Add interfaces to VLAN
   ios_vlan:
     vlan_id: "{{ item.vlan}}"
     interfaces: "{{ item.interfaces }}"
   with_items: "{{ vlan_id }}"
+  when: vlans
