@@ -3,6 +3,6 @@
   net_vlan:
     vlan_id: "{{ vlan_number }}"
     name: "{{ vlan_name }}"
-    provider:
-      authorize: no
+#    provider:
+#      authorize: no
 
