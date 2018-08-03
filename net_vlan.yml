@@ -2,7 +2,6 @@
 - hosts: all
   connection: network_cli
   gather_facts: no
-#  become: no
 
   roles:
     - mpva_vlan 

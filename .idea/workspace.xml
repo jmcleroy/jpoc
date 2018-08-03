@@ -57,8 +57,8 @@
       <file leaf-file-name="net_vlan.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/net_vlan.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+            <state relative-caret-position="72">
+              <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -676,13 +676,6 @@
       <option name="presentableId" value="Default" />
       <updated>1501075586948</updated>
     </task>
-    <task id="LOCAL-00106" summary="adding items">
-      <created>1528382231259</created>
-      <option name="number" value="00106" />
-      <option name="presentableId" value="LOCAL-00106" />
-      <option name="project" value="LOCAL" />
-      <updated>1528382231259</updated>
-    </task>
     <task id="LOCAL-00107" summary="adding items">
       <created>1528382304495</created>
       <option name="number" value="00107" />
@@ -1019,7 +1012,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533315176227</updated>
     </task>
-    <option name="localTasksCounter" value="155" />
+    <task id="LOCAL-00155" summary="Added in importing role with when statements.">
+      <created>1533315246380</created>
+      <option name="number" value="00155" />
+      <option name="presentableId" value="LOCAL-00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1533315246380</updated>
+    </task>
+    <option name="localTasksCounter" value="156" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1418,8 +1418,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/net_vlan.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        <state relative-caret-position="72">
+          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
           <folding />
         </state>
       </provider>
