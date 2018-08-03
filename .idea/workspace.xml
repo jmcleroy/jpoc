@@ -4,7 +4,6 @@
     <list default="true" id="1518ea8d-3031-4efc-8a0f-e7a5a881e274" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/net_vlan.yml" afterPath="$PROJECT_DIR$/net_vlan.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/roles/mpva_vlan/tasks/main.yml" afterPath="$PROJECT_DIR$/roles/mpva_vlan/tasks/main.yml" />
     </list>
     <ignored path="jpoc3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="net_vlan.yml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="net_vlan.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/net_vlan.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+            <state relative-caret-position="48">
+              <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -105,7 +104,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/roles/mpva_vlan/tasks/main.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
@@ -183,8 +182,8 @@
         <option value="$PROJECT_DIR$/host_vars/192.168.1.166" />
         <option value="$PROJECT_DIR$/roles/ios_config_template/tasks/main.yml" />
         <option value="$PROJECT_DIR$/host_vars/192.168.1.165" />
-        <option value="$PROJECT_DIR$/net_vlan.yml" />
         <option value="$PROJECT_DIR$/roles/mpva_vlan/tasks/main.yml" />
+        <option value="$PROJECT_DIR$/net_vlan.yml" />
       </list>
     </option>
   </component>
@@ -677,13 +676,6 @@
       <option name="presentableId" value="Default" />
       <updated>1501075586948</updated>
     </task>
-    <task id="LOCAL-00104" summary="adding items">
-      <created>1528381909374</created>
-      <option name="number" value="00104" />
-      <option name="presentableId" value="LOCAL-00104" />
-      <option name="project" value="LOCAL" />
-      <updated>1528381909374</updated>
-    </task>
     <task id="LOCAL-00105" summary="adding items">
       <created>1528382217223</created>
       <option name="number" value="00105" />
@@ -1020,7 +1012,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533221769422</updated>
     </task>
-    <option name="localTasksCounter" value="153" />
+    <task id="LOCAL-00153" summary="Added in importing role with when statements.">
+      <created>1533315033004</created>
+      <option name="number" value="00153" />
+      <option name="presentableId" value="LOCAL-00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1533315033005</updated>
+    </task>
+    <option name="localTasksCounter" value="154" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1409,18 +1408,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/net_vlan.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/roles/mpva_vlan/tasks/main.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/net_vlan.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
           <folding />
         </state>
       </provider>
