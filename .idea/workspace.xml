@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1518ea8d-3031-4efc-8a0f-e7a5a881e274" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/roles/nxos_acl/tasks/main.yml" afterPath="$PROJECT_DIR$/roles/nxos_acl/tasks/main.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nxos_acl.yml" afterPath="$PROJECT_DIR$/nxos_acl.yml" />
     </list>
     <ignored path="jpoc3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -77,8 +77,8 @@
       <file leaf-file-name="nxos_acl.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/nxos_acl.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="48">
+              <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -150,7 +150,6 @@
         <option value="$PROJECT_DIR$/nxos_vlan_6.yml" />
         <option value="$PROJECT_DIR$/roles/ciscoreloadwithprompt/tasks/main.yml" />
         <option value="$PROJECT_DIR$/snow.yml" />
-        <option value="$PROJECT_DIR$/nxos_acl.yml" />
         <option value="$PROJECT_DIR$/roles/network_facts/tasks/cisco-ios.yaml" />
         <option value="$PROJECT_DIR$/test.yml" />
         <option value="$PROJECT_DIR$/arista_show.yml" />
@@ -184,6 +183,7 @@
         <option value="$PROJECT_DIR$/roles/ios_config_template/tasks/main.yml" />
         <option value="$PROJECT_DIR$/runningconfig.yml" />
         <option value="$PROJECT_DIR$/roles/nxos_acl/tasks/main.yml" />
+        <option value="$PROJECT_DIR$/nxos_acl.yml" />
       </list>
     </option>
   </component>
@@ -618,13 +618,6 @@
       <option name="presentableId" value="Default" />
       <updated>1501075586948</updated>
     </task>
-    <task id="LOCAL-00109" summary="Modified snow_record.py in order to support host vs instance.">
-      <created>1528473257221</created>
-      <option name="number" value="00109" />
-      <option name="presentableId" value="LOCAL-00109" />
-      <option name="project" value="LOCAL" />
-      <updated>1528473257222</updated>
-    </task>
     <task id="LOCAL-00110" summary="Modified snow_record.py in order to support host vs instance.">
       <created>1528473537236</created>
       <option name="number" value="00110" />
@@ -961,7 +954,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533317376027</updated>
     </task>
-    <option name="localTasksCounter" value="158" />
+    <task id="LOCAL-00158" summary="Added in importing role with when statements.">
+      <created>1533570319468</created>
+      <option name="number" value="00158" />
+      <option name="presentableId" value="LOCAL-00158" />
+      <option name="project" value="LOCAL" />
+      <updated>1533570319468</updated>
+    </task>
+    <option name="localTasksCounter" value="159" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1367,8 +1367,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/nxos_acl.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="48">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
           <folding />
         </state>
       </provider>
