@@ -3,6 +3,6 @@
   nxos_config:
     host: "{{ inventory_hostname }}"
     lines:
-      - ip access-list Ansible
       - permit ip host 192.168.1.140 any
+    parents: ip access-list Ansible
 
