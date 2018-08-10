@@ -1,0 +1,15 @@
+- hosts: all
+  connection: local
+  gather_facts: no
+
+  tasks:
+  - name: configure an ipv4 host record
+    nios_host_record:
+      name: host.ansible.com
+      ipv4:
+        - address: 192.168.1.142
+      state: present
+      provider:
+        host: "192.168.1.155"
+        username: admin
+        password: admin
