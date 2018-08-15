@@ -1,0 +1,9 @@
+- hosts: all
+  connection: network_cli
+  gather_facts: no
+
+  tasks:
+    - nxos_facts:
+        gather_subset: all
+
+    - debug: msg="{{ inventory_hostname }} Serial Number is {{ ansible_net_serialnum }}"
