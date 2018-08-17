@@ -1,0 +1,11 @@
+- hosts: all
+  gather_facts: no
+  connection: local
+
+  tasks:
+    - name: set admin password
+      panos_admin:
+        ip_address: "{{ inventory_hostname }}"
+        admin_username: "{{ user_to_add }}"
+        admin_password: "{{ pass_to_add }}"
+        commit: true
