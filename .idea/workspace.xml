@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1518ea8d-3031-4efc-8a0f-e7a5a881e274" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/panos_add_user.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/infoblox_add.yml" afterPath="$PROJECT_DIR$/infoblox_add.yml" />
     </list>
     <ignored path="jpoc3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="infoblox_add.yml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="infoblox_add.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/infoblox_add.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
+            <state relative-caret-position="168">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -104,7 +104,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="panos_add_user.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="panos_add_user.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/panos_add_user.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
@@ -181,9 +181,9 @@
         <option value="$PROJECT_DIR$/runningconfig.yml" />
         <option value="$PROJECT_DIR$/nxos_acl.yml" />
         <option value="$PROJECT_DIR$/roles/nxos_acl/tasks/main.yml" />
-        <option value="$PROJECT_DIR$/infoblox_add.yml" />
         <option value="$PROJECT_DIR$/nxos_serial.yml" />
         <option value="$PROJECT_DIR$/panos_add_user.yml" />
+        <option value="$PROJECT_DIR$/infoblox_add.yml" />
       </list>
     </option>
   </component>
@@ -534,13 +534,6 @@
       <option name="presentableId" value="Default" />
       <updated>1501075586948</updated>
     </task>
-    <task id="LOCAL-00119" summary="Added in importing role with when statements.">
-      <created>1530643147824</created>
-      <option name="number" value="00119" />
-      <option name="presentableId" value="LOCAL-00119" />
-      <option name="project" value="LOCAL" />
-      <updated>1530643147824</updated>
-    </task>
     <task id="LOCAL-00120" summary="Added in importing role with when statements.">
       <created>1530643157628</created>
       <option name="number" value="00120" />
@@ -877,7 +870,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534351423349</updated>
     </task>
-    <option name="localTasksCounter" value="168" />
+    <task id="LOCAL-00168" summary="Adding panos playbook">
+      <created>1534511080135</created>
+      <option name="number" value="00168" />
+      <option name="presentableId" value="LOCAL-00168" />
+      <option name="project" value="LOCAL" />
+      <updated>1534511080135</updated>
+    </task>
+    <option name="localTasksCounter" value="169" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -919,7 +919,8 @@
     <MESSAGE value="adding items" />
     <MESSAGE value="Modified snow_record.py in order to support host vs instance." />
     <MESSAGE value="Added in importing role with when statements." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added in importing role with when statements." />
+    <MESSAGE value="Adding panos playbook" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding panos playbook" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1219,14 +1220,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/infoblox_add.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nxos_upgrade.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1279,6 +1272,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/infoblox_add.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding />
         </state>
       </provider>

@@ -5,9 +5,9 @@
   tasks:
   - name: configure an ipv4 host record
     nios_host_record:
-      name: host.example.com
+      name: "{{ host_name }}"
       ipv4:
-        - address: 192.168.1.142
+        - address: "{{ ip_address }}"
       state: present
       provider:
         host: "192.168.1.155"
