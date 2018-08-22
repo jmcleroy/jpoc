@@ -3,9 +3,9 @@
   connection: network_cli
 
   tasks:
-    - name: add acl
-      asa_acl:
+    - asa_config:
         lines:
-          - access-list ACL-OUTSIDE extended permit tcp any any eq www
-          - access-list ACL-OUTSIDE extended permit tcp any any eq https
-        context: customer_a
+          - network-object host 10.80.30.18
+          - network-object host 10.80.30.19
+          - network-object host 10.80.30.20
+        parents: ['object-group network OG-MONITORED-SERVERS']
