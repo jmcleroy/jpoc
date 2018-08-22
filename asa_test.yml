@@ -1,10 +1,14 @@
 - hosts: all
   gather_facts: no
   connection: network_cli
+  vars:
+  cli:
+    host: "{{ inventory_hostname }}"
+    authorize: yes
+    auth_pass: cisco
 
   tasks:
     - asa_config:
-        authorize: yes
         lines:
           - network-object host 10.80.30.18
           - network-object host 10.80.30.19
