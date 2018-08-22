@@ -3,8 +3,7 @@
   connecton: network_cli
 
   tasks:
-    - name: add acl
-      asa_acl:
+    - asa_acl:
         lines:
           - access-list ACL-OUTSIDE extended permit tcp any any eq www
           - access-list ACL-OUTSIDE extended permit tcp any any eq https
