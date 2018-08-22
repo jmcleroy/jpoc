@@ -1,9 +1,10 @@
 - hosts: all
   gather_facts: no
-  connecton: network_cli
+  connection: network_cli
 
   tasks:
-    - asa_acl:
+    - name: add acl
+      asa_acl:
         lines:
           - access-list ACL-OUTSIDE extended permit tcp any any eq www
           - access-list ACL-OUTSIDE extended permit tcp any any eq https
