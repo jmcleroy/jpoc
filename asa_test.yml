@@ -10,4 +10,3 @@
           - network-object host 10.80.30.19
           - network-object host 10.80.30.20
         parents: ['object-group network OG-MONITORED-SERVERS']
-        provider: "{{ cli }}"
