@@ -4,6 +4,7 @@
 
   tasks:
     - asa_config:
+        authorize: yes
         lines:
           - network-object host 10.80.30.18
           - network-object host 10.80.30.19
