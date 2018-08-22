@@ -1,11 +1,7 @@
 - hosts: all
   gather_facts: no
   connection: network_cli
-  vars:
-    cli:
-      host: "{{ inventory_hostname }}"
-      authorize: yes
-      auth_pass: cisco
+  become: yes
 
   tasks:
     - asa_config:
