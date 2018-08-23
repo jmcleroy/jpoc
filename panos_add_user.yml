@@ -10,6 +10,6 @@
         ip_address: "{{ inventory_hostname }}"
         admin_username: "{{ user_to_add }}"
         admin_password: "{{ pass_to_add }}"
-        role: default
+        role: "Custom role-based administrator"
         password: cisco
         commit: true
