@@ -13,3 +13,5 @@
 
     - panos_commit:
         ip_address: "{{ inventory_hostname }}"
+        username: admin
+        password: cisco
