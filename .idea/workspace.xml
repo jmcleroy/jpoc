@@ -117,8 +117,8 @@
       <file leaf-file-name="panos_add_user.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/panos_add_user.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+            <state relative-caret-position="264">
+              <caret line="11" column="71" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="71" />
               <folding />
             </state>
           </provider>
@@ -713,13 +713,6 @@
       <option name="presentableId" value="Default" />
       <updated>1501075586948</updated>
     </task>
-    <task id="LOCAL-00141" summary="Added in importing role with when statements.">
-      <created>1532892024464</created>
-      <option name="number" value="00141" />
-      <option name="presentableId" value="LOCAL-00141" />
-      <option name="project" value="LOCAL" />
-      <updated>1532892024464</updated>
-    </task>
     <task id="LOCAL-00142" summary="Added in importing role with when statements.">
       <created>1532892119930</created>
       <option name="number" value="00142" />
@@ -1056,7 +1049,14 @@
       <option name="project" value="LOCAL" />
       <updated>1535051404301</updated>
     </task>
-    <option name="localTasksCounter" value="190" />
+    <task id="LOCAL-00190" summary="Adding panos playbook">
+      <created>1535127149921</created>
+      <option name="number" value="00190" />
+      <option name="presentableId" value="LOCAL-00190" />
+      <option name="project" value="LOCAL" />
+      <updated>1535127149921</updated>
+    </task>
+    <option name="localTasksCounter" value="191" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1461,8 +1461,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/panos_add_user.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+        <state relative-caret-position="264">
+          <caret line="11" column="71" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="71" />
           <folding />
         </state>
       </provider>
