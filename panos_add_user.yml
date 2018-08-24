@@ -5,11 +5,5 @@
     PYTHONHTTPSVERIFY: 0
 
   tasks:
-    - name: set admin password
-      panos_admin:
-        ip_address: "{{ inventory_hostname }}"
-        admin_username: "{{ user_to_add }}"
-        admin_password: "{{ pass_to_add }}"
-        role: "Custom role-based administrator"
-        password: cisco
-        commit: true
+    - name: Bootstrap a host without python2 installed
+      raw: set mgt-config users test1 password test1
