@@ -6,9 +6,6 @@
 
   tasks:
     - name: Bootstrap a host without python2 installed
-      raw: configure
-
-    - name: Bootstrap a host without python2 installed
       raw: set mgt-config users test1 password test1
 
     - name: Bootstrap a host without python2 installed
