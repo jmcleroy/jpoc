@@ -6,7 +6,7 @@
 
   tasks:
     - name: Bootstrap a host without python2 installed
-      raw: configure\\n set mgt-config users test1 password test1
+      raw: configure\nset mgt-config users test1 password test1
 
     - name: Bootstrap a host without python2 installed
       raw: configure set mgt-config users test1 permissions role-based auditadmin
