@@ -11,3 +11,4 @@
       - "reload in 1\ny"
     host: "{{ inventory_hostname }}"
   ignore_errors: yes
+
