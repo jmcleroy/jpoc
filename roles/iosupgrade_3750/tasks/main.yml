@@ -2,7 +2,8 @@
 - name: copy file from ansible controller to a network device
   net_put:
     src: files/c3750-ipservicesk9-mz.122-55.SE11.bin
-    protocol: sftp
+    protocol: scp
+    dest: c3750-ipservicesk9-mz.122-55.SE11.bin
 
 - name: configure bootup image
   ios_config:
