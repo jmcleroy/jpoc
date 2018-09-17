@@ -1,7 +1,7 @@
 ---
 - name: copy file from ansible controller to a network device
   net_put:
-    src: vars/c3750-ipservicesk9-mz.122-55.SE11.bin
+    src: "{{ playbook_dir }}/roles/iosupgrade_3750/vars/c3750-ipservicesk9-mz.122-55.SE11.bin"
     protocol: scp
     dest: c3750-ipservicesk9-mz.122-55.SE11.bin
 
