@@ -1,4 +1,5 @@
 ---
+- name: show commands
   nxos_command:
     host: "{{ inventory_hostname }}"
     commands:
