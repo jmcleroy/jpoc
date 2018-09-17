@@ -35,11 +35,6 @@
         lines: no {{ item }}
         host: "{{ inventory_hostname }}"
       with_items: "{{ config_lines | select('match', 'ntp *') | list }}"
-      when:
-        - item.item != 172.16.1.1
-        - item.item != 172.16.1.75
-        - item.item != 172.16.1.200
-        - item.item != 172.16.1.177
 
 - name: Check compliance
   nxos_config:
