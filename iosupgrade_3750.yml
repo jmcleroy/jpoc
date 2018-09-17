@@ -1,12 +1,8 @@
 ---
 - hosts: all
   gather_facts: False
-  connection: local
-  serial: 1
+  connection: network_cli
+
 
   roles:
-    - ciscopre
-    - ciscocopy
-    - ciscoupgrade
-    - ciscoreload
-    - ciscopre
+    - iosupgrade_3750
