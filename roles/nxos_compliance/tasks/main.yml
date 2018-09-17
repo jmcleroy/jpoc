@@ -7,7 +7,7 @@
       - show interface
       - show running-config all
       - show ip interface brief vrf all | include {{ ansible_host }}
-    register: output
+  register: output
 
 - name: set hostname fact
   set_fact:
