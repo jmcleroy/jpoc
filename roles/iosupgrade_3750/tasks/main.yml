@@ -9,7 +9,7 @@
 - name: configure bootup image
   ios_config:
     lines:
-      - boot system flash:c3750-ipservicesk9-mz.122-55.SE11.bin
+      - boot system c3750-ipservicesk9-mz.122-55.SE11.bin
     save_when: changed
 
 - name: reload device
@@ -18,3 +18,11 @@
       - command: 'reload'
         prompt: 'Proceed with reload\? \[confirm\]'
         answer: y
+
+- name: Wait 600 seconds for target connection to become reachable/usable
+  wait_for_connection:
+
+- name: show boot
+  ios_config:
+    lines:
+      -
