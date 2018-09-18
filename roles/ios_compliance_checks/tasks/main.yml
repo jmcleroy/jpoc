@@ -19,7 +19,7 @@
     host: '{{ inventory_hostname }}'
     transport: cli
     lines:
-      - "ntp server {{ item.ntp_server }}"
+      - "ntp server {{ item.ntp_servers }}"
   with_items: "{{ ntp_servers }}"
 
 - name: configure the motd banner
