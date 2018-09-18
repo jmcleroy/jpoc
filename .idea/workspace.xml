@@ -27,8 +27,58 @@
       <file leaf-file-name="main.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/roles/nxos_compliance_checks/tasks/main.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1128">
-              <caret line="47" column="14" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
+            <state relative-caret-position="-781">
+              <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/roles/nxos_ntp/tasks/main.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="53" column="22" selection-start-line="50" selection-start-column="0" selection-end-line="54" selection-end-column="72" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cisco-ios.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/roles/nxos_ntp/tasks/cisco-ios.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-312">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cisco-ios-xr.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/roles/nxos_ntp/tasks/cisco-ios-xr.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-277">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cisco-ios.j2" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/roles/nxos_ntp/templates/cisco-ios.j2">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="arista-os.j2" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/roles/nxos_ntp/templates/arista-os.j2">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -47,8 +97,8 @@
       <file leaf-file-name="main.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/roles/ios_compliance_checks/tasks/main.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+            <state relative-caret-position="395">
+              <caret line="59" column="4" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -64,61 +114,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ios_compliance_checks.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ios_compliance_checks.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nxos_compliance_checks.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nxos_compliance_checks.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ios_config_template.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ios_config_template.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="main.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/roles/ios_compliance_checks/vars/main.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="24">
               <caret line="1" column="3" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ntp.j2" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/roles/nxos_compliance_checks/vars/ntp.j2">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/roles/nxos_compliance_checks/vars/main.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -272,6 +272,68 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="nxos_ntp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jpoc3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jpoc3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="roles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nxos_ntp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tasks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jpoc3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jpoc3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="roles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nxos_ntp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jpoc3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jpoc3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="roles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="nxos_config_template" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -317,28 +379,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="nxos_compliance_checks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jpoc3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jpoc3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="roles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nxos_compliance_checks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vars" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -746,13 +786,6 @@
       <option name="presentableId" value="Default" />
       <updated>1501075586948</updated>
     </task>
-    <task id="LOCAL-00233" summary="Adding panos playbook">
-      <created>1537221759440</created>
-      <option name="number" value="00233" />
-      <option name="presentableId" value="LOCAL-00233" />
-      <option name="project" value="LOCAL" />
-      <updated>1537221759440</updated>
-    </task>
     <task id="LOCAL-00234" summary="Adding panos playbook">
       <created>1537222368420</created>
       <option name="number" value="00234" />
@@ -1089,7 +1122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1537296101331</updated>
     </task>
-    <option name="localTasksCounter" value="282" />
+    <task id="LOCAL-00282" summary="Adding panos playbook">
+      <created>1537296161249</created>
+      <option name="number" value="00282" />
+      <option name="presentableId" value="LOCAL-00282" />
+      <option name="project" value="LOCAL" />
+      <updated>1537296161249</updated>
+    </task>
+    <option name="localTasksCounter" value="283" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1139,30 +1179,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/roles/nxos_compliance/vars/nxos.j2">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nxos_ntp_compliance.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roles/ciscoupgrade/vars/cisco3750.j2">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/roles/iosupgrade/files/new_device.cfg">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1283,26 +1299,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/roles/nxos_ntp/tasks/main.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-960">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/roles/nxos_ntp/tasks/oldmain.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roles/nxos_ntp/tasks/cisco-ios-xr.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-301">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1483,14 +1483,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/roles/nxos_compliance_checks/tasks/main.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1128">
-          <caret line="47" column="14" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ios_config_template.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1523,14 +1515,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/roles/ios_compliance_checks/templates/ntp.j2">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/roles/ios_compliance_checks/vars/main.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
@@ -1539,10 +1523,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/roles/ios_compliance_checks/templates/ntp.j2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roles/nxos_compliance_checks/tasks/main.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-781">
+          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roles/nxos_ntp/templates/cisco-ios.j2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roles/nxos_ntp/templates/arista-os.j2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roles/nxos_ntp/tasks/cisco-ios.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-312">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roles/nxos_ntp/tasks/cisco-ios-xr.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-277">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roles/nxos_ntp/tasks/main.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="53" column="22" selection-start-line="50" selection-start-column="0" selection-end-line="54" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/roles/ios_compliance_checks/tasks/main.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        <state relative-caret-position="395">
+          <caret line="59" column="4" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="4" />
           <folding />
         </state>
       </provider>
