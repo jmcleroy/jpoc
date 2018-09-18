@@ -1,6 +1,6 @@
-#{% if ntp_source_interface is defined %}
-#  ntp source {{ ntp_source_interface }}
-#{% endif%}
+{% if ntp_source_interface is defined %}
+  ntp source {{ ntp_source_interface }}
+{% endif%}
 {% if ntp_servers is defined %}
   {% for ntp_item in ntp_servers %}
     ntp server {{ ntp_item }}
