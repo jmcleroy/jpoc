@@ -9,17 +9,16 @@
     var: output.stdout_lines
 
 - name: compare ntp servers
-  debug:
-    msg: no {{ item }}
+  ios_config:
+    line: no {{ item }}
   loop: "{{ output.stdout_lines[0] }}"
   when: item not in ntp_servers
 
 - name: add ntp servers
   ios_config:
     host: '{{ inventory_hostname }}'
-    lines:
-      - "ntp server {{ ntp_servers }}"
-#  with_items: "{{ ntp_servers }}"
+    lines: ntp server {{ item }}
+  loop: "{{ ntp_servers }}"
 
 - name: configure the motd banner
   ios_banner:
