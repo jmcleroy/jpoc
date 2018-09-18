@@ -29,12 +29,11 @@
 - debug: msg="{{ configure_ntp }}"
 
 - name: "REMOVE NTP SERVER"
-    when: "(item not in ntp_servers)"
-    with_items: "{{ old_ntp_servers }}"
-    register: remove_ntp_server
-    ios_config:
-        lines:
-          - "no ntp {{ item.old_ntp_servers }} "
+  ios_config:
+    lines:
+      - "no ntp {{ item.old_ntp_servers }} "
+  when: "(item not in ntp_servers)"
+  with_items: "{{ old_ntp_servers }}"
 
 - name: configure the motd banner
   ios_banner:
