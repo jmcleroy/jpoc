@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1518ea8d-3031-4efc-8a0f-e7a5a881e274" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/roles/ios_compliance_checks/vars/main.yml" afterPath="$PROJECT_DIR$/roles/ios_compliance_checks/vars/main.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/roles/ios_compliance_checks/vars/ntp.j2" afterPath="$PROJECT_DIR$/roles/ios_compliance_checks/vars/ntp.j2" />
     </list>
     <ignored path="jpoc3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ntp.j2" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ntp.j2" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/roles/ios_compliance_checks/vars/ntp.j2">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="120">
+              <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -94,7 +94,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/roles/ios_compliance_checks/vars/main.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="48">
@@ -133,7 +133,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/roles/network_facts/tasks/cisco-ios.yaml" />
         <option value="$PROJECT_DIR$/test.yml" />
         <option value="$PROJECT_DIR$/arista_show.yml" />
         <option value="$PROJECT_DIR$/arista_eapi.yml" />
@@ -184,6 +183,7 @@
         <option value="$PROJECT_DIR$/roles/ios_compliance_checks/tasks/main.yml" />
         <option value="$PROJECT_DIR$/ios_compliance_checks.yml" />
         <option value="$PROJECT_DIR$/roles/ios_compliance_checks/vars/main.yml" />
+        <option value="$PROJECT_DIR$/roles/ios_compliance_checks/vars/ntp.j2" />
       </list>
     </option>
   </component>
@@ -723,13 +723,6 @@
       <option name="presentableId" value="Default" />
       <updated>1501075586948</updated>
     </task>
-    <task id="LOCAL-00225" summary="Adding panos playbook">
-      <created>1537219812818</created>
-      <option name="number" value="00225" />
-      <option name="presentableId" value="LOCAL-00225" />
-      <option name="project" value="LOCAL" />
-      <updated>1537219812818</updated>
-    </task>
     <task id="LOCAL-00226" summary="Adding panos playbook">
       <created>1537219919751</created>
       <option name="number" value="00226" />
@@ -1066,7 +1059,14 @@
       <option name="project" value="LOCAL" />
       <updated>1537295143961</updated>
     </task>
-    <option name="localTasksCounter" value="274" />
+    <task id="LOCAL-00274" summary="Adding panos playbook">
+      <created>1537295364807</created>
+      <option name="number" value="00274" />
+      <option name="presentableId" value="LOCAL-00274" />
+      <option name="project" value="LOCAL" />
+      <updated>1537295364807</updated>
+    </task>
+    <option name="localTasksCounter" value="275" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1508,18 +1508,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/roles/ios_compliance_checks/vars/ntp.j2">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/roles/ios_compliance_checks/vars/main.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
           <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roles/ios_compliance_checks/vars/ntp.j2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
           <folding />
         </state>
       </provider>
