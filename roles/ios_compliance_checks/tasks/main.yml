@@ -1,48 +1,18 @@
 ---
-- name: show commands
-  nxos_command:
-    host: "{{ inventory_hostname }}"
+- name: Extract current running-configuration from device...
+  ios_command:
     commands:
-      - show version
-      - show interface
-      - show running-config all
-      - show ip interface brief vrf all | include {{ ansible_host }}
-  register: output
+      - term len 0
+      - sh run
+  register: running_config
+- debug: msg="{{ running_config.stdout_lines }}"
 
-- name: set hostname fact
-  set_fact:
-    hostname: "{{ output.stdout[0] | regex_findall('\\s+Device name:\\s+(\\S+)') | first }}"
-
-- name: set interfaces fact
-  set_fact:
-    interfaces: "{{ output.stdout[1] | regex_findall('\n([E|L|P|V]\\S+)') }}"
-
-- name: set version fact
-  set_fact:
-    version: "{{ output.stdout[0] | regex_findall('(system|NXOS):\\s+version\\s+(\\S+)') | first }}"
-
-- name: set config fact
-  set_fact:
-    config: "{{ output.stdout[2] }}"
-
-- name: set config_lines fact
-  set_fact:
-    config_lines: "{{ config.split('\n') }}"
-
-#- name: Extract current running-configuration from device...
-#  ios_command:
-#    commands:
-#      - term len 0
-#      - sh run
-#  register: running_config
-#- debug: msg="{{ running_config.stdout_lines }}"
-
-#- name: Discover currently configured NTP servers...
-#  shell: echo {{ running_config.stdout }} | grep -Po 'ntp server (.+)' | awk '{ print $3 }'
-#  register: old_ntp_servers
-#  failed_when: "old_ntp_servers.rc == 2"
-#  changed_when: false
-#- debug: msg="{{ old_ntp_servers.stdout_lines }}"
+- name: Discover currently configured NTP servers...
+  shell: echo {{ running_config.stdout }} | grep -Po 'ntp server (.+)' | awk '{ print $3 }'
+  register: old_ntp_servers
+  failed_when: "old_ntp_servers.rc == 2"
+  changed_when: false
+- debug: msg="{{ old_ntp_servers.stdout_lines }}"
 
 #- name: Discover currently configured NTP source interfaces...
 #  shell: echo {{ running_config.stdout }} | grep -Po 'ntp source (.+)'
@@ -50,12 +20,6 @@
 #  failed_when: "old_ntp_source.rc == 2"
 #  changed_when: false
 #- debug: msg="{{ old_ntp_source }}"
-- name: Default NTP
-  ios_config:
-    lines:
-    host: "{{ inventory_hostname }}"
-  with_items: "{{ config_lines | select('match', 'ntp *') | list }}"
-  register: old_ntp_servers
 
 - name: Configure IOS NTP servers
   ios_config:
