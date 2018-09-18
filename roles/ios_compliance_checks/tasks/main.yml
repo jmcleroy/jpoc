@@ -16,7 +16,6 @@
 
 - name: add ntp servers
   ios_config:
-    host: '{{ inventory_hostname }}'
     lines: ntp server {{ item }}
   loop: "{{ ntp_servers }}"
 
