@@ -46,7 +46,6 @@
 
 - name: Configure IOS NTP servers
   nxos_config:
-    save: true
     src: "vars/ntp.j2"
   register: configure_ntp
 
