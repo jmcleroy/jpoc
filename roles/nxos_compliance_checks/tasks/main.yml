@@ -60,7 +60,7 @@
         host: '{{ inventory_hostname }}'
         transport: cli
         lines:
-          - ntp {{ item.ntp_server }}
+          - ntp {{ item.ntp_server }} use-vrf default
       with_items: "{{ ntp_servers }}"
 
 - name: configure the motd banner
