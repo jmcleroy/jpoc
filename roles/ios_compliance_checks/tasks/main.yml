@@ -1,7 +1,6 @@
 ---
 - name: Extract current running-configuration from device...
   ios_command:
-    provider: "{{ cli }}"
     commands:
       - term len 0
       - sh run
@@ -24,7 +23,6 @@
 
 - name: Configure IOS NTP servers
   ios_config:
-    provider: "{{ cli }}"
     save: true
     src: "ntp.j2"
   register: configure_ntp
