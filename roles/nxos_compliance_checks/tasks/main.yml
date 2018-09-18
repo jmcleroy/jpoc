@@ -47,7 +47,7 @@
 - name: Configure IOS NTP servers
   nxos_config:
     save: true
-    src: "ntp.j2"
+    src: "vars/ntp.j2"
   register: configure_ntp
 
 - debug: msg="{{ configure_ntp }}"
