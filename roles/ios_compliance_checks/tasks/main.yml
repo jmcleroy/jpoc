@@ -1,5 +1,4 @@
 ---
----
 - name: show commands
   nxos_command:
     host: "{{ inventory_hostname }}"
@@ -53,7 +52,7 @@
 #- debug: msg="{{ old_ntp_source }}"
 - name: Default NTP
     nxos_config:
-      lines: no {{ item }}
+      lines:
       host: "{{ inventory_hostname }}"
     with_items: "{{ config_lines | select('match', 'ntp *') | list }}"
     register: old_ntp_servers
