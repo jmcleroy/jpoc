@@ -51,11 +51,11 @@
 #  changed_when: false
 #- debug: msg="{{ old_ntp_source }}"
 - name: Default NTP
-    nxos_config:
-      lines:
-      host: "{{ inventory_hostname }}"
-    with_items: "{{ config_lines | select('match', 'ntp *') | list }}"
-    register: old_ntp_servers
+  ios_config:
+    lines:
+    host: "{{ inventory_hostname }}"
+  with_items: "{{ config_lines | select('match', 'ntp *') | list }}"
+  register: old_ntp_servers
 
 - name: Configure IOS NTP servers
   ios_config:
