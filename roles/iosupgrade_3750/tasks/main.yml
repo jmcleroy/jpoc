@@ -10,6 +10,7 @@
   ios_config:
     lines:
       - boot system flash:c3750-ipservicesk9-mz.122-55.SE11.bin
+      - copy run start
 
 - name: run command that requires answering a prompt
   ios_command:
