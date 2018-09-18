@@ -593,13 +593,6 @@
       <option name="presentableId" value="Default" />
       <updated>1501075586948</updated>
     </task>
-    <task id="LOCAL-00205" summary="Adding panos playbook">
-      <created>1535129262146</created>
-      <option name="number" value="00205" />
-      <option name="presentableId" value="LOCAL-00205" />
-      <option name="project" value="LOCAL" />
-      <updated>1535129262146</updated>
-    </task>
     <task id="LOCAL-00206" summary="Adding panos playbook">
       <created>1535129341164</created>
       <option name="number" value="00206" />
@@ -936,7 +929,14 @@
       <option name="project" value="LOCAL" />
       <updated>1537290187688</updated>
     </task>
-    <option name="localTasksCounter" value="254" />
+    <task id="LOCAL-00254" summary="Adding panos playbook">
+      <created>1537290436532</created>
+      <option name="number" value="00254" />
+      <option name="presentableId" value="LOCAL-00254" />
+      <option name="project" value="LOCAL" />
+      <updated>1537290436533</updated>
+    </task>
+    <option name="localTasksCounter" value="255" />
     <servers />
   </component>
   <component name="ToolWindowManager">
