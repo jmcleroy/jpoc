@@ -25,4 +25,4 @@
 - name: show boot
   ios_config:
     lines:
-      -
+      - show boot
