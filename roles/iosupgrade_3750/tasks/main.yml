@@ -6,14 +6,14 @@
     dest: flash:c3750-ipservicesk9-mz.122-55.SE11.bin
     mode: binary
 
-#- name: configure bootup image
-#  ios_config:
-#    lines:
-#      - boot system flash:c3750-ipservicesk9-mz.122-55.SE11.bin
+- name: configure bootup image
+  ios_config:
+    lines:
+      - boot system flash:c3750-ipservicesk9-mz.122-55.SE11.bin
 
-#- name: run command that requires answering a prompt
-#  ios_command:
-#    commands:
-#      - command: 'reload'
-#        prompt: 'Proceed with reload\? \[confirm\]'
-#        answer: y
+- name: run command that requires answering a prompt
+  ios_command:
+    commands:
+      - command: 'reload'
+        prompt: 'Proceed with reload\? \[confirm\]'
+        answer: y
