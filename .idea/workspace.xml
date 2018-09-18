@@ -38,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/roles/iosupgrade_3750/tasks/main.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+              <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -575,13 +575,6 @@
       <option name="presentableId" value="Default" />
       <updated>1501075586948</updated>
     </task>
-    <task id="LOCAL-00190" summary="Adding panos playbook">
-      <created>1535127149921</created>
-      <option name="number" value="00190" />
-      <option name="presentableId" value="LOCAL-00190" />
-      <option name="project" value="LOCAL" />
-      <updated>1535127149921</updated>
-    </task>
     <task id="LOCAL-00191" summary="Adding panos playbook">
       <created>1535127443277</created>
       <option name="number" value="00191" />
@@ -918,7 +911,14 @@
       <option name="project" value="LOCAL" />
       <updated>1537287630954</updated>
     </task>
-    <option name="localTasksCounter" value="239" />
+    <task id="LOCAL-00239" summary="Adding panos playbook">
+      <created>1537287813756</created>
+      <option name="number" value="00239" />
+      <option name="presentableId" value="LOCAL-00239" />
+      <option name="project" value="LOCAL" />
+      <updated>1537287813756</updated>
+    </task>
+    <option name="localTasksCounter" value="240" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1374,7 +1374,7 @@
     <entry file="file://$PROJECT_DIR$/roles/iosupgrade_3750/tasks/main.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
           <folding />
         </state>
       </provider>
