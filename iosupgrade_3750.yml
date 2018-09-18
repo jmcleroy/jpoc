@@ -2,7 +2,11 @@
 - hosts: all
   gather_facts: False
   connection: network_cli
-
+  vars:
+  nxos_provider:
+    host: "{{ inventory_hostname }}"
+    platform: "cisco_ios_ssh"
+    connection: ssh
 
   roles:
     - iosupgrade_3750
