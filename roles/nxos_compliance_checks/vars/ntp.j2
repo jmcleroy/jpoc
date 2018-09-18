@@ -1,0 +1,15 @@
+{% if ntp_source_interface is defined %}
+  ntp source {{ ntp_source_interface }}
+{% endif%}
+{% if ntp_servers is defined %}
+  {% for ntp_item in ntp_servers %}
+    ntp server {{ ntp_item }}
+  {% endfor %}
+  # If there are any NTP servers still listed that aren't in the list provided by
+  # the user, remove them...
+  {% for old_ntp_item in old_ntp_servers.stdout_lines %}
+    {% if old_ntp_item not in ntp_servers %}
+      no ntp server {{ old_ntp_item }}
+    {% endif %}
+  {% endfor %}
+{% endif%}
