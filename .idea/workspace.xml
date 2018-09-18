@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1518ea8d-3031-4efc-8a0f-e7a5a881e274" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/roles/iosupgrade_3750/tasks/main.yml" afterPath="$PROJECT_DIR$/roles/iosupgrade_3750/tasks/main.yml" />
     </list>
     <ignored path="jpoc3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -593,13 +592,6 @@
       <option name="presentableId" value="Default" />
       <updated>1501075586948</updated>
     </task>
-    <task id="LOCAL-00213" summary="Adding panos playbook">
-      <created>1537211277853</created>
-      <option name="number" value="00213" />
-      <option name="presentableId" value="LOCAL-00213" />
-      <option name="project" value="LOCAL" />
-      <updated>1537211277853</updated>
-    </task>
     <task id="LOCAL-00214" summary="Adding panos playbook">
       <created>1537211391134</created>
       <option name="number" value="00214" />
@@ -936,7 +928,14 @@
       <option name="project" value="LOCAL" />
       <updated>1537291706928</updated>
     </task>
-    <option name="localTasksCounter" value="262" />
+    <task id="LOCAL-00262" summary="Adding panos playbook">
+      <created>1537292161138</created>
+      <option name="number" value="00262" />
+      <option name="presentableId" value="LOCAL-00262" />
+      <option name="project" value="LOCAL" />
+      <updated>1537292161138</updated>
+    </task>
+    <option name="localTasksCounter" value="263" />
     <servers />
   </component>
   <component name="ToolWindowManager">
