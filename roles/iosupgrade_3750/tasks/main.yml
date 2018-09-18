@@ -1,5 +1,5 @@
 ---
-- name: copy file from ansible controller to a network device
+- name: copy boot file from ansible controller to a network device
   net_put:
     src: "{{ playbook_dir }}/roles/iosupgrade_3750/vars/c3750-ipservicesk9-mz.122-55.SE11.bin"
     protocol: scp
@@ -12,7 +12,7 @@
       - boot system flash:c3750-ipservicesk9-mz.122-55.SE11.bin
     save_when: changed
 
-- name: run command that requires answering a prompt
+- name: reload device
   ios_command:
     commands:
       - command: 'reload'
