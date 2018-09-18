@@ -3,8 +3,6 @@
     platform: cisco_ios_ssh
     local_file: "{{ playbook_dir }}/roles/iosupgrade_3750/vars/c3750-ipservicesk9-mz.122-55.SE11.bin"
     host: "{{ inventory_hostname }}"
-    username: "{{ username }}"
-    password: "{{ password }}"
 #- name: copy file from ansible controller to a network device
 #  net_put:
 #    src: "{{ playbook_dir }}/roles/iosupgrade_3750/vars/c3750-ipservicesk9-mz.122-55.SE11.bin"
