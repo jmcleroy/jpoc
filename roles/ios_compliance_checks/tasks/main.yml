@@ -1,39 +1,18 @@
 ---
-- name: Extract current running-configuration from device...
+- name: configure interface settings
   ios_command:
-    commands:
-      - term len 0
-      - sh run
-  register: running_config
-- debug: msg="{{ running_config.stdout_lines }}"
+    commands: show run | i ntp
+  register: output
 
-- name: Discover currently configured NTP servers...
-  shell: echo {{ running_config.stdout }} | grep -Po 'ntp server (.+)' | awk '{ print $3 }'
-  register: old_ntp_servers
-  failed_when: "old_ntp_servers.rc == 2"
-  changed_when: false
-- debug: msg="{{ old_ntp_servers.stdout_lines }}"
+- name: look at output
+  debug:
+    var: output.stdout_lines
 
-#- name: Discover currently configured NTP source interfaces...
-#  shell: echo {{ running_config.stdout }} | grep -Po 'ntp source (.+)'
-#  register: old_ntp_source
-#  failed_when: "old_ntp_source.rc == 2"
-#  changed_when: false
-#- debug: msg="{{ old_ntp_source }}"
-
-#- name: Configure IOS NTP servers
-#  ios_config:
-#    save: true
-#    src: "ntp.j2"
-#  register: configure_ntp
-#- debug: msg="{{ configure_ntp }}"
-
-- name: "REMOVE NTP SERVER"
-  ios_config:
-    lines:
-      - "no ntp {{ item.old_ntp_servers }} "
-  when: "(item not in ntp_servers)"
-  with_items: "{{ old_ntp_servers }}"
+- name: compare this bitch
+  debug:
+    msg: no {{ item }}
+  loop: "{{ output.stdout_lines[0] }}"
+  when: item not in ntp_servers
 
 - name: configure the motd banner
   ios_banner:
