@@ -46,7 +46,6 @@
 
 - name: Configure IOS NTP servers
   nxos_config:
-    provider: "{{ cli }}"
     save: true
     src: "ntp.j2"
   register: configure_ntp
