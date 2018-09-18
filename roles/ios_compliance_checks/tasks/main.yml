@@ -1,0 +1,31 @@
+---
+- name: Extract current running-configuration from device...
+  ios_command:
+    commands:
+      - term len 0
+      - sh run
+  register: running_config
+#- debug: msg="{{ running_config.stdout_lines }}"
+
+- name: Discover currently configured NTP servers...
+  shell: echo {{ running_config.stdout }} | grep -Po 'ntp server (.+)' | awk '{ print $3 }'
+  register: old_ntp_servers
+  failed_when: "old_ntp_servers.rc == 2"
+  changed_when: false
+#- debug: msg="{{ old_ntp_servers.stdout_lines }}"
+
+- name: Configure IOS NTP servers
+  ios_config:
+    src: "vars/ntp.j2"
+  register: configure_ntp
+
+- debug: msg="{{ configure_ntp }}"
+
+- name: configure the motd banner
+  ios_banner:
+    banner: motd
+    text: |
+      this is my motd banner
+      that contains a multiline
+      string
+    state: present
