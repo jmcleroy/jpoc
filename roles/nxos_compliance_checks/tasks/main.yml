@@ -61,7 +61,7 @@
         transport: cli
         lines:
           - ntp server {{ item.ntp_server }}
-      with_items: {{ ntp_servers }}
+      with_items: "{{ ntp_servers }}"
 
 - name: configure the motd banner
   nxos_banner:
