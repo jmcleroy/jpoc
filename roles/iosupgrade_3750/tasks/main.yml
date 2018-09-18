@@ -2,7 +2,7 @@
 - name: copy file from ansible controller to a network device
   net_put:
     src: "{{ playbook_dir }}/roles/iosupgrade_3750/vars/c3750-ipservicesk9-mz.122-55.SE11.bin"
-    protocol: sftp
+    protocol: scp
     dest: flash:/c3750-ipservicesk9-mz.122-55.SE11.bin
     mode: binary
 
