@@ -1,7 +1,6 @@
 ---
 - hosts: all
   gather_facts: False
-  connection: network_cli
 
   roles:
     - iosupgrade_3750

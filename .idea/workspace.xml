@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1518ea8d-3031-4efc-8a0f-e7a5a881e274" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iosupgrade_3750.yml" afterPath="$PROJECT_DIR$/iosupgrade_3750.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/roles/iosupgrade_3750/tasks/main.yml" afterPath="$PROJECT_DIR$/roles/iosupgrade_3750/tasks/main.yml" />
     </list>
     <ignored path="jpoc3.iws" />
@@ -34,21 +35,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/roles/iosupgrade_3750/tasks/main.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+            <state relative-caret-position="120">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="iosupgrade_3750.yml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="iosupgrade_3750.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/iosupgrade_3750.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+            <state relative-caret-position="48">
+              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -182,8 +183,8 @@
         <option value="$PROJECT_DIR$/nxos_compliance_checks.yml" />
         <option value="$PROJECT_DIR$/roles/nxos_compliance_checks/tasks/main.yml" />
         <option value="$PROJECT_DIR$/roles/ciscoupgrade/tasks/main.yml" />
-        <option value="$PROJECT_DIR$/iosupgrade_3750.yml" />
         <option value="$PROJECT_DIR$/roles/iosupgrade_3750/tasks/main.yml" />
+        <option value="$PROJECT_DIR$/iosupgrade_3750.yml" />
       </list>
     </option>
   </component>
@@ -593,13 +594,6 @@
       <option name="presentableId" value="Default" />
       <updated>1501075586948</updated>
     </task>
-    <task id="LOCAL-00197" summary="Adding panos playbook">
-      <created>1535128770005</created>
-      <option name="number" value="00197" />
-      <option name="presentableId" value="LOCAL-00197" />
-      <option name="project" value="LOCAL" />
-      <updated>1535128770005</updated>
-    </task>
     <task id="LOCAL-00198" summary="Adding panos playbook">
       <created>1535128774661</created>
       <option name="number" value="00198" />
@@ -936,7 +930,14 @@
       <option name="project" value="LOCAL" />
       <updated>1537288724178</updated>
     </task>
-    <option name="localTasksCounter" value="246" />
+    <task id="LOCAL-00246" summary="Adding panos playbook">
+      <created>1537288935879</created>
+      <option name="number" value="00246" />
+      <option name="presentableId" value="LOCAL-00246" />
+      <option name="project" value="LOCAL" />
+      <updated>1537288935879</updated>
+    </task>
+    <option name="localTasksCounter" value="247" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1379,18 +1380,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/iosupgrade_3750.yml">
+    <entry file="file://$PROJECT_DIR$/roles/iosupgrade_3750/tasks/main.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+        <state relative-caret-position="120">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/roles/iosupgrade_3750/tasks/main.yml">
+    <entry file="file://$PROJECT_DIR$/iosupgrade_3750.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+        <state relative-caret-position="48">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
           <folding />
         </state>
       </provider>
