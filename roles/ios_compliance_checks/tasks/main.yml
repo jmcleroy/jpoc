@@ -21,12 +21,12 @@
 #  changed_when: false
 #- debug: msg="{{ old_ntp_source }}"
 
-- name: Configure IOS NTP servers
-  ios_config:
-    save: true
-    src: "ntp.j2"
-  register: configure_ntp
-- debug: msg="{{ configure_ntp }}"
+#- name: Configure IOS NTP servers
+#  ios_config:
+#    save: true
+#    src: "ntp.j2"
+#  register: configure_ntp
+#- debug: msg="{{ configure_ntp }}"
 
 - name: "REMOVE NTP SERVER"
   ios_config:
