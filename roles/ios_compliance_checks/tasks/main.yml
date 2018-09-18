@@ -15,7 +15,7 @@
   when: item not in ntp_servers
 
 - name: add ntp servers
-  nxos_config:
+  ios_config:
     host: '{{ inventory_hostname }}'
     transport: cli
     lines:
