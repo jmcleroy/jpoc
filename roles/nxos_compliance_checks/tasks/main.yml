@@ -1,5 +1,5 @@
 ---
-- name: show commands
+- name: collect output from nxos device
   nxos_command:
     host: "{{ inventory_hostname }}"
     commands:
@@ -8,6 +8,10 @@
       - show running-config all
       - show ip interface brief vrf all | include {{ ansible_host }}
   register: output
+
+# common facts
+
+#
 
 - name: set hostname fact
   set_fact:
@@ -29,27 +33,27 @@
   set_fact:
     config_lines: "{{ config.split('\n') }}"
 
-- name: Extract current running-configuration from device...
-  nxos_command:
-    commands:
-      - term len 0
-      - sh run
-  register: running_config
-#- debug: msg="{{ running_config.stdout_lines }}"
+- debug:
+    msg: "START cisco-nxos.yml"
 
-- name: Discover currently configured NTP servers...
-  shell: echo {{ running_config.stdout }} | grep -Po 'ntp server (.+)' | awk '{ print $3 }'
-  register: old_ntp_servers
-  failed_when: "old_ntp_servers.rc == 2"
-  changed_when: false
-#- debug: msg="{{ old_ntp_servers.stdout_lines }}"
+- block:
+    - name: Get ipv6 interface info
+      nxos_command:
+        host: "{{ inventory_hostname }}"
+        commands:
+          - show ipv6 interface Lo0
+      register: ipv6_interface
 
-- name: Configure IOS NTP servers
-  nxos_config:
-    src: "vars/ntp.j2"
-  register: configure_ntp
+    - debug:
+        var: ipv6_interface
+        verbosity: 3
 
-- debug: msg="{{ configure_ntp }}"
+    - name: Default NTP
+      nxos_config:
+        lines: no {{ item }}
+        host: "{{ inventory_hostname }}"
+      with_items: "{{ config_lines | select('match', 'ntp *') | list }}"
+      when: "(item not in ntp_servers)"
 
 - name: configure the motd banner
   nxos_banner:

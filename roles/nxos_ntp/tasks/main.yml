@@ -53,6 +53,7 @@
         lines: no {{ item }}
         host: "{{ inventory_hostname }}"
       with_items: "{{ config_lines | select('match', 'ntp *') | list }}"
+      when: "(item not in ntp_servers)"
 
     - name: add ntp servers
       nxos_config:
