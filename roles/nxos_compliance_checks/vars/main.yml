@@ -1,4 +1,4 @@
 ntp_servers:
-  - { ntp_server: server 172.16.1.1 }
-  - { ntp_server: server 172.16.1.75 }
-  - { ntp_server: server 172.16.1.77 }
+  - { ntp_server: ntp server 172.16.1.1 use-vrf default }
+  - { ntp_server: ntp server 172.16.1.77 use-vrf default }
+  - { ntp_server: ntp server 172.16.1.75 use-vrf default }
