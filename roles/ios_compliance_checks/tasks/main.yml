@@ -17,10 +17,9 @@
 - name: add ntp servers
   ios_config:
     host: '{{ inventory_hostname }}'
-    transport: cli
     lines:
-      - "ntp server {{ item.ntp_servers }}"
-  with_items: "{{ ntp_servers }}"
+      - "ntp server {{ ntp_servers }}"
+#  with_items: "{{ ntp_servers }}"
 
 - name: configure the motd banner
   ios_banner:
