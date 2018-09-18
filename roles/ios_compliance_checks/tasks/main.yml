@@ -10,9 +10,10 @@
 
 - name: compare ntp servers
   ios_config:
-    line: no {{ item }}
+    lines: no {{ item }}
   loop: "{{ output.stdout_lines[0] }}"
   when: item not in ntp_servers
+
 
 - name: add ntp servers
   ios_config:
