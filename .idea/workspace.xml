@@ -38,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/roles/nxos_compliance_checks/tasks/main.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="312">
-              <caret line="60" column="39" selection-start-line="60" selection-start-column="39" selection-end-line="60" selection-end-column="39" />
+              <caret line="60" column="1" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -790,13 +790,6 @@
       <option name="presentableId" value="Default" />
       <updated>1501075586948</updated>
     </task>
-    <task id="LOCAL-00253" summary="Adding panos playbook">
-      <created>1537290187688</created>
-      <option name="number" value="00253" />
-      <option name="presentableId" value="LOCAL-00253" />
-      <option name="project" value="LOCAL" />
-      <updated>1537290187688</updated>
-    </task>
     <task id="LOCAL-00254" summary="Adding panos playbook">
       <created>1537290436532</created>
       <option name="number" value="00254" />
@@ -1133,7 +1126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1537301908834</updated>
     </task>
-    <option name="localTasksCounter" value="302" />
+    <task id="LOCAL-00302" summary="Adding panos playbook">
+      <created>1537302035514</created>
+      <option name="number" value="00302" />
+      <option name="presentableId" value="LOCAL-00302" />
+      <option name="project" value="LOCAL" />
+      <updated>1537302035514</updated>
+    </task>
+    <option name="localTasksCounter" value="303" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1586,7 +1586,7 @@
     <entry file="file://$PROJECT_DIR$/roles/nxos_compliance_checks/tasks/main.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
-          <caret line="60" column="39" selection-start-line="60" selection-start-column="39" selection-end-line="60" selection-end-column="39" />
+          <caret line="60" column="1" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
           <folding />
         </state>
       </provider>
