@@ -5,7 +5,7 @@
     protocol: scp
     dest: flash:c3750-ipservicesk9-mz.122-55.SE11.bin
     mode: binary
-    timeout: 600
+
 #- name: configure bootup image
 #  ios_config:
 #    lines:
