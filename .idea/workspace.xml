@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1518ea8d-3031-4efc-8a0f-e7a5a881e274" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/roles/ios_compliance_checks/vars/ntp.j2" afterPath="$PROJECT_DIR$/roles/ios_compliance_checks/templates/ntp.j2" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/roles/ios_compliance_checks/tasks/main.yml" afterPath="$PROJECT_DIR$/roles/ios_compliance_checks/tasks/main.yml" />
     </list>
     <ignored path="jpoc3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,21 +35,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ntp.j2" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/roles/ios_compliance_checks/vars/ntp.j2">
+      <file leaf-file-name="ntp.j2" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/roles/ios_compliance_checks/templates/ntp.j2">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+            <state relative-caret-position="120">
+              <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.yml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/roles/ios_compliance_checks/tasks/main.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="24" column="3" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
+            <state relative-caret-position="120">
+              <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -179,10 +181,10 @@
         <option value="$PROJECT_DIR$/roles/nxos_compliance_checks/vars/ntp_item" />
         <option value="$PROJECT_DIR$/roles/nxos_compliance_checks/vars/main.yml" />
         <option value="$PROJECT_DIR$/roles/nxos_compliance_checks/tasks/main.yml" />
-        <option value="$PROJECT_DIR$/roles/ios_compliance_checks/tasks/main.yml" />
         <option value="$PROJECT_DIR$/ios_compliance_checks.yml" />
         <option value="$PROJECT_DIR$/roles/ios_compliance_checks/vars/main.yml" />
         <option value="$PROJECT_DIR$/roles/ios_compliance_checks/vars/ntp.j2" />
+        <option value="$PROJECT_DIR$/roles/ios_compliance_checks/tasks/main.yml" />
       </list>
     </option>
   </component>
@@ -421,6 +423,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jpoc3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jpoc3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="roles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ios_compliance_checks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="tasks" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -486,6 +510,7 @@
       <recent name="$PROJECT_DIR$/host_vars" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/roles/ios_compliance_checks/templates" />
       <recent name="$PROJECT_DIR$/roles/nxos_test/vars" />
       <recent name="$PROJECT_DIR$/roles/nxos_test" />
     </key>
@@ -721,13 +746,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1501075586948</updated>
-    </task>
-    <task id="LOCAL-00228" summary="Adding panos playbook">
-      <created>1537220535402</created>
-      <option name="number" value="00228" />
-      <option name="presentableId" value="LOCAL-00228" />
-      <option name="project" value="LOCAL" />
-      <updated>1537220535403</updated>
     </task>
     <task id="LOCAL-00229" summary="Adding panos playbook">
       <created>1537220760765</created>
@@ -1065,7 +1083,14 @@
       <option name="project" value="LOCAL" />
       <updated>1537295602212</updated>
     </task>
-    <option name="localTasksCounter" value="277" />
+    <task id="LOCAL-00277" summary="Adding panos playbook">
+      <created>1537295620720</created>
+      <option name="number" value="00277" />
+      <option name="presentableId" value="LOCAL-00277" />
+      <option name="project" value="LOCAL" />
+      <updated>1537295620720</updated>
+    </task>
+    <option name="localTasksCounter" value="278" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1499,6 +1524,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/roles/ios_compliance_checks/templates/ntp.j2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/roles/ios_compliance_checks/vars/main.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
@@ -1509,16 +1542,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/roles/ios_compliance_checks/tasks/main.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="24" column="3" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roles/ios_compliance_checks/vars/ntp.j2">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        <state relative-caret-position="120">
+          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
           <folding />
         </state>
       </provider>

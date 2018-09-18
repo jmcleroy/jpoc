@@ -3,7 +3,7 @@
 #{% endif%}
 {% if ntp_servers is defined %}
   {% for ntp_item in ntp_servers %}
-    ntp server 172.16.1.1
+    ntp server {{ ntp_item }}
   {% endfor %}
   # If there are any NTP servers still listed that aren't in the list provided by
   # the user, remove them...

@@ -16,7 +16,7 @@
 
 - name: Configure IOS NTP servers
   ios_config:
-    src: "vars/ntp.j2"
+    src: "ntp.j2"
   register: configure_ntp
 
 - debug: msg="{{ configure_ntp }}"
