@@ -2,11 +2,11 @@
 - hosts: all
   connection: local
   gather_facts: no
-  vars:
-    ntp_servers:
-      - ntp server 172.16.1.1
-      - ntp server 172.16.1.77
-      - ntp server 172.16.1.75
+#  vars:
+#    ntp_servers:
+#      - ntp server 172.16.1.1
+#      - ntp server 172.16.1.77
+#      - ntp server 172.16.1.75
 
   roles:
     - ios_compliance_checks
