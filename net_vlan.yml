@@ -2,6 +2,8 @@
 - hosts: all
   connection: network_cli
   gather_facts: no
+  become: true
+  become_method: enable
 
   roles:
     - mpva_vlan 
