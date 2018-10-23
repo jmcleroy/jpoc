@@ -3,7 +3,7 @@
   gather_facts: no
 
   roles:
-   - ansible-network.network-engine
+    - ansible-network.network-engine
 
   tasks:
 
