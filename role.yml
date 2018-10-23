@@ -1,0 +1,14 @@
+- hosts: all
+  connection: network_cli
+  gather_facts: no
+
+  roles:
+   - ansible-network.network-engine
+
+  tasks:
+
+    - name: CAPTURE SHOW IP BGP SUM
+      ios_command:
+        commands:
+          - show ip bgp summary
+      register: output
