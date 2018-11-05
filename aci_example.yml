@@ -1,0 +1,29 @@
+---
+- hosts: all
+  connection: local
+  gather_facts: no
+  
+  tasks:
+    - name: Create a Snapshot
+      aci_config_snapshot:
+        host: "{{ inventory_hostname }}"
+        username: "{{ username }}"
+        password: "{{ password }}"
+        state: present
+        export_policy: config_backup
+        max_count: 10
+        description: Backups taken before new configs are applied.
+      delegate_to: localhost
+
+    - name: Add Bridge Domain
+      aci_bd:
+        host: "{{ inventory_hostname }}"
+        username: "{{ username }}"
+        password: "{{ password }}"
+        validate_certs: no
+        tenant: {{ tenant }}
+        bd: {{ bd }}
+        mac_address: {{ mac_address}}
+        vrf: {{ vrf }}
+        state: present
+      delegate_to: localhost
