@@ -43,5 +43,5 @@
 - name: REMOVE NON CONFIG LINES - REGEXP
   lineinfile:
     path: "./backup/{{inventory_hostname}}.config"
-    regexp: 'version.*'
+    regexp: 'version.+'
     state: absent

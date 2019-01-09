@@ -4,7 +4,6 @@
     <list default="true" id="1518ea8d-3031-4efc-8a0f-e7a5a881e274" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/roles/nxos_backup/tasks/main.yml" afterPath="$PROJECT_DIR$/roles/nxos_backup/tasks/main.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/roles/nxos_vlan_6/tasks/main.yml" afterPath="$PROJECT_DIR$/roles/nxos_vlan_6/tasks/main.yml" />
     </list>
     <ignored path="jpoc3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,8 +57,8 @@
       <file leaf-file-name="main.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/roles/nxos_backup/tasks/main.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="596">
-              <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
+            <state relative-caret-position="476">
+              <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -612,13 +611,6 @@
       <option name="presentableId" value="Default" />
       <updated>1501075586948</updated>
     </task>
-    <task id="LOCAL-00278" summary="Adding panos playbook">
-      <created>1537295756113</created>
-      <option name="number" value="00278" />
-      <option name="presentableId" value="LOCAL-00278" />
-      <option name="project" value="LOCAL" />
-      <updated>1537295756113</updated>
-    </task>
     <task id="LOCAL-00279" summary="Adding panos playbook">
       <created>1537295773409</created>
       <option name="number" value="00279" />
@@ -955,7 +947,14 @@
       <option name="project" value="LOCAL" />
       <updated>1541448405953</updated>
     </task>
-    <option name="localTasksCounter" value="327" />
+    <task id="LOCAL-00327" summary="Adding test">
+      <created>1547068276186</created>
+      <option name="number" value="00327" />
+      <option name="presentableId" value="LOCAL-00327" />
+      <option name="project" value="LOCAL" />
+      <updated>1547068276187</updated>
+    </task>
+    <option name="localTasksCounter" value="328" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1361,8 +1360,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/roles/nxos_backup/tasks/main.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="596">
-          <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
+        <state relative-caret-position="476">
+          <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
           <folding />
         </state>
       </provider>
