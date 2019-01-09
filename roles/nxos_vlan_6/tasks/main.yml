@@ -1,5 +1,3 @@
-- debug: msg="START ios.yaml"
-
 - name: Backup current config
   nxos_config:
     backup: yes
