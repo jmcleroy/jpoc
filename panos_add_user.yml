@@ -5,8 +5,9 @@
     PYTHONHTTPSVERIFY: 0
 
   tasks:
-    - name: commit to startup config
-      panos_commit:
-        ip_address: "{{ inventory_hostname }}"
-        username: admin
-        password: cisco
+    - name: show list of all interfaces
+      panos_op:
+        ip_address: '{{ inventory_hostname }}'
+        username: 'admin'
+        password: 'admin'
+        cmd: 'show interfaces all'
