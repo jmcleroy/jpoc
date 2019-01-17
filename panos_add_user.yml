@@ -5,9 +5,9 @@
     PYTHONHTTPSVERIFY: 0
 
   tasks:
-    - name: show list of all interfaces
-      panos_op:
-        ip_address: '{{ inventory_hostname }}'
-        username: 'admin'
-        password: 'admin'
-        cmd: 'show interfaces all'
+    - name: setup security profile group
+      panos_pg:
+        ip_address: "192.168.1.70"
+        password: "admin"
+        username: "admin"
+        pg_name: "pg-default"
