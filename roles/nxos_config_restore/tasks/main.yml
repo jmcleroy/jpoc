@@ -11,4 +11,4 @@
 - name: CONFIG REPLACE
   ios_command:
     commands:
-      - config replace flash:{{inventory_hostname}}.config force
+      - copy bootflash:{{inventory_hostname}}.config running-configuration
