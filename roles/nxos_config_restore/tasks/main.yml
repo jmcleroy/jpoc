@@ -1,6 +1,6 @@
 ---
     - name: COPY RUNNING CONFIG TO ROUTER
-      command: scp ./backup/{{inventory_hostname}}.config {{inventory_hostname}}:/{{inventory_hostname}}.config
+      command: scp {{playbook_dir}}/{{inventory_hostname}}.config {{inventory_hostname}}:/{{inventory_hostname}}.config
 
     - name: CONFIG REPLACE
       ios_command:
