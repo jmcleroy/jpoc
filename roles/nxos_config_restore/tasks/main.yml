@@ -3,5 +3,5 @@
   nxos_config:
     src: "{{playbook_dir}}/{{inventory_hostname}}.config"
     save: yes
-    proivder:
+    provider:
       timeout: 3000
