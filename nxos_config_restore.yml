@@ -1,0 +1,7 @@
+- name: RESTORE CONFIGURATION
+  hosts: all
+  connection: network_cli
+  gather_facts: no
+
+  roles:
+    - nxos_config_restore
