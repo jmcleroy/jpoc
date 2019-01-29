@@ -8,6 +8,7 @@
   copy:
     src: "{{config_output.backup_path}}"
     dest: "{{playbook_dir}}/{{inventory_hostname}}.config"
+    force: yes
 
 - name: REMOVE NON CONFIG LINES
   lineinfile:
@@ -49,12 +50,12 @@
 - name: REMOVE NON CONFIG LINES - REGEXP
   lineinfile:
     path: "{{playbook_dir}}/{{inventory_hostname}}.config"
-    regexp: 'power redundancy-mode redundant.+'
+    regexp: 'power redundancy-mode redundant.*'
     state: absent
 
 
 - name: REMOVE NON CONFIG LINES - REGEXP
   lineinfile:
     path: "{{playbook_dir}}/{{inventory_hostname}}.config"
-    regexp: 'license grace-period.+'
+    regexp: 'license grace-period.*'
     state: absent
