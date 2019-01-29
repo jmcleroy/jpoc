@@ -2,5 +2,6 @@
 - name: Reset to backed-up config
   nxos_config:
     src: "{{playbook_dir}}/{{inventory_hostname}}.config"
-    timeout: 3000
     save: yes
+    proivder:
+      timeout: 3000
