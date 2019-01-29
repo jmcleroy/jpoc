@@ -11,5 +11,5 @@
       state: present
       provider:
         host: "192.168.1.155"
-#        username: admin
-#        password: admin
+        username: admin
+        password: admin
