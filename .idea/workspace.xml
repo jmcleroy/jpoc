@@ -4,9 +4,8 @@
     <bookmark url="file://$PROJECT_DIR$/panos_add_user.yml" line="7" mnemonic="8" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1518ea8d-3031-4efc-8a0f-e7a5a881e274" name="Default" comment="Adding test">
+    <list default="true" id="1518ea8d-3031-4efc-8a0f-e7a5a881e274" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/roles/nxos_config_restore/tasks/main.yml" afterPath="$PROJECT_DIR$/roles/nxos_config_restore/tasks/main.yml" />
     </list>
     <ignored path="jpoc3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -550,13 +549,6 @@
       <option name="presentableId" value="Default" />
       <updated>1501075586948</updated>
     </task>
-    <task id="LOCAL-00307" summary="Adding panos playbook">
-      <created>1537307255976</created>
-      <option name="number" value="00307" />
-      <option name="presentableId" value="LOCAL-00307" />
-      <option name="project" value="LOCAL" />
-      <updated>1537307255976</updated>
-    </task>
     <task id="LOCAL-00308" summary="Adding panos playbook">
       <created>1537307360196</created>
       <option name="number" value="00308" />
@@ -893,7 +885,14 @@
       <option name="project" value="LOCAL" />
       <updated>1548785915236</updated>
     </task>
-    <option name="localTasksCounter" value="356" />
+    <task id="LOCAL-00356" summary="Adding test">
+      <created>1548786379803</created>
+      <option name="number" value="00356" />
+      <option name="presentableId" value="LOCAL-00356" />
+      <option name="project" value="LOCAL" />
+      <updated>1548786379803</updated>
+    </task>
+    <option name="localTasksCounter" value="357" />
     <servers />
   </component>
   <component name="ToolWindowManager">
