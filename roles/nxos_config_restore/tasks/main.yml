@@ -2,6 +2,7 @@
 - name: copy file from ansible controller to a network device
   net_put:
     src: "{{playbook_dir}}/{{inventory_hostname}}.config"
+    dest : bootflash:/{{playbook_dir}}/{{inventory_hostname}}.config
 
 #- name: COPY RUNNING CONFIG TO ROUTER
 #  command: scp {{playbook_dir}}/{{inventory_hostname}}.config {{inventory_hostname}}:/{{inventory_hostname}}.config
