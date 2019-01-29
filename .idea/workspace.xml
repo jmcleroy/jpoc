@@ -80,8 +80,8 @@
       <file leaf-file-name="main.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/roles/nxos_config_restore/tasks/main.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="2" column="65" selection-start-line="2" selection-start-column="65" selection-end-line="2" selection-end-column="65" />
+            <state relative-caret-position="72">
+              <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -92,7 +92,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="168">
               <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
+              <folding>
+                <marker date="1548784147653" expanded="true" signature="91:123" ph="roles: &lt;1 item&gt;" />
+                <marker date="1548784147653" expanded="true" signature="104:123" ph="nxos_confi..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -102,7 +105,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="168">
               <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-              <folding />
+              <folding>
+                <marker date="1548778709436" expanded="true" signature="102:140" ph="roles: &lt;1 item&gt;" />
+                <marker date="1548778709436" expanded="true" signature="115:140" ph="nxos_confi..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -716,13 +722,6 @@
       <option name="presentableId" value="Default" />
       <updated>1501075586948</updated>
     </task>
-    <task id="LOCAL-00297" summary="Adding panos playbook">
-      <created>1537301241136</created>
-      <option name="number" value="00297" />
-      <option name="presentableId" value="LOCAL-00297" />
-      <option name="project" value="LOCAL" />
-      <updated>1537301241136</updated>
-    </task>
     <task id="LOCAL-00298" summary="Adding panos playbook">
       <created>1537301385261</created>
       <option name="number" value="00298" />
@@ -1059,7 +1058,14 @@
       <option name="project" value="LOCAL" />
       <updated>1548784147869</updated>
     </task>
-    <option name="localTasksCounter" value="346" />
+    <task id="LOCAL-00346" summary="Adding test">
+      <created>1548784318814</created>
+      <option name="number" value="00346" />
+      <option name="presentableId" value="LOCAL-00346" />
+      <option name="project" value="LOCAL" />
+      <updated>1548784318814</updated>
+    </task>
+    <option name="localTasksCounter" value="347" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1433,7 +1439,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-          <folding />
+          <folding>
+            <marker date="1548778709436" expanded="true" signature="102:140" ph="roles: &lt;1 item&gt;" />
+            <marker date="1548778709436" expanded="true" signature="115:140" ph="nxos_confi..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1457,7 +1466,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1548784147653" expanded="true" signature="91:123" ph="roles: &lt;1 item&gt;" />
+            <marker date="1548784147653" expanded="true" signature="104:123" ph="nxos_confi..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1471,8 +1483,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/roles/nxos_config_restore/tasks/main.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="65" selection-start-line="2" selection-start-column="65" selection-end-line="2" selection-end-column="65" />
+        <state relative-caret-position="72">
+          <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
           <folding />
         </state>
       </provider>
