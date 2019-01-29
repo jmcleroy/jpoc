@@ -1,7 +1,14 @@
 ---
-- name: Reset to backed-up config
-  nxos_config:
+- name: copy file from ansible controller to a network device
+  net_put:
     src: "{{playbook_dir}}/{{inventory_hostname}}.config"
-    save: yes
-    provider:
-      timeout: 3000
+    dest : bootflash:/{{inventory_hostname}}.config
+
+
+#- name: COPY RUNNING CONFIG TO ROUTER
+#  command: scp {{playbook_dir}}/{{inventory_hostname}}.config {{inventory_hostname}}:/{{inventory_hostname}}.config
+
+- name: CONFIG REPLACE
+  ios_command:
+    commands:
+      - config replace flash:{{inventory_hostname}}.config force
