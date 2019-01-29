@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1518ea8d-3031-4efc-8a0f-e7a5a881e274" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/roles/nxos_config_restore/tasks/main.yml" afterPath="$PROJECT_DIR$/roles/nxos_config_restore/tasks/main.yml" />
     </list>
     <ignored path="jpoc3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -722,13 +721,6 @@
       <option name="presentableId" value="Default" />
       <updated>1501075586948</updated>
     </task>
-    <task id="LOCAL-00298" summary="Adding panos playbook">
-      <created>1537301385261</created>
-      <option name="number" value="00298" />
-      <option name="presentableId" value="LOCAL-00298" />
-      <option name="project" value="LOCAL" />
-      <updated>1537301385261</updated>
-    </task>
     <task id="LOCAL-00299" summary="Adding panos playbook">
       <created>1537301667875</created>
       <option name="number" value="00299" />
@@ -1065,7 +1057,14 @@
       <option name="project" value="LOCAL" />
       <updated>1548784318814</updated>
     </task>
-    <option name="localTasksCounter" value="347" />
+    <task id="LOCAL-00347" summary="Adding test">
+      <created>1548785027710</created>
+      <option name="number" value="00347" />
+      <option name="presentableId" value="LOCAL-00347" />
+      <option name="project" value="LOCAL" />
+      <updated>1548785027711</updated>
+    </task>
+    <option name="localTasksCounter" value="348" />
     <servers />
   </component>
   <component name="ToolWindowManager">
