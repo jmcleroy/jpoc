@@ -80,8 +80,8 @@
       <file leaf-file-name="main.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/roles/nxos_config_restore/tasks/main.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="4" column="68" selection-start-line="4" selection-start-column="68" selection-end-line="4" selection-end-column="68" />
+            <state relative-caret-position="120">
+              <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -722,13 +722,6 @@
       <option name="presentableId" value="Default" />
       <updated>1501075586948</updated>
     </task>
-    <task id="LOCAL-00300" summary="Adding panos playbook">
-      <created>1537301862363</created>
-      <option name="number" value="00300" />
-      <option name="presentableId" value="LOCAL-00300" />
-      <option name="project" value="LOCAL" />
-      <updated>1537301862363</updated>
-    </task>
     <task id="LOCAL-00301" summary="Adding panos playbook">
       <created>1537301908834</created>
       <option name="number" value="00301" />
@@ -1065,7 +1058,14 @@
       <option name="project" value="LOCAL" />
       <updated>1548785178883</updated>
     </task>
-    <option name="localTasksCounter" value="349" />
+    <task id="LOCAL-00349" summary="Adding test">
+      <created>1548785298907</created>
+      <option name="number" value="00349" />
+      <option name="presentableId" value="LOCAL-00349" />
+      <option name="project" value="LOCAL" />
+      <updated>1548785298907</updated>
+    </task>
+    <option name="localTasksCounter" value="350" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1483,8 +1483,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/roles/nxos_config_restore/tasks/main.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="68" selection-start-line="4" selection-start-column="68" selection-end-line="4" selection-end-column="68" />
+        <state relative-caret-position="120">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
           <folding />
         </state>
       </provider>
