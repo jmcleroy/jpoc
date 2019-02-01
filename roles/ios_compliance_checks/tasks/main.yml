@@ -1,5 +1,5 @@
 ---
-- name: configure interface settings
+- name: pulling ntp servers on device
   ios_command:
     commands: show run | i ntp
   register: output
@@ -8,7 +8,7 @@
   debug:
     var: output.stdout_lines
 
-- name: compare ntp servers
+- name: compare ntp servers and remove erroroneous entries
   ios_config:
     lines: no {{ item }}
   loop: "{{ output.stdout_lines[0] }}"
