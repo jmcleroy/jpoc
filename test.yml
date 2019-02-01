@@ -4,15 +4,7 @@
   gather_facts: no
   
   tasks:
-    - name: add switchport trunks and vlans
-      nxos_config:
-        lines:
-          - switchport mode trunk
-          - switchport trunk native vlan 20
-          - switchport trunk allowed vlan 50-51
-        parents: interface gigabitethernet 0/3
-
-    - name: show vlans
-      nxos_command:
-        commands:
-          - show vlans
+    - name: Admin down an interface
+      nxos_interface:
+        name: Ethernet0/4
+        admin_state: down
