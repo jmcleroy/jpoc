@@ -1,6 +1,6 @@
 ---
 - hosts: all
-  connection: httpapi
+  connection: network_cli
   gather_facts: no
   
   tasks:
@@ -8,3 +8,4 @@
       nxos_interface:
         name: Ethernet0/4
         admin_state: down
+      connection: httpapi
