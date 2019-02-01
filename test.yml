@@ -10,7 +10,7 @@
           - switchport mode trunk
           - switchport trunk native vlan 20
           - switchport trunk allowed vlan 50-51
-        parents: interface gigabitethernet 0/0
+        parents: interface gigabitethernet 0/3
 
     - name: show vlans
       nxos_command:
