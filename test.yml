@@ -15,10 +15,4 @@
     - name: show vlans
       nxos_command:
         commands:
-          - show vlan 20
-          - show vlan 50
-          - show vlan 51
-        wait_for:
-          - vlan 20 == present
-          - vlan 50 == present
-          - vlan 51 == present
+          - show vlans

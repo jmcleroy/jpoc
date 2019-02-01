@@ -60,8 +60,8 @@
       <file leaf-file-name="test.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+            <state relative-caret-position="408">
+              <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -734,13 +734,6 @@
       <option name="presentableId" value="Default" />
       <updated>1501075586948</updated>
     </task>
-    <task id="LOCAL-00311" summary="Adding panos playbook">
-      <created>1537307767502</created>
-      <option name="number" value="00311" />
-      <option name="presentableId" value="LOCAL-00311" />
-      <option name="project" value="LOCAL" />
-      <updated>1537307767502</updated>
-    </task>
     <task id="LOCAL-00312" summary="Adding panos playbook">
       <created>1537307954796</created>
       <option name="number" value="00312" />
@@ -1077,7 +1070,14 @@
       <option name="project" value="LOCAL" />
       <updated>1549034934532</updated>
     </task>
-    <option name="localTasksCounter" value="360" />
+    <task id="LOCAL-00360" summary="Adding test">
+      <created>1549047076756</created>
+      <option name="number" value="00360" />
+      <option name="presentableId" value="LOCAL-00360" />
+      <option name="project" value="LOCAL" />
+      <updated>1549047076756</updated>
+    </task>
+    <option name="localTasksCounter" value="361" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1504,8 +1504,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        <state relative-caret-position="408">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
           <folding />
         </state>
       </provider>
