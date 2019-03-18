@@ -3,6 +3,6 @@
   nxos_config:
     host: "{{ inventory_hostname }}"
     lines:
-      - permit ip host "{{ vip_address }}" "{{ vip_port }}"
+      - "permit ip host '{{ vip_address }}' '{{ vip_port }}'"
     parents: ip access-list Ansible
 
