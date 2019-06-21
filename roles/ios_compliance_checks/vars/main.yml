@@ -4,3 +4,4 @@ ntp_servers:
   - ntp server 172.16.1.77
   - ntp server 172.16.1.75
   - ntp server 192.168.1.1
+  - ntp server 10.0.0.1
