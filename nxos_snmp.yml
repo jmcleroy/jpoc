@@ -1,0 +1,12 @@
+---
+- hosts: all
+  connection: network_cli
+  gather_facts: no
+
+  tasks:
+    - name: configure snmp string via survey
+      nxos_snmp_community:
+        community: "{{ community }}"
+        group: "{{ group }}"
+        state: "{{ state }}"
+        access: "{{ access}}"
