@@ -4,7 +4,10 @@
     <bookmark url="file://$PROJECT_DIR$/panos_add_user.yml" line="7" mnemonic="8" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1518ea8d-3031-4efc-8a0f-e7a5a881e274" name="Default" comment="Adding test" />
+    <list default="true" id="1518ea8d-3031-4efc-8a0f-e7a5a881e274" name="Default" comment="Adding snmp Ansible Tower Playbook.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nxos_snmp.yml" beforeDir="false" afterPath="$PROJECT_DIR$/nxos_snmp.yml" afterDir="false" />
+    </list>
     <ignored path="jpoc3.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -26,16 +29,25 @@
         <entry file="file://$PROJECT_DIR$/importrole.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="308">
-              <caret line="14" column="39" lean-forward="true" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+              <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/roles/ciscopre/tasks/main.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/roles/ciscopre/tasks/main.yml">
+        <entry file="file://$PROJECT_DIR$/nxos_snmp.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="220">
+              <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -104,7 +116,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ciscoiosupgrade.yml" />
         <option value="$PROJECT_DIR$/roles/iosupgrade/tasks/main.yml" />
         <option value="$PROJECT_DIR$/roles/iosupgrade/files/new_device.cfg" />
         <option value="$PROJECT_DIR$/library/snow_record.py" />
@@ -155,6 +166,7 @@
         <option value="$PROJECT_DIR$/importrole.yml" />
         <option value="$PROJECT_DIR$/roles/ios_compliance_checks/vars/main.yml" />
         <option value="$PROJECT_DIR$/apt_update.yml" />
+        <option value="$PROJECT_DIR$/nxos_snmp.yml" />
       </list>
     </option>
   </component>
@@ -169,7 +181,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -181,6 +192,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -268,27 +280,7 @@
       <updated>1501075586948</updated>
       <workItem from="1560964509168" duration="1900000" />
       <workItem from="1561045902988" duration="2407000" />
-    </task>
-    <task id="LOCAL-00323" summary="Adding test">
-      <created>1539038092573</created>
-      <option name="number" value="00323" />
-      <option name="presentableId" value="LOCAL-00323" />
-      <option name="project" value="LOCAL" />
-      <updated>1539038092573</updated>
-    </task>
-    <task id="LOCAL-00324" summary="Adding test">
-      <created>1540326332854</created>
-      <option name="number" value="00324" />
-      <option name="presentableId" value="LOCAL-00324" />
-      <option name="project" value="LOCAL" />
-      <updated>1540326332854</updated>
-    </task>
-    <task id="LOCAL-00325" summary="Adding test">
-      <created>1540326904064</created>
-      <option name="number" value="00325" />
-      <option name="presentableId" value="LOCAL-00325" />
-      <option name="project" value="LOCAL" />
-      <updated>1540326904065</updated>
+      <workItem from="1562784259841" duration="1148000" />
     </task>
     <task id="LOCAL-00326" summary="Adding test">
       <created>1541448405953</created>
@@ -612,16 +604,38 @@
       <option name="project" value="LOCAL" />
       <updated>1561126225373</updated>
     </task>
-    <option name="localTasksCounter" value="372" />
+    <task id="LOCAL-00372" summary="Adding snmp Ansible Tower Playbook.">
+      <created>1562784465393</created>
+      <option name="number" value="00372" />
+      <option name="presentableId" value="LOCAL-00372" />
+      <option name="project" value="LOCAL" />
+      <updated>1562784465393</updated>
+    </task>
+    <task id="LOCAL-00373" summary="Adding snmp Ansible Tower Playbook.">
+      <created>1562784960507</created>
+      <option name="number" value="00373" />
+      <option name="presentableId" value="LOCAL-00373" />
+      <option name="project" value="LOCAL" />
+      <updated>1562784960507</updated>
+    </task>
+    <task id="LOCAL-00374" summary="Adding snmp Ansible Tower Playbook.">
+      <created>1562784970628</created>
+      <option name="number" value="00374" />
+      <option name="presentableId" value="LOCAL-00374" />
+      <option name="project" value="LOCAL" />
+      <updated>1562784970628</updated>
+    </task>
+    <option name="localTasksCounter" value="375" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4307000" />
+    <option name="totallyTimeSpent" value="5455000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="957" extended-state="6" />
+    <frame x="0" y="23" width="1920" height="981" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.47464788" visible="true" weight="0.21001221" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.47464788" visible="true" weight="0.21192758" />
       <window_info id="Structure" order="1" sideWeight="0.49506348" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5253521" side_tool="true" weight="0.265043" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -661,12 +675,10 @@
     <MESSAGE value="Added in importing role with when statements." />
     <MESSAGE value="Adding panos playbook" />
     <MESSAGE value="Adding test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding test" />
+    <MESSAGE value="Adding snmp Ansible Tower Playbook." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding snmp Ansible Tower Playbook." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ios_config_template.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/roles/ios_compliance_checks/templates/ntp.j2" />
     <entry file="file://$PROJECT_DIR$/nxos_vlan.yml">
       <provider selected="true" editor-type-id="text-editor" />
@@ -881,6 +893,14 @@
     <entry file="file://$PROJECT_DIR$/backup.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/apt_update.yml" />
+    <entry file="file://$PROJECT_DIR$/importrole.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/arista_show.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -922,24 +942,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/importrole.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="39" lean-forward="true" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apt_update.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/roles/ciscopre/tasks/main.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nxos_snmp.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
         </state>
       </provider>
     </entry>
