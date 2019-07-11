@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1518ea8d-3031-4efc-8a0f-e7a5a881e274" name="Default" comment="Adding snmp Ansible Tower Playbook.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nxos_snmp.yml" beforeDir="false" afterPath="$PROJECT_DIR$/nxos_snmp.yml" afterDir="false" />
     </list>
     <ignored path="jpoc3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -170,11 +169,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="82" />
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1680" />
-    <option name="height" value="977" />
+    <option name="width" value="1920" />
+    <option name="height" value="981" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -280,14 +278,7 @@
       <updated>1501075586948</updated>
       <workItem from="1560964509168" duration="1900000" />
       <workItem from="1561045902988" duration="2407000" />
-      <workItem from="1562784259841" duration="1148000" />
-    </task>
-    <task id="LOCAL-00326" summary="Adding test">
-      <created>1541448405953</created>
-      <option name="number" value="00326" />
-      <option name="presentableId" value="LOCAL-00326" />
-      <option name="project" value="LOCAL" />
-      <updated>1541448405953</updated>
+      <workItem from="1562784259841" duration="2166000" />
     </task>
     <task id="LOCAL-00327" summary="Adding test">
       <created>1547068276186</created>
@@ -625,15 +616,21 @@
       <option name="project" value="LOCAL" />
       <updated>1562784970628</updated>
     </task>
-    <option name="localTasksCounter" value="375" />
+    <task id="LOCAL-00375" summary="Adding snmp Ansible Tower Playbook.">
+      <created>1562785658129</created>
+      <option name="number" value="00375" />
+      <option name="presentableId" value="LOCAL-00375" />
+      <option name="project" value="LOCAL" />
+      <updated>1562785658129</updated>
+    </task>
+    <option name="localTasksCounter" value="376" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5455000" />
+    <option name="totallyTimeSpent" value="6473000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="981" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1920" height="981" extended-state="1" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.47464788" visible="true" weight="0.21192758" />
       <window_info id="Structure" order="1" sideWeight="0.49506348" weight="0.25" />
