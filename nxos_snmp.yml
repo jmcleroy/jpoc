@@ -9,4 +9,3 @@
         community: "{{ community }}"
         group: "{{ group }}"
         state: "{{ state }}"
-        
