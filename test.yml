@@ -3,9 +3,12 @@
   connection: network_cli
   gather_facts: no
   
+
   tasks:
-    - name: Admin down an interface
-      nxos_interface:
-        name: Ethernet0/4
-        admin_state: down
-      connection: httpapi
+    - name: configure interface
+      ios_interface:
+        name: GigabitEthernet0/2
+        description: test-interface
+        speed: 100
+        duplex: half
+        mtu: 512
