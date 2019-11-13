@@ -1,0 +1,7 @@
+---
+- hosts: all
+  gather_facts: no
+  connection: network_cli
+
+  roles:
+    - ios_ise_check

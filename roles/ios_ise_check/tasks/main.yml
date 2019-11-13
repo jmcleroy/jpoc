@@ -1,0 +1,16 @@
+---
+- name: Check port for ISE configuration and vlans
+  ios_command:
+    commands: show running interface '{{ interface }}'
+
+- name: Check if ISE is controlling the port
+  ios_command:
+    commands: show auth session interface '{{ interface }}' detail
+
+- name: Check to see if acl is applied
+  ios_command:
+    commands: show ip device tracking interface '{{ interface }}'
+
+- name: Check if acl is allowing traffic on enterface
+  ios_command:
+    commands: show ip access-list interface '{{ interface }}'
